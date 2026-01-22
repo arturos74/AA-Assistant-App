@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/homeTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="40dp"
+        android:textAppearance="@android:animator/fade_in"
+        android:text="ArcheAge Assistant"
+        android:layout_marginTop="30dp"
+        />
+
+    <Button
+        android:id="@+id/silver2LaborButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Silver to Labor Calculator"
+        android:layout_marginTop="50dp"
+        />
+
+    <Button
+        android:id="@+id/moneyToGoldButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Money to Gold"
+        />
+
+    <Button
+        android:id="@+id/goldToMoneyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Gold to Money"
+        />
+
+    <Button
+        android:id="@+id/eventScheduleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Event Schedule"
+        />
+
+    <Button
+        android:id="@+id/skillCalculatorButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Skill Calculator"
+        />
+
+    <Button
+        android:id="@+id/tradePackCalculatorButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Trade Pack Calculator"
+        />
+
+    <TextView
+        android:id="@+id/randomTipText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginTop="100dp"
+        android:text=""
+        />
+
+</LinearLayout>
