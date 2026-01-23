@@ -96,54 +96,85 @@ class SkillCalculator : ComponentActivity() {
 
         val gridArchery1 = findViewById<GridLayout>(R.id.gridArchery1)
         val gridArcheryPassive1 = findViewById<GridLayout>(R.id.gridArcheryPassive1)
+        val gridArchery2 = findViewById<GridLayout>(R.id.gridArchery2)
+        val gridArcheryPassive2 = findViewById<GridLayout>(R.id.gridArcheryPassive2)
 
         val gridDefense1 = findViewById<GridLayout>(R.id.gridDefense1)
         val gridDefensePassive1 = findViewById<GridLayout>(R.id.gridDefensePassive1)
+        val gridDefense2 = findViewById<GridLayout>(R.id.gridDefense2)
+        val gridDefensePassive2 = findViewById<GridLayout>(R.id.gridDefensePassive2)
 
         val gridOccultism1 = findViewById<GridLayout>(R.id.gridOccultism1)
         val gridOccultismPassive1 = findViewById<GridLayout>(R.id.gridOccultismPassive1)
+        val gridOccultism2 = findViewById<GridLayout>(R.id.gridOccultism2)
+        val gridOccultismPassive2 = findViewById<GridLayout>(R.id.gridOccultismPassive2)
 
         val gridSorcery1 = findViewById<GridLayout>(R.id.gridSorcery1)
         val gridSorceryPassive1 = findViewById<GridLayout>(R.id.gridSorceryPassive1)
+        val gridSorcery2 = findViewById<GridLayout>(R.id.gridSorcery2)
+        val gridSorceryPassive2 = findViewById<GridLayout>(R.id.gridSorceryPassive1)
 
         val gridSongcraft1 = findViewById<GridLayout>(R.id.gridSongcraft1)
         val gridSongcraftPassive1 = findViewById<GridLayout>(R.id.gridSongcraftPassive1)
+        val gridSongcraft2 = findViewById<GridLayout>(R.id.gridSongcraft2)
+        val gridSongcraftPassive2 = findViewById<GridLayout>(R.id.gridSongcraftPassive2)
 
         val gridWitchcraft1 = findViewById<GridLayout>(R.id.gridWitchcraft1)
         val gridWitchcraftPassive1 = findViewById<GridLayout>(R.id.gridWitchcraftPassive1)
+        val gridWitchcraft2 = findViewById<GridLayout>(R.id.gridWitchcraft2)
+        val gridWitchcraftPassive2 = findViewById<GridLayout>(R.id.gridWitchcraftPassive2)
 
         val gridAuramancy1 = findViewById<GridLayout>(R.id.gridAuramancy1)
         val gridAuramancyPassive1 = findViewById<GridLayout>(R.id.gridAuramancyPassive1)
+        val gridAuramancy2 = findViewById<GridLayout>(R.id.gridAuramancy2)
+        val gridAuramancyPassive2 = findViewById<GridLayout>(R.id.gridAuramancyPassive2)
 
         val gridShadowplay1 = findViewById<GridLayout>(R.id.gridShadowplay1)
         val gridShadowplayPassive1 = findViewById<GridLayout>(R.id.gridShadowplayPassive1)
+        val gridShadowplay2 = findViewById<GridLayout>(R.id.gridShadowplay2)
+        val gridShadowplayPassive2 = findViewById<GridLayout>(R.id.gridShadowplayPassive2)
 
         val gridVitalism1 = findViewById<GridLayout>(R.id.gridVitalism1)
         val gridVitalismPassive1 = findViewById<GridLayout>(R.id.gridVitalismPassive1)
+        val gridVitalism2 = findViewById<GridLayout>(R.id.gridVitalism2)
+        val gridVitalismPassive2 = findViewById<GridLayout>(R.id.gridVitalismPassive2)
 
         val gridMalediction1 = findViewById<GridLayout>(R.id.gridMalediction1)
         val gridMaledictionPassive1 = findViewById<GridLayout>(R.id.gridMaledictionPassive1)
+        val gridMalediction2 = findViewById<GridLayout>(R.id.gridMalediction2)
+        val gridMaledictionPassive2 = findViewById<GridLayout>(R.id.gridMaledictionPassive2)
 
         val gridSwiftblade1 = findViewById<GridLayout>(R.id.gridSwiftblade1)
         val gridSwiftbladePassive1 = findViewById<GridLayout>(R.id.gridSwiftbladePassive1)
+        val gridSwiftblade2 = findViewById<GridLayout>(R.id.gridSwiftblade2)
+        val gridSwiftbladePassive2 = findViewById<GridLayout>(R.id.gridSwiftbladePassive2)
 
         val gridGunslinger1 = findViewById<GridLayout>(R.id.gridGunslinger1)
         val gridGunslingerPassive1 = findViewById<GridLayout>(R.id.gridGunslingerPassive1)
+        val gridGunslinger2 = findViewById<GridLayout>(R.id.gridGunslinger2)
+        val gridGunslingerPassive2 = findViewById<GridLayout>(R.id.gridGunslingerPassive2)
 
         val gridSpelldance1 = findViewById<GridLayout>(R.id.gridSpelldance1)
         val gridSpelldancePassive1 = findViewById<GridLayout>(R.id.gridSpelldancePassive1)
+        val gridSpelldance2 = findViewById<GridLayout>(R.id.gridSpelldance2)
+        val gridSpelldancePassive2 = findViewById<GridLayout>(R.id.gridSpelldancePassive2)
 
         val btnReset1 = findViewById<Button>(R.id.btnReset1)
+        val btnReset2 = findViewById<Button>(R.id.btnReset2)
         //endregion
 
 
 
         //region Text Values
         val tvPanel1Title = findViewById<TextView>(R.id.tvPanel1Title)
+        val tvPanel2Title = findViewById<TextView>(R.id.tvPanel2Title)
         val tvPointsLeft = findViewById<TextView>(R.id.tvPointsLeft)
         tvPointsLeft.text = " ${skillPoints} points left"
         val skillPoints1Text = findViewById<TextView>(R.id.skillPointsText)
+        val skillPoints2Text = findViewById<TextView>(R.id.skillPointsText2)
         skillPoints1Text.text = " ${skillTree1Points} / 12"
+        skillPoints2Text.text = " ${skillTree1Points} / 12"
+        
         val combatText1 = findViewById<TextView>(R.id.combatText1)
         val passiveText1 = findViewById<TextView>(R.id.passiveText1)
         val battlerageText1 = findViewById<TextView>(R.id.battlerageText1)
@@ -160,6 +191,23 @@ class SkillCalculator : ComponentActivity() {
         val swiftbladeText1 = findViewById<TextView>(R.id.swiftbladeText1)
         val gunslingerText1 = findViewById<TextView>(R.id.gunslingerText1)
         val spelldanceText1 = findViewById<TextView>(R.id.spelldanceText1)
+
+        val combatText2 = findViewById<TextView>(R.id.combatText2)
+        val passiveText2 = findViewById<TextView>(R.id.passiveText2)
+        val battlerageText2 = findViewById<TextView>(R.id.battlerageText2)
+        val archeryText2 = findViewById<TextView>(R.id.archeryText2)
+        val defenseText2 = findViewById<TextView>(R.id.defenseText2)
+        val occultismText2 = findViewById<TextView>(R.id.occultismText2)
+        val sorceryText2 = findViewById<TextView>(R.id.sorceryText2)
+        val songcraftText2 = findViewById<TextView>(R.id.songcraftText2)
+        val witchcraftText2 = findViewById<TextView>(R.id.witchcraftText2)
+        val auramancyText2 = findViewById<TextView>(R.id.auramancyText2)
+        val shadowplayText2 = findViewById<TextView>(R.id.shadowplayText2)
+        val vitalismText2 = findViewById<TextView>(R.id.vitalismText2)
+        val maledictionText2 = findViewById<TextView>(R.id.maledictionText2)
+        val swiftbladeText2 = findViewById<TextView>(R.id.swiftbladeText2)
+        val gunslingerText2 = findViewById<TextView>(R.id.gunslingerText2)
+        val spelldanceText2 = findViewById<TextView>(R.id.spelldanceText2)
         //endregion
 
         //region Battlerage Skill Values Panel 1
@@ -2099,6 +2147,411 @@ class SkillCalculator : ComponentActivity() {
 
 
         //region Panel 2 Skill Tree Button Actions
+        btnBattlerage2.setOnClickListener {
+            gridSkillsets2.visibility = View.GONE
+            tvPanel2Title.visibility = View.GONE
+            btnBattlerage2.visibility = View.GONE
+            btnBattlerage3.visibility = View.GONE
+
+            battlerageText2.visibility = View.VISIBLE
+            combatText2.visibility = View.VISIBLE
+            skillPoints2Text.visibility = View.VISIBLE
+            gridBattlerage2.visibility = View.VISIBLE
+
+            passiveText2.visibility = View.VISIBLE
+            gridBattleragePassive2.visibility = View.VISIBLE
+
+            btnReset2.visibility = View.VISIBLE
+        }
+
+        btnArchery2.setOnClickListener {
+            gridSkillsets2.visibility = View.GONE
+            tvPanel2Title.visibility = View.GONE
+            btnArchery2.visibility = View.GONE
+            btnArchery3.visibility = View.GONE
+
+            archeryText2.visibility = View.VISIBLE
+            combatText2.visibility = View.VISIBLE
+            skillPoints2Text.visibility = View.VISIBLE
+            gridArchery2.visibility = View.VISIBLE
+
+            passiveText2.visibility = View.VISIBLE
+            gridArcheryPassive2.visibility = View.VISIBLE
+
+            btnReset2.visibility = View.VISIBLE
+        }
+
+        btnDefense2.setOnClickListener {
+            gridSkillsets2.visibility = View.GONE
+            tvPanel2Title.visibility = View.GONE
+            btnDefense2.visibility = View.GONE
+            btnDefense3.visibility = View.GONE
+
+            defenseText2.visibility = View.VISIBLE
+            combatText2.visibility = View.VISIBLE
+            skillPoints2Text.visibility = View.VISIBLE
+            gridDefense2.visibility = View.VISIBLE
+
+            passiveText2.visibility = View.VISIBLE
+            gridDefensePassive2.visibility = View.VISIBLE
+
+            btnReset2.visibility = View.VISIBLE
+        }
+
+        btnOccultism2.setOnClickListener {
+            gridSkillsets2.visibility = View.GONE
+            tvPanel2Title.visibility = View.GONE
+            btnOccultism2.visibility = View.GONE
+            btnOccultism3.visibility = View.GONE
+
+            occultismText2.visibility = View.VISIBLE
+            combatText2.visibility = View.VISIBLE
+            skillPoints2Text.visibility = View.VISIBLE
+            gridOccultism2.visibility = View.VISIBLE
+
+            passiveText2.visibility = View.VISIBLE
+            gridOccultismPassive2.visibility = View.VISIBLE
+
+            btnReset2.visibility = View.VISIBLE
+        }
+
+        btnSorcery2.setOnClickListener {
+            gridSkillsets2.visibility = View.GONE
+            tvPanel2Title.visibility = View.GONE
+            btnSorcery2.visibility = View.GONE
+            btnSorcery3.visibility = View.GONE
+
+            sorceryText2.visibility = View.VISIBLE
+            combatText2.visibility = View.VISIBLE
+            skillPoints2Text.visibility = View.VISIBLE
+            gridSorcery2.visibility = View.VISIBLE
+
+            passiveText2.visibility = View.VISIBLE
+            gridSorceryPassive2.visibility = View.VISIBLE
+
+            btnReset2.visibility = View.VISIBLE
+        }
+
+        btnSongcraft2.setOnClickListener {
+            gridSkillsets2.visibility = View.GONE
+            tvPanel2Title.visibility = View.GONE
+            btnSongcraft2.visibility = View.GONE
+            btnSongcraft3.visibility = View.GONE
+
+            songcraftText2.visibility = View.VISIBLE
+            combatText2.visibility = View.VISIBLE
+            skillPoints2Text.visibility = View.VISIBLE
+            gridSongcraft2.visibility = View.VISIBLE
+
+            passiveText2.visibility = View.VISIBLE
+            gridSongcraftPassive2.visibility = View.VISIBLE
+
+            btnReset2.visibility = View.VISIBLE
+        }
+
+        btnWitchcraft2.setOnClickListener {
+            gridSkillsets2.visibility = View.GONE
+            tvPanel2Title.visibility = View.GONE
+            btnWitchcraft2.visibility = View.GONE
+            btnWitchcraft3.visibility = View.GONE
+
+            witchcraftText2.visibility = View.VISIBLE
+            combatText2.visibility = View.VISIBLE
+            skillPoints2Text.visibility = View.VISIBLE
+            gridWitchcraft2.visibility = View.VISIBLE
+
+            passiveText2.visibility = View.VISIBLE
+            gridWitchcraftPassive2.visibility = View.VISIBLE
+
+            btnReset2.visibility = View.VISIBLE
+        }
+
+        btnAuramancy2.setOnClickListener {
+            gridSkillsets2.visibility = View.GONE
+            tvPanel2Title.visibility = View.GONE
+            btnAuramancy2.visibility = View.GONE
+            btnAuramancy3.visibility = View.GONE
+
+            auramancyText2.visibility = View.VISIBLE
+            combatText2.visibility = View.VISIBLE
+            skillPoints2Text.visibility = View.VISIBLE
+            gridAuramancy2.visibility = View.VISIBLE
+
+            passiveText2.visibility = View.VISIBLE
+            gridAuramancyPassive2.visibility = View.VISIBLE
+
+            btnReset2.visibility = View.VISIBLE
+        }
+
+        btnShadowplay2.setOnClickListener {
+            gridSkillsets2.visibility = View.GONE
+            tvPanel2Title.visibility = View.GONE
+            btnShadowplay2.visibility = View.GONE
+            btnShadowplay3.visibility = View.GONE
+
+            shadowplayText2.visibility = View.VISIBLE
+            combatText2.visibility = View.VISIBLE
+            skillPoints2Text.visibility = View.VISIBLE
+            gridShadowplay2.visibility = View.VISIBLE
+
+            passiveText2.visibility = View.VISIBLE
+            gridShadowplayPassive2.visibility = View.VISIBLE
+
+            btnReset2.visibility = View.VISIBLE
+        }
+
+        btnVitalism2.setOnClickListener {
+            gridSkillsets2.visibility = View.GONE
+            tvPanel2Title.visibility = View.GONE
+            btnVitalism2.visibility = View.GONE
+            btnVitalism3.visibility = View.GONE
+
+            vitalismText2.visibility = View.VISIBLE
+            combatText2.visibility = View.VISIBLE
+            skillPoints2Text.visibility = View.VISIBLE
+            gridVitalism2.visibility = View.VISIBLE
+
+            passiveText2.visibility = View.VISIBLE
+            gridVitalismPassive2.visibility = View.VISIBLE
+
+            btnReset2.visibility = View.VISIBLE
+        }
+
+        btnMalediction2.setOnClickListener {
+            gridSkillsets2.visibility = View.GONE
+            tvPanel2Title.visibility = View.GONE
+            btnMalediction2.visibility = View.GONE
+            btnMalediction3.visibility = View.GONE
+
+            maledictionText2.visibility = View.VISIBLE
+            combatText2.visibility = View.VISIBLE
+            skillPoints2Text.visibility = View.VISIBLE
+            gridMalediction2.visibility = View.VISIBLE
+
+            passiveText2.visibility = View.VISIBLE
+            gridMaledictionPassive2.visibility = View.VISIBLE
+
+            btnReset2.visibility = View.VISIBLE
+        }
+
+        btnSwiftblade2.setOnClickListener {
+            gridSkillsets2.visibility = View.GONE
+            tvPanel2Title.visibility = View.GONE
+            btnSwiftblade2.visibility = View.GONE
+            btnSwiftblade3.visibility = View.GONE
+
+            swiftbladeText2.visibility = View.VISIBLE
+            combatText2.visibility = View.VISIBLE
+            skillPoints2Text.visibility = View.VISIBLE
+            gridSwiftblade2.visibility = View.VISIBLE
+
+            passiveText2.visibility = View.VISIBLE
+            gridSwiftbladePassive2.visibility = View.VISIBLE
+
+            btnReset2.visibility = View.VISIBLE
+        }
+
+        btnGunslinger2.setOnClickListener {
+            gridSkillsets2.visibility = View.GONE
+            tvPanel2Title.visibility = View.GONE
+            btnGunslinger2.visibility = View.GONE
+            btnGunslinger3.visibility = View.GONE
+
+            gunslingerText2.visibility = View.VISIBLE
+            combatText2.visibility = View.VISIBLE
+            skillPoints2Text.visibility = View.VISIBLE
+            gridGunslinger2.visibility = View.VISIBLE
+
+            passiveText2.visibility = View.VISIBLE
+            gridGunslingerPassive2.visibility = View.VISIBLE
+
+            btnReset2.visibility = View.VISIBLE
+        }
+
+        btnSpelldance2.setOnClickListener {
+            gridSkillsets2.visibility = View.GONE
+            tvPanel2Title.visibility = View.GONE
+            btnSpelldance2.visibility = View.GONE
+            btnSpelldance3.visibility = View.GONE
+
+            spelldanceText2.visibility = View.VISIBLE
+            combatText2.visibility = View.VISIBLE
+            skillPoints2Text.visibility = View.VISIBLE
+            gridSpelldance2.visibility = View.VISIBLE
+
+            passiveText2.visibility = View.VISIBLE
+            gridSpelldancePassive2.visibility = View.VISIBLE
+
+            btnReset2.visibility = View.VISIBLE
+        }
+
+        //region Panel 2 Reset Button
+        btnReset2.setOnClickListener {
+            //Enables Visibility of Original Skill Select Panel
+            gridSkillsets2.visibility = View.VISIBLE
+            tvPanel2Title.visibility = View.VISIBLE
+
+            //Disables Visibility of Skill Texts for the ones enabled
+            battlerageText2.visibility = View.GONE
+            archeryText2.visibility = View.GONE
+            defenseText2.visibility = View.GONE
+            occultismText2.visibility = View.GONE
+            sorceryText2.visibility = View.GONE
+            songcraftText2.visibility = View.GONE
+            witchcraftText2.visibility = View.GONE
+            auramancyText2.visibility = View.GONE
+            shadowplayText2.visibility = View.GONE
+            vitalismText2.visibility = View.GONE
+            maledictionText2.visibility = View.GONE
+            swiftbladeText2.visibility = View.GONE
+            gunslingerText2.visibility = View.GONE
+            spelldanceText2.visibility = View.GONE
+
+            //Disables Visibility of 'Combat' Text and the Skill Points Text
+            combatText2.visibility = View.GONE
+            skillPoints2Text.visibility = View.GONE
+
+            //Disables visibility of any visible skill grids
+            gridBattlerage2.visibility = View.GONE
+            gridArchery2.visibility = View.GONE
+            gridDefense2.visibility = View.GONE
+            gridOccultism2.visibility = View.GONE
+            gridSorcery2.visibility = View.GONE
+            gridSongcraft2.visibility = View.GONE
+            gridWitchcraft2.visibility = View.GONE
+            gridAuramancy2.visibility = View.GONE
+            gridShadowplay2.visibility = View.GONE
+            gridVitalism2.visibility = View.GONE
+            gridMalediction2.visibility = View.GONE
+            gridSwiftblade2.visibility = View.GONE
+            gridGunslinger2.visibility = View.GONE
+            gridSpelldance2.visibility = View.GONE
+
+            //Disables Visibility of 'Passives' Text
+            passiveText2.visibility = View.GONE
+
+            //Disables Visibility of Passive Grid for Skill Sets
+            gridBattleragePassive2.visibility = View.GONE
+            gridArcheryPassive2.visibility = View.GONE
+            gridDefensePassive2.visibility = View.GONE
+            gridOccultismPassive2.visibility = View.GONE
+            gridSorceryPassive2.visibility = View.GONE
+            gridSongcraftPassive2.visibility = View.GONE
+            gridWitchcraftPassive2.visibility = View.GONE
+            gridAuramancyPassive2.visibility = View.GONE
+            gridShadowplayPassive2.visibility = View.GONE
+            gridVitalismPassive2.visibility = View.GONE
+            gridMaledictionPassive2.visibility = View.GONE
+            gridSwiftbladePassive2.visibility = View.GONE
+            gridGunslingerPassive2.visibility = View.GONE
+            gridSpelldancePassive2.visibility = View.GONE
+
+            //Enables Visibility of any invisible buttons
+            btnBattlerage2.visibility = View.VISIBLE
+            btnBattlerage2.visibility = View.VISIBLE
+            btnBattlerage3.visibility = View.VISIBLE
+
+            btnArchery2.visibility = View.VISIBLE
+            btnArchery2.visibility = View.VISIBLE
+            btnArchery3.visibility = View.VISIBLE
+
+            btnDefense2.visibility = View.VISIBLE
+            btnDefense2.visibility = View.VISIBLE
+            btnDefense3.visibility = View.VISIBLE
+
+            btnOccultism2.visibility = View.VISIBLE
+            btnOccultism2.visibility = View.VISIBLE
+            btnOccultism3.visibility = View.VISIBLE
+
+            btnSorcery2.visibility = View.VISIBLE
+            btnSorcery2.visibility = View.VISIBLE
+            btnSorcery3.visibility = View.VISIBLE
+
+            btnSongcraft2.visibility = View.VISIBLE
+            btnSongcraft2.visibility = View.VISIBLE
+            btnSongcraft3.visibility = View.VISIBLE
+
+            btnWitchcraft2.visibility = View.VISIBLE
+            btnWitchcraft2.visibility = View.VISIBLE
+            btnWitchcraft3.visibility = View.VISIBLE
+
+            btnAuramancy2.visibility = View.VISIBLE
+            btnAuramancy2.visibility = View.VISIBLE
+            btnAuramancy3.visibility = View.VISIBLE
+
+            btnShadowplay2.visibility = View.VISIBLE
+            btnShadowplay2.visibility = View.VISIBLE
+            btnShadowplay3.visibility = View.VISIBLE
+
+            btnVitalism2.visibility = View.VISIBLE
+            btnVitalism2.visibility = View.VISIBLE
+            btnVitalism3.visibility = View.VISIBLE
+
+            btnMalediction2.visibility = View.VISIBLE
+            btnMalediction2.visibility = View.VISIBLE
+            btnMalediction3.visibility = View.VISIBLE
+
+            btnSwiftblade2.visibility = View.VISIBLE
+            btnSwiftblade2.visibility = View.VISIBLE
+            btnSwiftblade3.visibility = View.VISIBLE
+
+            btnGunslinger2.visibility = View.VISIBLE
+            btnGunslinger2.visibility = View.VISIBLE
+            btnGunslinger3.visibility = View.VISIBLE
+
+            btnSpelldance2.visibility = View.VISIBLE
+            btnSpelldance2.visibility = View.VISIBLE
+            btnSpelldance3.visibility = View.VISIBLE
+
+            btnReset2.visibility = View.GONE
+
+            skillPoints += skillTree2Points
+            skillTree2Points = 0
+            tvPointsLeft.text = " $skillPoints points left"
+            skillPoints2Text.text = "$skillTree2Points / 22"
+
+            resetGrid(gridBattlerage2)
+            resetGrid(gridBattleragePassive2)
+
+            resetGrid(gridArchery2)
+            resetGrid(gridArcheryPassive2)
+
+            resetGrid(gridDefense2)
+            resetGrid(gridDefensePassive2)
+
+            resetGrid(gridOccultism2)
+            resetGrid(gridOccultismPassive2)
+
+            resetGrid(gridSorcery2)
+            resetGrid(gridSorceryPassive2)
+
+            resetGrid(gridSongcraft2)
+            resetGrid(gridSongcraftPassive2)
+
+            resetGrid(gridWitchcraft2)
+            resetGrid(gridWitchcraftPassive2)
+
+            resetGrid(gridAuramancy2)
+            resetGrid(gridAuramancyPassive2)
+
+            resetGrid(gridShadowplay2)
+            resetGrid(gridShadowplayPassive2)
+
+            resetGrid(gridVitalism2)
+            resetGrid(gridVitalismPassive2)
+
+            resetGrid(gridMalediction2)
+            resetGrid(gridMaledictionPassive2)
+
+            resetGrid(gridSwiftblade2)
+            resetGrid(gridSwiftbladePassive2)
+
+            resetGrid(gridGunslinger2)
+            resetGrid(gridGunslingerPassive2)
+
+            resetGrid(gridSpelldance2)
+            resetGrid(gridSpelldancePassive2)
+        }
         //endregion
 
 
@@ -2148,7 +2601,8 @@ class SkillCalculator : ComponentActivity() {
             p3: ImageButton,
             p4: ImageButton,
             p5: ImageButton,
-            p6: ImageButton
+            p6: ImageButton,
+            skillText: TextView
         ) {
             // basic enable/disable based on current points
             btn4.isEnabled = skillTree1Points >= 3
@@ -2186,9 +2640,9 @@ class SkillCalculator : ComponentActivity() {
 
             // 🔹 After any auto-unselect/refund, keep the labels in sync
             tvPointsLeft.text = " $skillPoints points left"
-            skillPoints1Text.text  = "$skillTree1Points / 12"
+            skillText.text  = "$skillText / 12"
 
-            passiveUnlocker(p1,p2,p3,p4,p5,p6, skillTree1Points)
+            passiveUnlocker(p1,p2,p3,p4,p5,p6, skillText)
         }
 
         //endregion
@@ -2229,7 +2683,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnBattlerage1_4, btnBattlerage1_8, btnBattlerage1_12,
                 btnBattleragePassive1_1, btnBattleragePassive1_2, btnBattleragePassive1_3,
-                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6
+                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6,
+                skillPoints1Text
             )
             btnBattlerage1_1.isSelected = !btnBattlerage1_1.isSelected
         }
@@ -2249,7 +2704,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnBattlerage1_4, btnBattlerage1_8, btnBattlerage1_12,
                 btnBattleragePassive1_1, btnBattleragePassive1_2, btnBattleragePassive1_3,
-                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6
+                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6,
+                skillPoints1Text
             )
             btnBattlerage1_2.isSelected = !btnBattlerage1_2.isSelected
         }
@@ -2268,7 +2724,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnBattlerage1_4, btnBattlerage1_8, btnBattlerage1_12,
                 btnBattleragePassive1_1, btnBattleragePassive1_2, btnBattleragePassive1_3,
-                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6
+                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6,
+                skillPoints1Text
             )
             btnBattlerage1_3.isSelected = !btnBattlerage1_3.isSelected
         }
@@ -2289,7 +2746,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnBattlerage1_4, btnBattlerage1_8, btnBattlerage1_12,
                 btnBattleragePassive1_1, btnBattleragePassive1_2, btnBattleragePassive1_3,
-                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6
+                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6,
+                skillPoints1Text
             )
         }
 
@@ -2308,7 +2766,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnBattlerage1_4, btnBattlerage1_8, btnBattlerage1_12,
                 btnBattleragePassive1_1, btnBattleragePassive1_2, btnBattleragePassive1_3,
-                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6
+                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6,
+                skillPoints1Text
             )
             btnBattlerage1_5.isSelected = !btnBattlerage1_5.isSelected
         }
@@ -2328,7 +2787,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnBattlerage1_4, btnBattlerage1_8, btnBattlerage1_12,
                 btnBattleragePassive1_1, btnBattleragePassive1_2, btnBattleragePassive1_3,
-                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6
+                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6,
+                skillPoints1Text
             )
             btnBattlerage1_6.isSelected = !btnBattlerage1_6.isSelected
         }
@@ -2348,7 +2808,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnBattlerage1_4, btnBattlerage1_8, btnBattlerage1_12,
                 btnBattleragePassive1_1, btnBattleragePassive1_2, btnBattleragePassive1_3,
-                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6
+                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6,
+                skillPoints1Text
             )
             btnBattlerage1_7.isSelected = !btnBattlerage1_7.isSelected
         }
@@ -2368,7 +2829,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnBattlerage1_4, btnBattlerage1_8, btnBattlerage1_12,
                 btnBattleragePassive1_1, btnBattleragePassive1_2, btnBattleragePassive1_3,
-                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6
+                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6,
+                skillPoints1Text
             )
             btnBattlerage1_8.isSelected = !btnBattlerage1_8.isSelected
         }

@@ -3797,7 +3797,7 @@
 
                 <!-- Swiftblade Panel2 -->
                 <GridLayout
-                    android:id="@+id/gridswiftblade2"
+                    android:id="@+id/gridSwiftblade2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:useDefaultMargins="true"
@@ -3995,7 +3995,7 @@
 
                 <!-- Spelldance Panel2 -->
                 <GridLayout
-                    android:id="@+id/gridsSpelldance2"
+                    android:id="@+id/gridSpelldance2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:useDefaultMargins="true"
