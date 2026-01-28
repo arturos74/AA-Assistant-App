@@ -2510,7 +2510,7 @@ class SkillCalculator : ComponentActivity() {
             skillPoints += skillTree2Points
             skillTree2Points = 0
             tvPointsLeft.text = " $skillPoints points left"
-            skillPoints2Text.text = "$skillTree2Points / 22"
+            skillPoints2Text.text = "$skillTree2Points / 12"
 
             resetGrid(gridBattlerage2)
             resetGrid(gridBattleragePassive2)
