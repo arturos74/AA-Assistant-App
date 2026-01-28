@@ -2557,7 +2557,7 @@ class SkillCalculator : ComponentActivity() {
 
 
         //region Passive Unlocker Function
-        fun passiveUnlocker(passive1: ImageButton, passive2: ImageButton, passive3: ImageButton, passive4: ImageButton, passive5: ImageButton, passive6: ImageButton, skillTreePoints: Int) {
+        fun passiveUnlocker(passive1: ImageButton, passive2: ImageButton, passive3: ImageButton, passive4: ImageButton, passive5: ImageButton, passive6: ImageButton, skillTreePointsText: TextView, skillTreePoints: Int) {
             if (skillTreePoints >= 3) {
                 passive1.alpha = 1.0f
             } else {
@@ -2602,7 +2602,8 @@ class SkillCalculator : ComponentActivity() {
             p4: ImageButton,
             p5: ImageButton,
             p6: ImageButton,
-            skillText: TextView
+            skillText: TextView,
+            skillTreePoints: Int
         ) {
             // basic enable/disable based on current points
             btn4.isEnabled = skillTree1Points >= 3
@@ -2640,9 +2641,9 @@ class SkillCalculator : ComponentActivity() {
 
             // 🔹 After any auto-unselect/refund, keep the labels in sync
             tvPointsLeft.text = " $skillPoints points left"
-            skillText.text  = "$skillText / 12"
+            skillText.text  = "$skillTreePoints / 12"
 
-            passiveUnlocker(p1,p2,p3,p4,p5,p6, skillText)
+            passiveUnlocker(p1,p2,p3,p4,p5,p6, skillText,skillTreePoints)
         }
 
         //endregion
@@ -2684,7 +2685,7 @@ class SkillCalculator : ComponentActivity() {
                 btnBattlerage1_4, btnBattlerage1_8, btnBattlerage1_12,
                 btnBattleragePassive1_1, btnBattleragePassive1_2, btnBattleragePassive1_3,
                 btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6,
-                skillPoints1Text
+                skillPoints1Text, skillTree1Points
             )
             btnBattlerage1_1.isSelected = !btnBattlerage1_1.isSelected
         }
@@ -2705,7 +2706,7 @@ class SkillCalculator : ComponentActivity() {
                 btnBattlerage1_4, btnBattlerage1_8, btnBattlerage1_12,
                 btnBattleragePassive1_1, btnBattleragePassive1_2, btnBattleragePassive1_3,
                 btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6,
-                skillPoints1Text
+                skillPoints1Text, skillTree1Points
             )
             btnBattlerage1_2.isSelected = !btnBattlerage1_2.isSelected
         }
@@ -2725,7 +2726,7 @@ class SkillCalculator : ComponentActivity() {
                 btnBattlerage1_4, btnBattlerage1_8, btnBattlerage1_12,
                 btnBattleragePassive1_1, btnBattleragePassive1_2, btnBattleragePassive1_3,
                 btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6,
-                skillPoints1Text
+                skillPoints1Text, skillTree1Points
             )
             btnBattlerage1_3.isSelected = !btnBattlerage1_3.isSelected
         }
@@ -2747,7 +2748,7 @@ class SkillCalculator : ComponentActivity() {
                 btnBattlerage1_4, btnBattlerage1_8, btnBattlerage1_12,
                 btnBattleragePassive1_1, btnBattleragePassive1_2, btnBattleragePassive1_3,
                 btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6,
-                skillPoints1Text
+                skillPoints1Text, skillTree1Points
             )
         }
 
@@ -2767,7 +2768,7 @@ class SkillCalculator : ComponentActivity() {
                 btnBattlerage1_4, btnBattlerage1_8, btnBattlerage1_12,
                 btnBattleragePassive1_1, btnBattleragePassive1_2, btnBattleragePassive1_3,
                 btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6,
-                skillPoints1Text
+                skillPoints1Text, skillTree1Points
             )
             btnBattlerage1_5.isSelected = !btnBattlerage1_5.isSelected
         }
@@ -2788,7 +2789,7 @@ class SkillCalculator : ComponentActivity() {
                 btnBattlerage1_4, btnBattlerage1_8, btnBattlerage1_12,
                 btnBattleragePassive1_1, btnBattleragePassive1_2, btnBattleragePassive1_3,
                 btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6,
-                skillPoints1Text
+                skillPoints1Text, skillTree1Points
             )
             btnBattlerage1_6.isSelected = !btnBattlerage1_6.isSelected
         }
@@ -2809,7 +2810,7 @@ class SkillCalculator : ComponentActivity() {
                 btnBattlerage1_4, btnBattlerage1_8, btnBattlerage1_12,
                 btnBattleragePassive1_1, btnBattleragePassive1_2, btnBattleragePassive1_3,
                 btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6,
-                skillPoints1Text
+                skillPoints1Text, skillTree1Points
             )
             btnBattlerage1_7.isSelected = !btnBattlerage1_7.isSelected
         }
@@ -2830,7 +2831,7 @@ class SkillCalculator : ComponentActivity() {
                 btnBattlerage1_4, btnBattlerage1_8, btnBattlerage1_12,
                 btnBattleragePassive1_1, btnBattleragePassive1_2, btnBattleragePassive1_3,
                 btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6,
-                skillPoints1Text
+                skillPoints1Text, skillTree1Points
             )
             btnBattlerage1_8.isSelected = !btnBattlerage1_8.isSelected
         }
@@ -2850,7 +2851,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnBattlerage1_4, btnBattlerage1_8, btnBattlerage1_12,
                 btnBattleragePassive1_1, btnBattleragePassive1_2, btnBattleragePassive1_3,
-                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6
+                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnBattlerage1_9.isSelected = !btnBattlerage1_9.isSelected
         }
@@ -2870,7 +2872,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnBattlerage1_4, btnBattlerage1_8, btnBattlerage1_12,
                 btnBattleragePassive1_1, btnBattleragePassive1_2, btnBattleragePassive1_3,
-                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6
+                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnBattlerage1_10.isSelected = !btnBattlerage1_10.isSelected
         }
@@ -2889,8 +2892,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnBattlerage1_4, btnBattlerage1_8, btnBattlerage1_12,
-                btnBattleragePassive1_1, btnBattlerage1_2, btnBattleragePassive1_3,
-                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6
+                btnBattleragePassive1_1, btnBattleragePassive1_2, btnBattleragePassive1_3,
+                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnBattlerage1_11.isSelected = !btnBattlerage1_11.isSelected
         }
@@ -2910,7 +2914,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnBattlerage1_4, btnBattlerage1_8, btnBattlerage1_12,
                 btnBattleragePassive1_1, btnBattleragePassive1_2, btnBattleragePassive1_3,
-                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6
+                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnBattlerage1_12.isSelected = !btnBattlerage1_12.isSelected
         }
@@ -2932,7 +2937,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnBattlerage2_4, btnBattlerage2_8, btnBattlerage2_12,
                 btnBattleragePassive1_1, btnBattleragePassive1_2, btnBattleragePassive1_3,
-                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6
+                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6,
+                skillPoints2Text, skillTree2Points
             )
             btnBattlerage2_1.isSelected = !btnBattlerage2_1.isSelected
         }
@@ -2952,7 +2958,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnBattlerage2_4, btnBattlerage2_8, btnBattlerage2_12,
                 btnBattleragePassive1_1, btnBattleragePassive1_2, btnBattleragePassive1_3,
-                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6
+                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6,
+                skillPoints2Text, skillTree2Points
             )
             btnBattlerage2_2.isSelected = !btnBattlerage2_2.isSelected
         }
@@ -2971,7 +2978,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnBattlerage2_4, btnBattlerage2_8, btnBattlerage2_12,
                 btnBattleragePassive1_1, btnBattleragePassive1_2, btnBattleragePassive1_3,
-                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6
+                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6,
+                skillPoints2Text, skillTree2Points
             )
             btnBattlerage2_3.isSelected = !btnBattlerage2_3.isSelected
         }
@@ -2992,7 +3000,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnBattlerage2_4, btnBattlerage2_8, btnBattlerage2_12,
                 btnBattleragePassive1_1, btnBattleragePassive1_2, btnBattleragePassive1_3,
-                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6
+                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6,
+                skillPoints2Text, skillTree2Points
             )
         }
 
@@ -3011,7 +3020,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnBattlerage2_4, btnBattlerage2_8, btnBattlerage2_12,
                 btnBattleragePassive1_1, btnBattleragePassive1_2, btnBattleragePassive1_3,
-                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6
+                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6,
+                skillPoints2Text, skillTree2Points
             )
             btnBattlerage2_5.isSelected = !btnBattlerage2_5.isSelected
         }
@@ -3031,7 +3041,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnBattlerage2_4, btnBattlerage2_8, btnBattlerage2_12,
                 btnBattleragePassive1_1, btnBattleragePassive1_2, btnBattleragePassive1_3,
-                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6
+                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6,
+                skillPoints2Text, skillTree2Points
             )
             btnBattlerage2_6.isSelected = !btnBattlerage2_6.isSelected
         }
@@ -3051,7 +3062,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnBattlerage2_4, btnBattlerage2_8, btnBattlerage2_12,
                 btnBattleragePassive1_1, btnBattleragePassive1_2, btnBattleragePassive1_3,
-                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6
+                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6,
+                skillPoints2Text, skillTree2Points
             )
             btnBattlerage2_7.isSelected = !btnBattlerage2_7.isSelected
         }
@@ -3071,7 +3083,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnBattlerage2_4, btnBattlerage2_8, btnBattlerage2_12,
                 btnBattleragePassive1_1, btnBattleragePassive1_2, btnBattleragePassive1_3,
-                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6
+                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6,
+                skillPoints2Text, skillTree2Points
             )
             btnBattlerage2_8.isSelected = !btnBattlerage2_8.isSelected
         }
@@ -3091,7 +3104,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnBattlerage2_4, btnBattlerage2_8, btnBattlerage2_12,
                 btnBattleragePassive1_1, btnBattleragePassive1_2, btnBattleragePassive1_3,
-                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6
+                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6,
+                skillPoints2Text, skillTree2Points
             )
             btnBattlerage2_9.isSelected = !btnBattlerage2_9.isSelected
         }
@@ -3111,7 +3125,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnBattlerage2_4, btnBattlerage2_8, btnBattlerage2_12,
                 btnBattleragePassive1_1, btnBattleragePassive1_2, btnBattleragePassive1_3,
-                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6
+                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6,
+                skillPoints2Text, skillTree2Points
             )
             btnBattlerage2_10.isSelected = !btnBattlerage2_10.isSelected
         }
@@ -3130,8 +3145,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnBattlerage2_4, btnBattlerage2_8, btnBattlerage2_12,
-                btnBattleragePassive1_1, btnBattlerage2_2, btnBattleragePassive1_3,
-                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6
+                btnBattleragePassive1_1, btnBattleragePassive1_2, btnBattleragePassive1_3,
+                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6,
+                skillPoints2Text, skillTree2Points
             )
             btnBattlerage2_11.isSelected = !btnBattlerage2_11.isSelected
         }
@@ -3151,7 +3167,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnBattlerage2_4, btnBattlerage2_8, btnBattlerage2_12,
                 btnBattleragePassive1_1, btnBattleragePassive1_2, btnBattleragePassive1_3,
-                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6
+                btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6,
+                skillPoints2Text, skillTree2Points
             )
             btnBattlerage2_12.isSelected = !btnBattlerage2_12.isSelected
         }
@@ -3174,7 +3191,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnArchery1_4, btnArchery1_8, btnArchery1_12,
                 btnArcheryPassive1_1, btnArcheryPassive1_2, btnArcheryPassive1_3,
-                btnArcheryPassive1_4, btnArcheryPassive1_5, btnArcheryPassive1_6
+                btnArcheryPassive1_4, btnArcheryPassive1_5, btnArcheryPassive1_6, skillPoints1Text,
+                skillTree1Points
             )
             btnArchery1_1.isSelected = !btnArchery1_1.isSelected
         }
@@ -3192,7 +3210,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnArchery1_4, btnArchery1_8, btnArchery1_12,
                 btnArcheryPassive1_1, btnArcheryPassive1_2, btnArcheryPassive1_3,
-                btnArcheryPassive1_4, btnArcheryPassive1_5, btnArcheryPassive1_6
+                btnArcheryPassive1_4, btnArcheryPassive1_5, btnArcheryPassive1_6, skillPoints1Text,
+                skillTree1Points
             )
             btnArchery1_2.isSelected = !btnArchery1_2.isSelected
         }
@@ -3210,7 +3229,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnArchery1_4, btnArchery1_8, btnArchery1_12,
                 btnArcheryPassive1_1, btnArcheryPassive1_2, btnArcheryPassive1_3,
-                btnArcheryPassive1_4, btnArcheryPassive1_5, btnArcheryPassive1_6
+                btnArcheryPassive1_4, btnArcheryPassive1_5, btnArcheryPassive1_6, skillPoints1Text,
+                skillTree1Points
             )
             btnArchery1_3.isSelected = !btnArchery1_3.isSelected
         }
@@ -3228,7 +3248,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnArchery1_4, btnArchery1_8, btnArchery1_12,
                 btnArcheryPassive1_1, btnArcheryPassive1_2, btnArcheryPassive1_3,
-                btnArcheryPassive1_4, btnArcheryPassive1_5, btnArcheryPassive1_6
+                btnArcheryPassive1_4, btnArcheryPassive1_5, btnArcheryPassive1_6, skillPoints1Text,
+                skillTree1Points
             )
             btnArchery1_4.isSelected = !btnArchery1_4.isSelected
         }
@@ -3246,7 +3267,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnArchery1_4, btnArchery1_8, btnArchery1_12,
                 btnArcheryPassive1_1, btnArcheryPassive1_2, btnArcheryPassive1_3,
-                btnArcheryPassive1_4, btnArcheryPassive1_5, btnArcheryPassive1_6
+                btnArcheryPassive1_4, btnArcheryPassive1_5, btnArcheryPassive1_6, skillPoints1Text,
+                skillTree1Points
             )
             btnArchery1_5.isSelected = !btnArchery1_5.isSelected
         }
@@ -3264,7 +3286,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnArchery1_4, btnArchery1_8, btnArchery1_12,
                 btnArcheryPassive1_1, btnArcheryPassive1_2, btnArcheryPassive1_3,
-                btnArcheryPassive1_4, btnArcheryPassive1_5, btnArcheryPassive1_6
+                btnArcheryPassive1_4, btnArcheryPassive1_5, btnArcheryPassive1_6, skillPoints1Text,
+                skillTree1Points
             )
             btnArchery1_6.isSelected = !btnArchery1_6.isSelected
         }
@@ -3282,7 +3305,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnArchery1_4, btnArchery1_8, btnArchery1_12,
                 btnArcheryPassive1_1, btnArcheryPassive1_2, btnArcheryPassive1_3,
-                btnArcheryPassive1_4, btnArcheryPassive1_5, btnArcheryPassive1_6
+                btnArcheryPassive1_4, btnArcheryPassive1_5, btnArcheryPassive1_6, skillPoints1Text,
+                skillTree1Points
             )
             btnArchery1_7.isSelected = !btnArchery1_7.isSelected
         }
@@ -3300,7 +3324,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnArchery1_4, btnArchery1_8, btnArchery1_12,
                 btnArcheryPassive1_1, btnArcheryPassive1_2, btnArcheryPassive1_3,
-                btnArcheryPassive1_4, btnArcheryPassive1_5, btnArcheryPassive1_6
+                btnArcheryPassive1_4, btnArcheryPassive1_5, btnArcheryPassive1_6, skillPoints1Text,
+                skillTree1Points
             )
             btnArchery1_8.isSelected = !btnArchery1_8.isSelected
         }
@@ -3318,7 +3343,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnArchery1_4, btnArchery1_8, btnArchery1_12,
                 btnArcheryPassive1_1, btnArcheryPassive1_2, btnArcheryPassive1_3,
-                btnArcheryPassive1_4, btnArcheryPassive1_5, btnArcheryPassive1_6
+                btnArcheryPassive1_4, btnArcheryPassive1_5, btnArcheryPassive1_6, skillPoints1Text,
+                skillTree1Points
             )
             btnArchery1_9.isSelected = !btnArchery1_9.isSelected
         }
@@ -3336,7 +3362,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnArchery1_4, btnArchery1_8, btnArchery1_12,
                 btnArcheryPassive1_1, btnArcheryPassive1_2, btnArcheryPassive1_3,
-                btnArcheryPassive1_4, btnArcheryPassive1_5, btnArcheryPassive1_6
+                btnArcheryPassive1_4, btnArcheryPassive1_5, btnArcheryPassive1_6, skillPoints1Text,
+                skillTree1Points
             )
             btnArchery1_10.isSelected = !btnArchery1_10.isSelected
         }
@@ -3354,7 +3381,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnArchery1_4, btnArchery1_8, btnArchery1_12,
                 btnArcheryPassive1_1, btnArcheryPassive1_2, btnArcheryPassive1_3,
-                btnArcheryPassive1_4, btnArcheryPassive1_5, btnArcheryPassive1_6
+                btnArcheryPassive1_4, btnArcheryPassive1_5, btnArcheryPassive1_6, skillPoints1Text,
+                skillTree1Points
             )
             btnArchery1_11.isSelected = !btnArchery1_11.isSelected
         }
@@ -3372,7 +3400,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnArchery1_4, btnArchery1_8, btnArchery1_12,
                 btnArcheryPassive1_1, btnArcheryPassive1_2, btnArcheryPassive1_3,
-                btnArcheryPassive1_4, btnArcheryPassive1_5, btnArcheryPassive1_6
+                btnArcheryPassive1_4, btnArcheryPassive1_5, btnArcheryPassive1_6, skillPoints1Text,
+                skillTree1Points
             )
             btnArchery1_12.isSelected = !btnArchery1_12.isSelected
         }
@@ -3391,8 +3420,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnArchery2_4, btnArchery2_8, btnArchery2_12,
-                btnArcheryPassive1_1, btnArcheryPassive1_2, btnArcheryPassive1_3,
-                btnArcheryPassive1_4, btnArcheryPassive1_5, btnArcheryPassive1_6
+                btnArcheryPassive2_1, btnArcheryPassive2_2, btnArcheryPassive2_3,
+                btnArcheryPassive2_4, btnArcheryPassive2_5, btnArcheryPassive2_6, 
+                skillPoints2Text, skillTree2Points
             )
             btnArchery2_1.isSelected = !btnArchery2_1.isSelected
         }
@@ -3409,8 +3439,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnArchery2_4, btnArchery2_8, btnArchery2_12,
-                btnArcheryPassive1_1, btnArcheryPassive1_2, btnArcheryPassive1_3,
-                btnArcheryPassive1_4, btnArcheryPassive1_5, btnArcheryPassive1_6
+                btnArcheryPassive2_1, btnArcheryPassive2_2, btnArcheryPassive2_3,
+                btnArcheryPassive2_4, btnArcheryPassive2_5, btnArcheryPassive2_6, 
+                skillPoints2Text, skillTree2Points
             )
             btnArchery2_2.isSelected = !btnArchery2_2.isSelected
         }
@@ -3427,8 +3458,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnArchery2_4, btnArchery2_8, btnArchery2_12,
-                btnArcheryPassive1_1, btnArcheryPassive1_2, btnArcheryPassive1_3,
-                btnArcheryPassive1_4, btnArcheryPassive1_5, btnArcheryPassive1_6
+                btnArcheryPassive2_1, btnArcheryPassive2_2, btnArcheryPassive2_3,
+                btnArcheryPassive2_4, btnArcheryPassive2_5, btnArcheryPassive2_6, 
+                skillPoints2Text, skillTree2Points
             )
             btnArchery2_3.isSelected = !btnArchery2_3.isSelected
         }
@@ -3445,8 +3477,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnArchery2_4, btnArchery2_8, btnArchery2_12,
-                btnArcheryPassive1_1, btnArcheryPassive1_2, btnArcheryPassive1_3,
-                btnArcheryPassive1_4, btnArcheryPassive1_5, btnArcheryPassive1_6
+                btnArcheryPassive2_1, btnArcheryPassive2_2, btnArcheryPassive2_3,
+                btnArcheryPassive2_4, btnArcheryPassive2_5, btnArcheryPassive2_6, 
+                skillPoints2Text, skillTree2Points
             )
             btnArchery2_4.isSelected = !btnArchery2_4.isSelected
         }
@@ -3463,8 +3496,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnArchery2_4, btnArchery2_8, btnArchery2_12,
-                btnArcheryPassive1_1, btnArcheryPassive1_2, btnArcheryPassive1_3,
-                btnArcheryPassive1_4, btnArcheryPassive1_5, btnArcheryPassive1_6
+                btnArcheryPassive2_1, btnArcheryPassive2_2, btnArcheryPassive2_3,
+                btnArcheryPassive2_4, btnArcheryPassive2_5, btnArcheryPassive2_6, 
+                skillPoints2Text, skillTree2Points
             )
             btnArchery2_5.isSelected = !btnArchery2_5.isSelected
         }
@@ -3481,8 +3515,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnArchery2_4, btnArchery2_8, btnArchery2_12,
-                btnArcheryPassive1_1, btnArcheryPassive1_2, btnArcheryPassive1_3,
-                btnArcheryPassive1_4, btnArcheryPassive1_5, btnArcheryPassive1_6
+                btnArcheryPassive2_1, btnArcheryPassive2_2, btnArcheryPassive2_3,
+                btnArcheryPassive2_4, btnArcheryPassive2_5, btnArcheryPassive2_6, 
+                skillPoints2Text, skillTree2Points
             )
             btnArchery2_6.isSelected = !btnArchery2_6.isSelected
         }
@@ -3499,8 +3534,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnArchery2_4, btnArchery2_8, btnArchery2_12,
-                btnArcheryPassive1_1, btnArcheryPassive1_2, btnArcheryPassive1_3,
-                btnArcheryPassive1_4, btnArcheryPassive1_5, btnArcheryPassive1_6
+                btnArcheryPassive2_1, btnArcheryPassive2_2, btnArcheryPassive2_3,
+                btnArcheryPassive2_4, btnArcheryPassive2_5, btnArcheryPassive2_6, 
+                skillPoints2Text, skillTree2Points
             )
             btnArchery2_7.isSelected = !btnArchery2_7.isSelected
         }
@@ -3517,8 +3553,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnArchery2_4, btnArchery2_8, btnArchery2_12,
-                btnArcheryPassive1_1, btnArcheryPassive1_2, btnArcheryPassive1_3,
-                btnArcheryPassive1_4, btnArcheryPassive1_5, btnArcheryPassive1_6
+                btnArcheryPassive2_1, btnArcheryPassive2_2, btnArcheryPassive2_3,
+                btnArcheryPassive2_4, btnArcheryPassive2_5, btnArcheryPassive2_6, 
+                skillPoints2Text, skillTree2Points
             )
             btnArchery2_8.isSelected = !btnArchery2_8.isSelected
         }
@@ -3535,8 +3572,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnArchery2_4, btnArchery2_8, btnArchery2_12,
-                btnArcheryPassive1_1, btnArcheryPassive1_2, btnArcheryPassive1_3,
-                btnArcheryPassive1_4, btnArcheryPassive1_5, btnArcheryPassive1_6
+                btnArcheryPassive2_1, btnArcheryPassive2_2, btnArcheryPassive2_3,
+                btnArcheryPassive2_4, btnArcheryPassive2_5, btnArcheryPassive2_6, 
+                skillPoints2Text, skillTree2Points
             )
             btnArchery2_9.isSelected = !btnArchery2_9.isSelected
         }
@@ -3553,8 +3591,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnArchery2_4, btnArchery2_8, btnArchery2_12,
-                btnArcheryPassive1_1, btnArcheryPassive1_2, btnArcheryPassive1_3,
-                btnArcheryPassive1_4, btnArcheryPassive1_5, btnArcheryPassive1_6
+                btnArcheryPassive2_1, btnArcheryPassive2_2, btnArcheryPassive2_3,
+                btnArcheryPassive2_4, btnArcheryPassive2_5, btnArcheryPassive2_6, 
+                skillPoints2Text, skillTree2Points
             )
             btnArchery2_10.isSelected = !btnArchery2_10.isSelected
         }
@@ -3571,8 +3610,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnArchery2_4, btnArchery2_8, btnArchery2_12,
-                btnArcheryPassive1_1, btnArcheryPassive1_2, btnArcheryPassive1_3,
-                btnArcheryPassive1_4, btnArcheryPassive1_5, btnArcheryPassive1_6
+                btnArcheryPassive2_1, btnArcheryPassive2_2, btnArcheryPassive2_3,
+                btnArcheryPassive2_4, btnArcheryPassive2_5, btnArcheryPassive2_6, 
+                skillPoints2Text, skillTree2Points
             )
             btnArchery2_11.isSelected = !btnArchery2_11.isSelected
         }
@@ -3589,8 +3629,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnArchery2_4, btnArchery2_8, btnArchery2_12,
-                btnArcheryPassive1_1, btnArcheryPassive1_2, btnArcheryPassive1_3,
-                btnArcheryPassive1_4, btnArcheryPassive1_5, btnArcheryPassive1_6
+                btnArcheryPassive2_1, btnArcheryPassive2_2, btnArcheryPassive2_3,
+                btnArcheryPassive2_4, btnArcheryPassive2_5, btnArcheryPassive2_6, 
+                skillPoints2Text, skillTree2Points
             )
             btnArchery2_12.isSelected = !btnArchery2_12.isSelected
         }
@@ -3611,7 +3652,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnDefense1_4, btnDefense1_8, btnDefense1_12,
                 btnDefensePassive1_1, btnDefensePassive1_2, btnDefensePassive1_3,
-                btnDefensePassive1_4, btnDefensePassive1_5, btnDefensePassive1_6
+                btnDefensePassive1_4, btnDefensePassive1_5, btnDefensePassive1_6, 
+                skillPoints1Text, skillTree1Points
             )
             btnDefense1_1.isSelected = !btnDefense1_1.isSelected
         }
@@ -3629,7 +3671,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnDefense1_4, btnDefense1_8, btnDefense1_12,
                 btnDefensePassive1_1, btnDefensePassive1_2, btnDefensePassive1_3,
-                btnDefensePassive1_4, btnDefensePassive1_5, btnDefensePassive1_6
+                btnDefensePassive1_4, btnDefensePassive1_5, btnDefensePassive1_6, 
+                skillPoints1Text, skillTree1Points
             )
             btnDefense1_2.isSelected = !btnDefense1_2.isSelected
         }
@@ -3647,7 +3690,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnDefense1_4, btnDefense1_8, btnDefense1_12,
                 btnDefensePassive1_1, btnDefensePassive1_2, btnDefensePassive1_3,
-                btnDefensePassive1_4, btnDefensePassive1_5, btnDefensePassive1_6
+                btnDefensePassive1_4, btnDefensePassive1_5, btnDefensePassive1_6, 
+                skillPoints1Text, skillTree1Points
             )
             btnDefense1_3.isSelected = !btnDefense1_3.isSelected
         }
@@ -3666,7 +3710,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnDefense1_4, btnDefense1_8, btnDefense1_12,
                 btnDefensePassive1_1, btnDefensePassive1_2, btnDefensePassive1_3,
-                btnDefensePassive1_4, btnDefensePassive1_5, btnDefensePassive1_6
+                btnDefensePassive1_4, btnDefensePassive1_5, btnDefensePassive1_6, 
+                skillPoints1Text, skillTree1Points
             )
         }
 
@@ -3683,7 +3728,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnDefense1_4, btnDefense1_8, btnDefense1_12,
                 btnDefensePassive1_1, btnDefensePassive1_2, btnDefensePassive1_3,
-                btnDefensePassive1_4, btnDefensePassive1_5, btnDefensePassive1_6
+                btnDefensePassive1_4, btnDefensePassive1_5, btnDefensePassive1_6, 
+                skillPoints1Text, skillTree1Points
             )
             btnDefense1_5.isSelected = !btnDefense1_5.isSelected
         }
@@ -3701,7 +3747,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnDefense1_4, btnDefense1_8, btnDefense1_12,
                 btnDefensePassive1_1, btnDefensePassive1_2, btnDefensePassive1_3,
-                btnDefensePassive1_4, btnDefensePassive1_5, btnDefensePassive1_6
+                btnDefensePassive1_4, btnDefensePassive1_5, btnDefensePassive1_6, 
+                skillPoints1Text, skillTree1Points
             )
             btnDefense1_6.isSelected = !btnDefense1_6.isSelected
         }
@@ -3719,7 +3766,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnDefense1_4, btnDefense1_8, btnDefense1_12,
                 btnDefensePassive1_1, btnDefensePassive1_2, btnDefensePassive1_3,
-                btnDefensePassive1_4, btnDefensePassive1_5, btnDefensePassive1_6
+                btnDefensePassive1_4, btnDefensePassive1_5, btnDefensePassive1_6, 
+                skillPoints1Text, skillTree1Points
             )
             btnDefense1_7.isSelected = !btnDefense1_7.isSelected
         }
@@ -3738,7 +3786,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnDefense1_4, btnDefense1_8, btnDefense1_12,
                 btnDefensePassive1_1, btnDefensePassive1_2, btnDefensePassive1_3,
-                btnDefensePassive1_4, btnDefensePassive1_5, btnDefensePassive1_6
+                btnDefensePassive1_4, btnDefensePassive1_5, btnDefensePassive1_6, 
+                skillPoints1Text, skillTree1Points
             )
         }
 
@@ -3755,7 +3804,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnDefense1_4, btnDefense1_8, btnDefense1_12,
                 btnDefensePassive1_1, btnDefensePassive1_2, btnDefensePassive1_3,
-                btnDefensePassive1_4, btnDefensePassive1_5, btnDefensePassive1_6
+                btnDefensePassive1_4, btnDefensePassive1_5, btnDefensePassive1_6, 
+                skillPoints1Text, skillTree1Points
             )
             btnDefense1_9.isSelected = !btnDefense1_9.isSelected
         }
@@ -3773,7 +3823,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnDefense1_4, btnDefense1_8, btnDefense1_12,
                 btnDefensePassive1_1, btnDefensePassive1_2, btnDefensePassive1_3,
-                btnDefensePassive1_4, btnDefensePassive1_5, btnDefensePassive1_6
+                btnDefensePassive1_4, btnDefensePassive1_5, btnDefensePassive1_6, 
+                skillPoints1Text, skillTree1Points
             )
             btnDefense1_10.isSelected = !btnDefense1_10.isSelected
         }
@@ -3791,7 +3842,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnDefense1_4, btnDefense1_8, btnDefense1_12,
                 btnDefensePassive1_1, btnDefensePassive1_2, btnDefensePassive1_3,
-                btnDefensePassive1_4, btnDefensePassive1_5, btnDefensePassive1_6
+                btnDefensePassive1_4, btnDefensePassive1_5, btnDefensePassive1_6, 
+                skillPoints1Text, skillTree1Points
             )
             btnDefense1_11.isSelected = !btnDefense1_11.isSelected
         }
@@ -3810,11 +3862,12 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnDefense1_4, btnDefense1_8, btnDefense1_12,
                 btnDefensePassive1_1, btnDefensePassive1_2, btnDefensePassive1_3,
-                btnDefensePassive1_4, btnDefensePassive1_5, btnDefensePassive1_6
+                btnDefensePassive1_4, btnDefensePassive1_5, btnDefensePassive1_6, 
+                skillPoints1Text, skillTree1Points
             )
         }
 //endregion
-
+        
         //region Defense2 Button Actions
         btnDefense2_1.setOnClickListener {
             if (skillPoints <= 0){
@@ -3828,8 +3881,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnDefense2_4, btnDefense2_8, btnDefense2_12,
-                btnDefensePassive1_1, btnDefensePassive1_2, btnDefensePassive1_3,
-                btnDefensePassive1_4, btnDefensePassive1_5, btnDefensePassive1_6
+                btnDefensePassive2_1, btnDefensePassive2_2, btnDefensePassive2_3,
+                btnDefensePassive2_4, btnDefensePassive2_5, btnDefensePassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnDefense2_1.isSelected = !btnDefense2_1.isSelected
         }
@@ -3846,9 +3900,10 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnDefense2_4, btnDefense2_8, btnDefense2_12,
-                btnDefensePassive1_1, btnDefensePassive1_2, btnDefensePassive1_3,
-                btnDefensePassive1_4, btnDefensePassive1_5, btnDefensePassive1_6
-            )
+                btnDefensePassive2_1, btnDefensePassive2_2, btnDefensePassive2_3,
+                btnDefensePassive2_4, btnDefensePassive2_5, btnDefensePassive2_6,
+                skillPoints2Text, skillTree2Points
+                )
             btnDefense2_2.isSelected = !btnDefense2_2.isSelected
         }
 
@@ -3864,8 +3919,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnDefense2_4, btnDefense2_8, btnDefense2_12,
-                btnDefensePassive1_1, btnDefensePassive1_2, btnDefensePassive1_3,
-                btnDefensePassive1_4, btnDefensePassive1_5, btnDefensePassive1_6
+                btnDefensePassive2_1, btnDefensePassive2_2, btnDefensePassive2_3,
+                btnDefensePassive2_4, btnDefensePassive2_5, btnDefensePassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnDefense2_3.isSelected = !btnDefense2_3.isSelected
         }
@@ -3883,8 +3939,9 @@ class SkillCalculator : ComponentActivity() {
             btnDefense2_4.isSelected = !btnDefense2_4.isSelected
             skillUnlock(
                 btnDefense2_4, btnDefense2_8, btnDefense2_12,
-                btnDefensePassive1_1, btnDefensePassive1_2, btnDefensePassive1_3,
-                btnDefensePassive1_4, btnDefensePassive1_5, btnDefensePassive1_6
+                btnDefensePassive2_1, btnDefensePassive2_2, btnDefensePassive2_3,
+                btnDefensePassive2_4, btnDefensePassive2_5, btnDefensePassive2_6,
+                skillPoints2Text, skillTree2Points
             )
         }
 
@@ -3900,8 +3957,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnDefense2_4, btnDefense2_8, btnDefense2_12,
-                btnDefensePassive1_1, btnDefensePassive1_2, btnDefensePassive1_3,
-                btnDefensePassive1_4, btnDefensePassive1_5, btnDefensePassive1_6
+                btnDefensePassive2_1, btnDefensePassive2_2, btnDefensePassive2_3,
+                btnDefensePassive2_4, btnDefensePassive2_5, btnDefensePassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnDefense2_5.isSelected = !btnDefense2_5.isSelected
         }
@@ -3918,8 +3976,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnDefense2_4, btnDefense2_8, btnDefense2_12,
-                btnDefensePassive1_1, btnDefensePassive1_2, btnDefensePassive1_3,
-                btnDefensePassive1_4, btnDefensePassive1_5, btnDefensePassive1_6
+                btnDefensePassive2_1, btnDefensePassive2_2, btnDefensePassive2_3,
+                btnDefensePassive2_4, btnDefensePassive2_5, btnDefensePassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnDefense2_6.isSelected = !btnDefense2_6.isSelected
         }
@@ -3936,8 +3995,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnDefense2_4, btnDefense2_8, btnDefense2_12,
-                btnDefensePassive1_1, btnDefensePassive1_2, btnDefensePassive1_3,
-                btnDefensePassive1_4, btnDefensePassive1_5, btnDefensePassive1_6
+                btnDefensePassive2_1, btnDefensePassive2_2, btnDefensePassive2_3,
+                btnDefensePassive2_4, btnDefensePassive2_5, btnDefensePassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnDefense2_7.isSelected = !btnDefense2_7.isSelected
         }
@@ -3955,8 +4015,9 @@ class SkillCalculator : ComponentActivity() {
             btnDefense2_8.isSelected = !btnDefense2_8.isSelected
             skillUnlock(
                 btnDefense2_4, btnDefense2_8, btnDefense2_12,
-                btnDefensePassive1_1, btnDefensePassive1_2, btnDefensePassive1_3,
-                btnDefensePassive1_4, btnDefensePassive1_5, btnDefensePassive1_6
+                btnDefensePassive2_1, btnDefensePassive2_2, btnDefensePassive2_3,
+                btnDefensePassive2_4, btnDefensePassive2_5, btnDefensePassive2_6,
+                skillPoints2Text, skillTree2Points
             )
         }
 
@@ -3972,8 +4033,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnDefense2_4, btnDefense2_8, btnDefense2_12,
-                btnDefensePassive1_1, btnDefensePassive1_2, btnDefensePassive1_3,
-                btnDefensePassive1_4, btnDefensePassive1_5, btnDefensePassive1_6
+                btnDefensePassive2_1, btnDefensePassive2_2, btnDefensePassive2_3,
+                btnDefensePassive2_4, btnDefensePassive2_5, btnDefensePassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnDefense2_9.isSelected = !btnDefense2_9.isSelected
         }
@@ -3990,8 +4052,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnDefense2_4, btnDefense2_8, btnDefense2_12,
-                btnDefensePassive1_1, btnDefensePassive1_2, btnDefensePassive1_3,
-                btnDefensePassive1_4, btnDefensePassive1_5, btnDefensePassive1_6
+                btnDefensePassive2_1, btnDefensePassive2_2, btnDefensePassive2_3,
+                btnDefensePassive2_4, btnDefensePassive2_5, btnDefensePassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnDefense2_10.isSelected = !btnDefense2_10.isSelected
         }
@@ -4008,8 +4071,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnDefense2_4, btnDefense2_8, btnDefense2_12,
-                btnDefensePassive1_1, btnDefensePassive1_2, btnDefensePassive1_3,
-                btnDefensePassive1_4, btnDefensePassive1_5, btnDefensePassive1_6
+                btnDefensePassive2_1, btnDefensePassive2_2, btnDefensePassive2_3,
+                btnDefensePassive2_4, btnDefensePassive2_5, btnDefensePassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnDefense2_11.isSelected = !btnDefense2_11.isSelected
         }
@@ -4027,11 +4091,13 @@ class SkillCalculator : ComponentActivity() {
             btnDefense2_12.isSelected = !btnDefense2_12.isSelected
             skillUnlock(
                 btnDefense2_4, btnDefense2_8, btnDefense2_12,
-                btnDefensePassive1_1, btnDefensePassive1_2, btnDefensePassive1_3,
-                btnDefensePassive1_4, btnDefensePassive1_5, btnDefensePassive1_6
+                btnDefensePassive2_1, btnDefensePassive2_2, btnDefensePassive2_3,
+                btnDefensePassive2_4, btnDefensePassive2_5, btnDefensePassive2_6,
+                skillPoints2Text, skillTree2Points
             )
         }
 //endregion
+
         
 
         //region Occultism1 Button Actions
@@ -4048,7 +4114,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnOccultism1_4, btnOccultism1_8, btnOccultism1_12,
                 btnOccultismPassive1_1, btnOccultismPassive1_2, btnOccultismPassive1_3,
-                btnOccultismPassive1_4, btnOccultismPassive1_5, btnOccultismPassive1_6
+                btnOccultismPassive1_4, btnOccultismPassive1_5, btnOccultismPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnOccultism1_1.isSelected = !btnOccultism1_1.isSelected
         }
@@ -4066,7 +4133,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnOccultism1_4, btnOccultism1_8, btnOccultism1_12,
                 btnOccultismPassive1_1, btnOccultismPassive1_2, btnOccultismPassive1_3,
-                btnOccultismPassive1_4, btnOccultismPassive1_5, btnOccultismPassive1_6
+                btnOccultismPassive1_4, btnOccultismPassive1_5, btnOccultismPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnOccultism1_2.isSelected = !btnOccultism1_2.isSelected
         }
@@ -4084,7 +4152,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnOccultism1_4, btnOccultism1_8, btnOccultism1_12,
                 btnOccultismPassive1_1, btnOccultismPassive1_2, btnOccultismPassive1_3,
-                btnOccultismPassive1_4, btnOccultismPassive1_5, btnOccultismPassive1_6
+                btnOccultismPassive1_4, btnOccultismPassive1_5, btnOccultismPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnOccultism1_3.isSelected = !btnOccultism1_3.isSelected
         }
@@ -4103,7 +4172,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnOccultism1_4, btnOccultism1_8, btnOccultism1_12,
                 btnOccultismPassive1_1, btnOccultismPassive1_2, btnOccultismPassive1_3,
-                btnOccultismPassive1_4, btnOccultismPassive1_5, btnOccultismPassive1_6
+                btnOccultismPassive1_4, btnOccultismPassive1_5, btnOccultismPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
         }
 
@@ -4120,7 +4190,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnOccultism1_4, btnOccultism1_8, btnOccultism1_12,
                 btnOccultismPassive1_1, btnOccultismPassive1_2, btnOccultismPassive1_3,
-                btnOccultismPassive1_4, btnOccultismPassive1_5, btnOccultismPassive1_6
+                btnOccultismPassive1_4, btnOccultismPassive1_5, btnOccultismPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnOccultism1_5.isSelected = !btnOccultism1_5.isSelected
         }
@@ -4138,7 +4209,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnOccultism1_4, btnOccultism1_8, btnOccultism1_12,
                 btnOccultismPassive1_1, btnOccultismPassive1_2, btnOccultismPassive1_3,
-                btnOccultismPassive1_4, btnOccultismPassive1_5, btnOccultismPassive1_6
+                btnOccultismPassive1_4, btnOccultismPassive1_5, btnOccultismPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnOccultism1_6.isSelected = !btnOccultism1_6.isSelected
         }
@@ -4156,7 +4228,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnOccultism1_4, btnOccultism1_8, btnOccultism1_12,
                 btnOccultismPassive1_1, btnOccultismPassive1_2, btnOccultismPassive1_3,
-                btnOccultismPassive1_4, btnOccultismPassive1_5, btnOccultismPassive1_6
+                btnOccultismPassive1_4, btnOccultismPassive1_5, btnOccultismPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnOccultism1_7.isSelected = !btnOccultism1_7.isSelected
         }
@@ -4175,7 +4248,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnOccultism1_4, btnOccultism1_8, btnOccultism1_12,
                 btnOccultismPassive1_1, btnOccultismPassive1_2, btnOccultismPassive1_3,
-                btnOccultismPassive1_4, btnOccultismPassive1_5, btnOccultismPassive1_6
+                btnOccultismPassive1_4, btnOccultismPassive1_5, btnOccultismPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
         }
 
@@ -4192,7 +4266,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnOccultism1_4, btnOccultism1_8, btnOccultism1_12,
                 btnOccultismPassive1_1, btnOccultismPassive1_2, btnOccultismPassive1_3,
-                btnOccultismPassive1_4, btnOccultismPassive1_5, btnOccultismPassive1_6
+                btnOccultismPassive1_4, btnOccultismPassive1_5, btnOccultismPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnOccultism1_9.isSelected = !btnOccultism1_9.isSelected
         }
@@ -4210,7 +4285,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnOccultism1_4, btnOccultism1_8, btnOccultism1_12,
                 btnOccultismPassive1_1, btnOccultismPassive1_2, btnOccultismPassive1_3,
-                btnOccultismPassive1_4, btnOccultismPassive1_5, btnOccultismPassive1_6
+                btnOccultismPassive1_4, btnOccultismPassive1_5, btnOccultismPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnOccultism1_10.isSelected = !btnOccultism1_10.isSelected
         }
@@ -4228,7 +4304,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnOccultism1_4, btnOccultism1_8, btnOccultism1_12,
                 btnOccultismPassive1_1, btnOccultismPassive1_2, btnOccultismPassive1_3,
-                btnOccultismPassive1_4, btnOccultismPassive1_5, btnOccultismPassive1_6
+                btnOccultismPassive1_4, btnOccultismPassive1_5, btnOccultismPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnOccultism1_11.isSelected = !btnOccultism1_11.isSelected
         }
@@ -4247,7 +4324,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnOccultism1_4, btnOccultism1_8, btnOccultism1_12,
                 btnOccultismPassive1_1, btnOccultismPassive1_2, btnOccultismPassive1_3,
-                btnOccultismPassive1_4, btnOccultismPassive1_5, btnOccultismPassive1_6
+                btnOccultismPassive1_4, btnOccultismPassive1_5, btnOccultismPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
         }
 //endregion
@@ -4265,8 +4343,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnOccultism2_4, btnOccultism2_8, btnOccultism2_12,
-                btnOccultismPassive1_1, btnOccultismPassive1_2, btnOccultismPassive1_3,
-                btnOccultismPassive1_4, btnOccultismPassive1_5, btnOccultismPassive1_6
+                btnOccultismPassive2_1, btnOccultismPassive2_2, btnOccultismPassive2_3,
+                btnOccultismPassive2_4, btnOccultismPassive2_5, btnOccultismPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnOccultism2_1.isSelected = !btnOccultism2_1.isSelected
         }
@@ -4283,8 +4362,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnOccultism2_4, btnOccultism2_8, btnOccultism2_12,
-                btnOccultismPassive1_1, btnOccultismPassive1_2, btnOccultismPassive1_3,
-                btnOccultismPassive1_4, btnOccultismPassive1_5, btnOccultismPassive1_6
+                btnOccultismPassive2_1, btnOccultismPassive2_2, btnOccultismPassive2_3,
+                btnOccultismPassive2_4, btnOccultismPassive2_5, btnOccultismPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnOccultism2_2.isSelected = !btnOccultism2_2.isSelected
         }
@@ -4301,8 +4381,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnOccultism2_4, btnOccultism2_8, btnOccultism2_12,
-                btnOccultismPassive1_1, btnOccultismPassive1_2, btnOccultismPassive1_3,
-                btnOccultismPassive1_4, btnOccultismPassive1_5, btnOccultismPassive1_6
+                btnOccultismPassive2_1, btnOccultismPassive2_2, btnOccultismPassive2_3,
+                btnOccultismPassive2_4, btnOccultismPassive2_5, btnOccultismPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnOccultism2_3.isSelected = !btnOccultism2_3.isSelected
         }
@@ -4320,8 +4401,9 @@ class SkillCalculator : ComponentActivity() {
             btnOccultism2_4.isSelected = !btnOccultism2_4.isSelected
             skillUnlock(
                 btnOccultism2_4, btnOccultism2_8, btnOccultism2_12,
-                btnOccultismPassive1_1, btnOccultismPassive1_2, btnOccultismPassive1_3,
-                btnOccultismPassive1_4, btnOccultismPassive1_5, btnOccultismPassive1_6
+                btnOccultismPassive2_1, btnOccultismPassive2_2, btnOccultismPassive2_3,
+                btnOccultismPassive2_4, btnOccultismPassive2_5, btnOccultismPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
         }
 
@@ -4337,8 +4419,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnOccultism2_4, btnOccultism2_8, btnOccultism2_12,
-                btnOccultismPassive1_1, btnOccultismPassive1_2, btnOccultismPassive1_3,
-                btnOccultismPassive1_4, btnOccultismPassive1_5, btnOccultismPassive1_6
+                btnOccultismPassive2_1, btnOccultismPassive2_2, btnOccultismPassive2_3,
+                btnOccultismPassive2_4, btnOccultismPassive2_5, btnOccultismPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnOccultism2_5.isSelected = !btnOccultism2_5.isSelected
         }
@@ -4355,8 +4438,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnOccultism2_4, btnOccultism2_8, btnOccultism2_12,
-                btnOccultismPassive1_1, btnOccultismPassive1_2, btnOccultismPassive1_3,
-                btnOccultismPassive1_4, btnOccultismPassive1_5, btnOccultismPassive1_6
+                btnOccultismPassive2_1, btnOccultismPassive2_2, btnOccultismPassive2_3,
+                btnOccultismPassive2_4, btnOccultismPassive2_5, btnOccultismPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnOccultism2_6.isSelected = !btnOccultism2_6.isSelected
         }
@@ -4373,8 +4457,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnOccultism2_4, btnOccultism2_8, btnOccultism2_12,
-                btnOccultismPassive1_1, btnOccultismPassive1_2, btnOccultismPassive1_3,
-                btnOccultismPassive1_4, btnOccultismPassive1_5, btnOccultismPassive1_6
+                btnOccultismPassive2_1, btnOccultismPassive2_2, btnOccultismPassive2_3,
+                btnOccultismPassive2_4, btnOccultismPassive2_5, btnOccultismPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnOccultism2_7.isSelected = !btnOccultism2_7.isSelected
         }
@@ -4392,8 +4477,9 @@ class SkillCalculator : ComponentActivity() {
             btnOccultism2_8.isSelected = !btnOccultism2_8.isSelected
             skillUnlock(
                 btnOccultism2_4, btnOccultism2_8, btnOccultism2_12,
-                btnOccultismPassive1_1, btnOccultismPassive1_2, btnOccultismPassive1_3,
-                btnOccultismPassive1_4, btnOccultismPassive1_5, btnOccultismPassive1_6
+                btnOccultismPassive2_1, btnOccultismPassive2_2, btnOccultismPassive2_3,
+                btnOccultismPassive2_4, btnOccultismPassive2_5, btnOccultismPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
         }
 
@@ -4409,8 +4495,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnOccultism2_4, btnOccultism2_8, btnOccultism2_12,
-                btnOccultismPassive1_1, btnOccultismPassive1_2, btnOccultismPassive1_3,
-                btnOccultismPassive1_4, btnOccultismPassive1_5, btnOccultismPassive1_6
+                btnOccultismPassive2_1, btnOccultismPassive2_2, btnOccultismPassive2_3,
+                btnOccultismPassive2_4, btnOccultismPassive2_5, btnOccultismPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnOccultism2_9.isSelected = !btnOccultism2_9.isSelected
         }
@@ -4427,8 +4514,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnOccultism2_4, btnOccultism2_8, btnOccultism2_12,
-                btnOccultismPassive1_1, btnOccultismPassive1_2, btnOccultismPassive1_3,
-                btnOccultismPassive1_4, btnOccultismPassive1_5, btnOccultismPassive1_6
+                btnOccultismPassive2_1, btnOccultismPassive2_2, btnOccultismPassive2_3,
+                btnOccultismPassive2_4, btnOccultismPassive2_5, btnOccultismPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnOccultism2_10.isSelected = !btnOccultism2_10.isSelected
         }
@@ -4445,8 +4533,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnOccultism2_4, btnOccultism2_8, btnOccultism2_12,
-                btnOccultismPassive1_1, btnOccultismPassive1_2, btnOccultismPassive1_3,
-                btnOccultismPassive1_4, btnOccultismPassive1_5, btnOccultismPassive1_6
+                btnOccultismPassive2_1, btnOccultismPassive2_2, btnOccultismPassive2_3,
+                btnOccultismPassive2_4, btnOccultismPassive2_5, btnOccultismPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnOccultism2_11.isSelected = !btnOccultism2_11.isSelected
         }
@@ -4464,8 +4553,9 @@ class SkillCalculator : ComponentActivity() {
             btnOccultism2_12.isSelected = !btnOccultism2_12.isSelected
             skillUnlock(
                 btnOccultism2_4, btnOccultism2_8, btnOccultism2_12,
-                btnOccultismPassive1_1, btnOccultismPassive1_2, btnOccultismPassive1_3,
-                btnOccultismPassive1_4, btnOccultismPassive1_5, btnOccultismPassive1_6
+                btnOccultismPassive2_1, btnOccultismPassive2_2, btnOccultismPassive2_3,
+                btnOccultismPassive2_4, btnOccultismPassive2_5, btnOccultismPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
         }
 //endregion
@@ -4485,7 +4575,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnSorcery1_4, btnSorcery1_8, btnSorcery1_12,
                 btnSorceryPassive1_1, btnSorceryPassive1_2, btnSorceryPassive1_3,
-                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6
+                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnSorcery1_1.isSelected = !btnSorcery1_1.isSelected
         }
@@ -4503,7 +4594,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnSorcery1_4, btnSorcery1_8, btnSorcery1_12,
                 btnSorceryPassive1_1, btnSorceryPassive1_2, btnSorceryPassive1_3,
-                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6
+                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnSorcery1_2.isSelected = !btnSorcery1_2.isSelected
         }
@@ -4521,7 +4613,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnSorcery1_4, btnSorcery1_8, btnSorcery1_12,
                 btnSorceryPassive1_1, btnSorceryPassive1_2, btnSorceryPassive1_3,
-                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6
+                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnSorcery1_3.isSelected = !btnSorcery1_3.isSelected
         }
@@ -4540,7 +4633,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnSorcery1_4, btnSorcery1_8, btnSorcery1_12,
                 btnSorceryPassive1_1, btnSorceryPassive1_2, btnSorceryPassive1_3,
-                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6
+                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
         }
 
@@ -4557,7 +4651,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnSorcery1_4, btnSorcery1_8, btnSorcery1_12,
                 btnSorceryPassive1_1, btnSorceryPassive1_2, btnSorceryPassive1_3,
-                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6
+                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnSorcery1_5.isSelected = !btnSorcery1_5.isSelected
         }
@@ -4575,7 +4670,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnSorcery1_4, btnSorcery1_8, btnSorcery1_12,
                 btnSorceryPassive1_1, btnSorceryPassive1_2, btnSorceryPassive1_3,
-                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6
+                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnSorcery1_6.isSelected = !btnSorcery1_6.isSelected
         }
@@ -4593,7 +4689,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnSorcery1_4, btnSorcery1_8, btnSorcery1_12,
                 btnSorceryPassive1_1, btnSorceryPassive1_2, btnSorceryPassive1_3,
-                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6
+                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnSorcery1_7.isSelected = !btnSorcery1_7.isSelected
         }
@@ -4612,7 +4709,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnSorcery1_4, btnSorcery1_8, btnSorcery1_12,
                 btnSorceryPassive1_1, btnSorceryPassive1_2, btnSorceryPassive1_3,
-                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6
+                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
         }
 
@@ -4629,7 +4727,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnSorcery1_4, btnSorcery1_8, btnSorcery1_12,
                 btnSorceryPassive1_1, btnSorceryPassive1_2, btnSorceryPassive1_3,
-                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6
+                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnSorcery1_9.isSelected = !btnSorcery1_9.isSelected
         }
@@ -4647,7 +4746,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnSorcery1_4, btnSorcery1_8, btnSorcery1_12,
                 btnSorceryPassive1_1, btnSorceryPassive1_2, btnSorceryPassive1_3,
-                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6
+                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnSorcery1_10.isSelected = !btnSorcery1_10.isSelected
         }
@@ -4665,7 +4765,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnSorcery1_4, btnSorcery1_8, btnSorcery1_12,
                 btnSorceryPassive1_1, btnSorceryPassive1_2, btnSorceryPassive1_3,
-                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6
+                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnSorcery1_11.isSelected = !btnSorcery1_11.isSelected
         }
@@ -4684,7 +4785,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnSorcery1_4, btnSorcery1_8, btnSorcery1_12,
                 btnSorceryPassive1_1, btnSorceryPassive1_2, btnSorceryPassive1_3,
-                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6
+                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
         }
 //endregion
@@ -4702,8 +4804,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnSorcery2_4, btnSorcery2_8, btnSorcery2_12,
-                btnSorceryPassive1_1, btnSorceryPassive1_2, btnSorceryPassive1_3,
-                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6
+                btnSorceryPassive2_1, btnSorceryPassive2_2, btnSorceryPassive2_3,
+                btnSorceryPassive2_4, btnSorceryPassive2_5, btnSorceryPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnSorcery2_1.isSelected = !btnSorcery2_1.isSelected
         }
@@ -4719,9 +4822,10 @@ class SkillCalculator : ComponentActivity() {
             updateButtons(btnSorcery2_2)
 
             skillUnlock(
-                btnSorcery2_4, btnSorcery2_8, btnSorcery2_12,
+                btnSorcery1_4, btnSorcery1_8, btnSorcery1_12,
                 btnSorceryPassive1_1, btnSorceryPassive1_2, btnSorceryPassive1_3,
-                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6
+                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnSorcery2_2.isSelected = !btnSorcery2_2.isSelected
         }
@@ -4737,9 +4841,10 @@ class SkillCalculator : ComponentActivity() {
             updateButtons(btnSorcery2_3)
 
             skillUnlock(
-                btnSorcery2_4, btnSorcery2_8, btnSorcery2_12,
+                btnSorcery1_4, btnSorcery1_8, btnSorcery1_12,
                 btnSorceryPassive1_1, btnSorceryPassive1_2, btnSorceryPassive1_3,
-                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6
+                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnSorcery2_3.isSelected = !btnSorcery2_3.isSelected
         }
@@ -4756,9 +4861,10 @@ class SkillCalculator : ComponentActivity() {
 
             btnSorcery2_4.isSelected = !btnSorcery2_4.isSelected
             skillUnlock(
-                btnSorcery2_4, btnSorcery2_8, btnSorcery2_12,
+                btnSorcery1_4, btnSorcery1_8, btnSorcery1_12,
                 btnSorceryPassive1_1, btnSorceryPassive1_2, btnSorceryPassive1_3,
-                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6
+                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
         }
 
@@ -4773,9 +4879,10 @@ class SkillCalculator : ComponentActivity() {
             updateButtons(btnSorcery2_5)
 
             skillUnlock(
-                btnSorcery2_4, btnSorcery2_8, btnSorcery2_12,
+                btnSorcery1_4, btnSorcery1_8, btnSorcery1_12,
                 btnSorceryPassive1_1, btnSorceryPassive1_2, btnSorceryPassive1_3,
-                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6
+                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnSorcery2_5.isSelected = !btnSorcery2_5.isSelected
         }
@@ -4791,9 +4898,10 @@ class SkillCalculator : ComponentActivity() {
             updateButtons(btnSorcery2_6)
 
             skillUnlock(
-                btnSorcery2_4, btnSorcery2_8, btnSorcery2_12,
+                btnSorcery1_4, btnSorcery1_8, btnSorcery1_12,
                 btnSorceryPassive1_1, btnSorceryPassive1_2, btnSorceryPassive1_3,
-                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6
+                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnSorcery2_6.isSelected = !btnSorcery2_6.isSelected
         }
@@ -4809,9 +4917,10 @@ class SkillCalculator : ComponentActivity() {
             updateButtons(btnSorcery2_7)
 
             skillUnlock(
-                btnSorcery2_4, btnSorcery2_8, btnSorcery2_12,
+                btnSorcery1_4, btnSorcery1_8, btnSorcery1_12,
                 btnSorceryPassive1_1, btnSorceryPassive1_2, btnSorceryPassive1_3,
-                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6
+                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnSorcery2_7.isSelected = !btnSorcery2_7.isSelected
         }
@@ -4828,9 +4937,10 @@ class SkillCalculator : ComponentActivity() {
 
             btnSorcery2_8.isSelected = !btnSorcery2_8.isSelected
             skillUnlock(
-                btnSorcery2_4, btnSorcery2_8, btnSorcery2_12,
+                btnSorcery1_4, btnSorcery1_8, btnSorcery1_12,
                 btnSorceryPassive1_1, btnSorceryPassive1_2, btnSorceryPassive1_3,
-                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6
+                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
         }
 
@@ -4845,9 +4955,10 @@ class SkillCalculator : ComponentActivity() {
             updateButtons(btnSorcery2_9)
 
             skillUnlock(
-                btnSorcery2_4, btnSorcery2_8, btnSorcery2_12,
+                btnSorcery1_4, btnSorcery1_8, btnSorcery1_12,
                 btnSorceryPassive1_1, btnSorceryPassive1_2, btnSorceryPassive1_3,
-                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6
+                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnSorcery2_9.isSelected = !btnSorcery2_9.isSelected
         }
@@ -4863,9 +4974,10 @@ class SkillCalculator : ComponentActivity() {
             updateButtons(btnSorcery2_10)
 
             skillUnlock(
-                btnSorcery2_4, btnSorcery2_8, btnSorcery2_12,
+                btnSorcery1_4, btnSorcery1_8, btnSorcery1_12,
                 btnSorceryPassive1_1, btnSorceryPassive1_2, btnSorceryPassive1_3,
-                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6
+                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnSorcery2_10.isSelected = !btnSorcery2_10.isSelected
         }
@@ -4881,9 +4993,10 @@ class SkillCalculator : ComponentActivity() {
             updateButtons(btnSorcery2_11)
 
             skillUnlock(
-                btnSorcery2_4, btnSorcery2_8, btnSorcery2_12,
+                btnSorcery1_4, btnSorcery1_8, btnSorcery1_12,
                 btnSorceryPassive1_1, btnSorceryPassive1_2, btnSorceryPassive1_3,
-                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6
+                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnSorcery2_11.isSelected = !btnSorcery2_11.isSelected
         }
@@ -4900,9 +5013,10 @@ class SkillCalculator : ComponentActivity() {
 
             btnSorcery2_12.isSelected = !btnSorcery2_12.isSelected
             skillUnlock(
-                btnSorcery2_4, btnSorcery2_8, btnSorcery2_12,
+                btnSorcery1_4, btnSorcery1_8, btnSorcery1_12,
                 btnSorceryPassive1_1, btnSorceryPassive1_2, btnSorceryPassive1_3,
-                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6
+                btnSorceryPassive1_4, btnSorceryPassive1_5, btnSorceryPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
         }
 //endregion
@@ -4922,7 +5036,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnSongcraft1_4, btnSongcraft1_8, btnSongcraft1_12,
                 btnSongcraftPassive1_1, btnSongcraftPassive1_2, btnSongcraftPassive1_3,
-                btnSongcraftPassive1_4, btnSongcraftPassive1_5, btnSongcraftPassive1_6
+                btnSongcraftPassive1_4, btnSongcraftPassive1_5, btnSongcraftPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnSongcraft1_1.isSelected = !btnSongcraft1_1.isSelected
         }
@@ -4940,7 +5055,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnSongcraft1_4, btnSongcraft1_8, btnSongcraft1_12,
                 btnSongcraftPassive1_1, btnSongcraftPassive1_2, btnSongcraftPassive1_3,
-                btnSongcraftPassive1_4, btnSongcraftPassive1_5, btnSongcraftPassive1_6
+                btnSongcraftPassive1_4, btnSongcraftPassive1_5, btnSongcraftPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnSongcraft1_2.isSelected = !btnSongcraft1_2.isSelected
         }
@@ -4958,7 +5074,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnSongcraft1_4, btnSongcraft1_8, btnSongcraft1_12,
                 btnSongcraftPassive1_1, btnSongcraftPassive1_2, btnSongcraftPassive1_3,
-                btnSongcraftPassive1_4, btnSongcraftPassive1_5, btnSongcraftPassive1_6
+                btnSongcraftPassive1_4, btnSongcraftPassive1_5, btnSongcraftPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnSongcraft1_3.isSelected = !btnSongcraft1_3.isSelected
         }
@@ -4977,7 +5094,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnSongcraft1_4, btnSongcraft1_8, btnSongcraft1_12,
                 btnSongcraftPassive1_1, btnSongcraftPassive1_2, btnSongcraftPassive1_3,
-                btnSongcraftPassive1_4, btnSongcraftPassive1_5, btnSongcraftPassive1_6
+                btnSongcraftPassive1_4, btnSongcraftPassive1_5, btnSongcraftPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
         }
 
@@ -4994,7 +5112,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnSongcraft1_4, btnSongcraft1_8, btnSongcraft1_12,
                 btnSongcraftPassive1_1, btnSongcraftPassive1_2, btnSongcraftPassive1_3,
-                btnSongcraftPassive1_4, btnSongcraftPassive1_5, btnSongcraftPassive1_6
+                btnSongcraftPassive1_4, btnSongcraftPassive1_5, btnSongcraftPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnSongcraft1_5.isSelected = !btnSongcraft1_5.isSelected
         }
@@ -5012,7 +5131,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnSongcraft1_4, btnSongcraft1_8, btnSongcraft1_12,
                 btnSongcraftPassive1_1, btnSongcraftPassive1_2, btnSongcraftPassive1_3,
-                btnSongcraftPassive1_4, btnSongcraftPassive1_5, btnSongcraftPassive1_6
+                btnSongcraftPassive1_4, btnSongcraftPassive1_5, btnSongcraftPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnSongcraft1_6.isSelected = !btnSongcraft1_6.isSelected
         }
@@ -5030,7 +5150,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnSongcraft1_4, btnSongcraft1_8, btnSongcraft1_12,
                 btnSongcraftPassive1_1, btnSongcraftPassive1_2, btnSongcraftPassive1_3,
-                btnSongcraftPassive1_4, btnSongcraftPassive1_5, btnSongcraftPassive1_6
+                btnSongcraftPassive1_4, btnSongcraftPassive1_5, btnSongcraftPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnSongcraft1_7.isSelected = !btnSongcraft1_7.isSelected
         }
@@ -5049,7 +5170,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnSongcraft1_4, btnSongcraft1_8, btnSongcraft1_12,
                 btnSongcraftPassive1_1, btnSongcraftPassive1_2, btnSongcraftPassive1_3,
-                btnSongcraftPassive1_4, btnSongcraftPassive1_5, btnSongcraftPassive1_6
+                btnSongcraftPassive1_4, btnSongcraftPassive1_5, btnSongcraftPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
         }
 
@@ -5066,7 +5188,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnSongcraft1_4, btnSongcraft1_8, btnSongcraft1_12,
                 btnSongcraftPassive1_1, btnSongcraftPassive1_2, btnSongcraftPassive1_3,
-                btnSongcraftPassive1_4, btnSongcraftPassive1_5, btnSongcraftPassive1_6
+                btnSongcraftPassive1_4, btnSongcraftPassive1_5, btnSongcraftPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnSongcraft1_9.isSelected = !btnSongcraft1_9.isSelected
         }
@@ -5084,7 +5207,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnSongcraft1_4, btnSongcraft1_8, btnSongcraft1_12,
                 btnSongcraftPassive1_1, btnSongcraftPassive1_2, btnSongcraftPassive1_3,
-                btnSongcraftPassive1_4, btnSongcraftPassive1_5, btnSongcraftPassive1_6
+                btnSongcraftPassive1_4, btnSongcraftPassive1_5, btnSongcraftPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnSongcraft1_10.isSelected = !btnSongcraft1_10.isSelected
         }
@@ -5102,7 +5226,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnSongcraft1_4, btnSongcraft1_8, btnSongcraft1_12,
                 btnSongcraftPassive1_1, btnSongcraftPassive1_2, btnSongcraftPassive1_3,
-                btnSongcraftPassive1_4, btnSongcraftPassive1_5, btnSongcraftPassive1_6
+                btnSongcraftPassive1_4, btnSongcraftPassive1_5, btnSongcraftPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnSongcraft1_11.isSelected = !btnSongcraft1_11.isSelected
         }
@@ -5121,7 +5246,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnSongcraft1_4, btnSongcraft1_8, btnSongcraft1_12,
                 btnSongcraftPassive1_1, btnSongcraftPassive1_2, btnSongcraftPassive1_3,
-                btnSongcraftPassive1_4, btnSongcraftPassive1_5, btnSongcraftPassive1_6
+                btnSongcraftPassive1_4, btnSongcraftPassive1_5, btnSongcraftPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
         }
 //endregion
@@ -5139,8 +5265,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnSongcraft2_4, btnSongcraft2_8, btnSongcraft2_12,
-                btnSongcraftPassive1_1, btnSongcraftPassive1_2, btnSongcraftPassive1_3,
-                btnSongcraftPassive1_4, btnSongcraftPassive1_5, btnSongcraftPassive1_6
+                btnSongcraftPassive2_1, btnSongcraftPassive2_2, btnSongcraftPassive2_3,
+                btnSongcraftPassive2_4, btnSongcraftPassive2_5, btnSongcraftPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnSongcraft2_1.isSelected = !btnSongcraft2_1.isSelected
         }
@@ -5157,8 +5284,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnSongcraft2_4, btnSongcraft2_8, btnSongcraft2_12,
-                btnSongcraftPassive1_1, btnSongcraftPassive1_2, btnSongcraftPassive1_3,
-                btnSongcraftPassive1_4, btnSongcraftPassive1_5, btnSongcraftPassive1_6
+                btnSongcraftPassive2_1, btnSongcraftPassive2_2, btnSongcraftPassive2_3,
+                btnSongcraftPassive2_4, btnSongcraftPassive2_5, btnSongcraftPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnSongcraft2_2.isSelected = !btnSongcraft2_2.isSelected
         }
@@ -5175,8 +5303,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnSongcraft2_4, btnSongcraft2_8, btnSongcraft2_12,
-                btnSongcraftPassive1_1, btnSongcraftPassive1_2, btnSongcraftPassive1_3,
-                btnSongcraftPassive1_4, btnSongcraftPassive1_5, btnSongcraftPassive1_6
+                btnSongcraftPassive2_1, btnSongcraftPassive2_2, btnSongcraftPassive2_3,
+                btnSongcraftPassive2_4, btnSongcraftPassive2_5, btnSongcraftPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnSongcraft2_3.isSelected = !btnSongcraft2_3.isSelected
         }
@@ -5194,8 +5323,9 @@ class SkillCalculator : ComponentActivity() {
             btnSongcraft2_4.isSelected = !btnSongcraft2_4.isSelected
             skillUnlock(
                 btnSongcraft2_4, btnSongcraft2_8, btnSongcraft2_12,
-                btnSongcraftPassive1_1, btnSongcraftPassive1_2, btnSongcraftPassive1_3,
-                btnSongcraftPassive1_4, btnSongcraftPassive1_5, btnSongcraftPassive1_6
+                btnSongcraftPassive2_1, btnSongcraftPassive2_2, btnSongcraftPassive2_3,
+                btnSongcraftPassive2_4, btnSongcraftPassive2_5, btnSongcraftPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
         }
 
@@ -5211,8 +5341,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnSongcraft2_4, btnSongcraft2_8, btnSongcraft2_12,
-                btnSongcraftPassive1_1, btnSongcraftPassive1_2, btnSongcraftPassive1_3,
-                btnSongcraftPassive1_4, btnSongcraftPassive1_5, btnSongcraftPassive1_6
+                btnSongcraftPassive2_1, btnSongcraftPassive2_2, btnSongcraftPassive2_3,
+                btnSongcraftPassive2_4, btnSongcraftPassive2_5, btnSongcraftPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnSongcraft2_5.isSelected = !btnSongcraft2_5.isSelected
         }
@@ -5229,8 +5360,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnSongcraft2_4, btnSongcraft2_8, btnSongcraft2_12,
-                btnSongcraftPassive1_1, btnSongcraftPassive1_2, btnSongcraftPassive1_3,
-                btnSongcraftPassive1_4, btnSongcraftPassive1_5, btnSongcraftPassive1_6
+                btnSongcraftPassive2_1, btnSongcraftPassive2_2, btnSongcraftPassive2_3,
+                btnSongcraftPassive2_4, btnSongcraftPassive2_5, btnSongcraftPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnSongcraft2_6.isSelected = !btnSongcraft2_6.isSelected
         }
@@ -5247,8 +5379,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnSongcraft2_4, btnSongcraft2_8, btnSongcraft2_12,
-                btnSongcraftPassive1_1, btnSongcraftPassive1_2, btnSongcraftPassive1_3,
-                btnSongcraftPassive1_4, btnSongcraftPassive1_5, btnSongcraftPassive1_6
+                btnSongcraftPassive2_1, btnSongcraftPassive2_2, btnSongcraftPassive2_3,
+                btnSongcraftPassive2_4, btnSongcraftPassive2_5, btnSongcraftPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnSongcraft2_7.isSelected = !btnSongcraft2_7.isSelected
         }
@@ -5266,8 +5399,9 @@ class SkillCalculator : ComponentActivity() {
             btnSongcraft2_8.isSelected = !btnSongcraft2_8.isSelected
             skillUnlock(
                 btnSongcraft2_4, btnSongcraft2_8, btnSongcraft2_12,
-                btnSongcraftPassive1_1, btnSongcraftPassive1_2, btnSongcraftPassive1_3,
-                btnSongcraftPassive1_4, btnSongcraftPassive1_5, btnSongcraftPassive1_6
+                btnSongcraftPassive2_1, btnSongcraftPassive2_2, btnSongcraftPassive2_3,
+                btnSongcraftPassive2_4, btnSongcraftPassive2_5, btnSongcraftPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
         }
 
@@ -5283,8 +5417,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnSongcraft2_4, btnSongcraft2_8, btnSongcraft2_12,
-                btnSongcraftPassive1_1, btnSongcraftPassive1_2, btnSongcraftPassive1_3,
-                btnSongcraftPassive1_4, btnSongcraftPassive1_5, btnSongcraftPassive1_6
+                btnSongcraftPassive2_1, btnSongcraftPassive2_2, btnSongcraftPassive2_3,
+                btnSongcraftPassive2_4, btnSongcraftPassive2_5, btnSongcraftPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnSongcraft2_9.isSelected = !btnSongcraft2_9.isSelected
         }
@@ -5301,8 +5436,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnSongcraft2_4, btnSongcraft2_8, btnSongcraft2_12,
-                btnSongcraftPassive1_1, btnSongcraftPassive1_2, btnSongcraftPassive1_3,
-                btnSongcraftPassive1_4, btnSongcraftPassive1_5, btnSongcraftPassive1_6
+                btnSongcraftPassive2_1, btnSongcraftPassive2_2, btnSongcraftPassive2_3,
+                btnSongcraftPassive2_4, btnSongcraftPassive2_5, btnSongcraftPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnSongcraft2_10.isSelected = !btnSongcraft2_10.isSelected
         }
@@ -5319,8 +5455,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnSongcraft2_4, btnSongcraft2_8, btnSongcraft2_12,
-                btnSongcraftPassive1_1, btnSongcraftPassive1_2, btnSongcraftPassive1_3,
-                btnSongcraftPassive1_4, btnSongcraftPassive1_5, btnSongcraftPassive1_6
+                btnSongcraftPassive2_1, btnSongcraftPassive2_2, btnSongcraftPassive2_3,
+                btnSongcraftPassive2_4, btnSongcraftPassive2_5, btnSongcraftPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnSongcraft2_11.isSelected = !btnSongcraft2_11.isSelected
         }
@@ -5338,8 +5475,9 @@ class SkillCalculator : ComponentActivity() {
             btnSongcraft2_12.isSelected = !btnSongcraft2_12.isSelected
             skillUnlock(
                 btnSongcraft2_4, btnSongcraft2_8, btnSongcraft2_12,
-                btnSongcraftPassive1_1, btnSongcraftPassive1_2, btnSongcraftPassive1_3,
-                btnSongcraftPassive1_4, btnSongcraftPassive1_5, btnSongcraftPassive1_6
+                btnSongcraftPassive2_1, btnSongcraftPassive2_2, btnSongcraftPassive2_3,
+                btnSongcraftPassive2_4, btnSongcraftPassive2_5, btnSongcraftPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
         }
 //endregion
@@ -5359,7 +5497,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnWitchcraft1_4, btnWitchcraft1_8, btnWitchcraft1_12,
                 btnWitchcraftPassive1_1, btnWitchcraftPassive1_2, btnWitchcraftPassive1_3,
-                btnWitchcraftPassive1_4, btnWitchcraftPassive1_5, btnWitchcraftPassive1_6
+                btnWitchcraftPassive1_4, btnWitchcraftPassive1_5, btnWitchcraftPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnWitchcraft1_1.isSelected = !btnWitchcraft1_1.isSelected
         }
@@ -5377,7 +5516,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnWitchcraft1_4, btnWitchcraft1_8, btnWitchcraft1_12,
                 btnWitchcraftPassive1_1, btnWitchcraftPassive1_2, btnWitchcraftPassive1_3,
-                btnWitchcraftPassive1_4, btnWitchcraftPassive1_5, btnWitchcraftPassive1_6
+                btnWitchcraftPassive1_4, btnWitchcraftPassive1_5, btnWitchcraftPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnWitchcraft1_2.isSelected = !btnWitchcraft1_2.isSelected
         }
@@ -5395,7 +5535,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnWitchcraft1_4, btnWitchcraft1_8, btnWitchcraft1_12,
                 btnWitchcraftPassive1_1, btnWitchcraftPassive1_2, btnWitchcraftPassive1_3,
-                btnWitchcraftPassive1_4, btnWitchcraftPassive1_5, btnWitchcraftPassive1_6
+                btnWitchcraftPassive1_4, btnWitchcraftPassive1_5, btnWitchcraftPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnWitchcraft1_3.isSelected = !btnWitchcraft1_3.isSelected
         }
@@ -5414,7 +5555,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnWitchcraft1_4, btnWitchcraft1_8, btnWitchcraft1_12,
                 btnWitchcraftPassive1_1, btnWitchcraftPassive1_2, btnWitchcraftPassive1_3,
-                btnWitchcraftPassive1_4, btnWitchcraftPassive1_5, btnWitchcraftPassive1_6
+                btnWitchcraftPassive1_4, btnWitchcraftPassive1_5, btnWitchcraftPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
         }
 
@@ -5431,7 +5573,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnWitchcraft1_4, btnWitchcraft1_8, btnWitchcraft1_12,
                 btnWitchcraftPassive1_1, btnWitchcraftPassive1_2, btnWitchcraftPassive1_3,
-                btnWitchcraftPassive1_4, btnWitchcraftPassive1_5, btnWitchcraftPassive1_6
+                btnWitchcraftPassive1_4, btnWitchcraftPassive1_5, btnWitchcraftPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnWitchcraft1_5.isSelected = !btnWitchcraft1_5.isSelected
         }
@@ -5449,7 +5592,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnWitchcraft1_4, btnWitchcraft1_8, btnWitchcraft1_12,
                 btnWitchcraftPassive1_1, btnWitchcraftPassive1_2, btnWitchcraftPassive1_3,
-                btnWitchcraftPassive1_4, btnWitchcraftPassive1_5, btnWitchcraftPassive1_6
+                btnWitchcraftPassive1_4, btnWitchcraftPassive1_5, btnWitchcraftPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnWitchcraft1_6.isSelected = !btnWitchcraft1_6.isSelected
         }
@@ -5467,7 +5611,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnWitchcraft1_4, btnWitchcraft1_8, btnWitchcraft1_12,
                 btnWitchcraftPassive1_1, btnWitchcraftPassive1_2, btnWitchcraftPassive1_3,
-                btnWitchcraftPassive1_4, btnWitchcraftPassive1_5, btnWitchcraftPassive1_6
+                btnWitchcraftPassive1_4, btnWitchcraftPassive1_5, btnWitchcraftPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnWitchcraft1_7.isSelected = !btnWitchcraft1_7.isSelected
         }
@@ -5486,7 +5631,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnWitchcraft1_4, btnWitchcraft1_8, btnWitchcraft1_12,
                 btnWitchcraftPassive1_1, btnWitchcraftPassive1_2, btnWitchcraftPassive1_3,
-                btnWitchcraftPassive1_4, btnWitchcraftPassive1_5, btnWitchcraftPassive1_6
+                btnWitchcraftPassive1_4, btnWitchcraftPassive1_5, btnWitchcraftPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
         }
 
@@ -5503,7 +5649,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnWitchcraft1_4, btnWitchcraft1_8, btnWitchcraft1_12,
                 btnWitchcraftPassive1_1, btnWitchcraftPassive1_2, btnWitchcraftPassive1_3,
-                btnWitchcraftPassive1_4, btnWitchcraftPassive1_5, btnWitchcraftPassive1_6
+                btnWitchcraftPassive1_4, btnWitchcraftPassive1_5, btnWitchcraftPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnWitchcraft1_9.isSelected = !btnWitchcraft1_9.isSelected
         }
@@ -5521,7 +5668,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnWitchcraft1_4, btnWitchcraft1_8, btnWitchcraft1_12,
                 btnWitchcraftPassive1_1, btnWitchcraftPassive1_2, btnWitchcraftPassive1_3,
-                btnWitchcraftPassive1_4, btnWitchcraftPassive1_5, btnWitchcraftPassive1_6
+                btnWitchcraftPassive1_4, btnWitchcraftPassive1_5, btnWitchcraftPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnWitchcraft1_10.isSelected = !btnWitchcraft1_10.isSelected
         }
@@ -5539,7 +5687,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnWitchcraft1_4, btnWitchcraft1_8, btnWitchcraft1_12,
                 btnWitchcraftPassive1_1, btnWitchcraftPassive1_2, btnWitchcraftPassive1_3,
-                btnWitchcraftPassive1_4, btnWitchcraftPassive1_5, btnWitchcraftPassive1_6
+                btnWitchcraftPassive1_4, btnWitchcraftPassive1_5, btnWitchcraftPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnWitchcraft1_11.isSelected = !btnWitchcraft1_11.isSelected
         }
@@ -5558,7 +5707,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnWitchcraft1_4, btnWitchcraft1_8, btnWitchcraft1_12,
                 btnWitchcraftPassive1_1, btnWitchcraftPassive1_2, btnWitchcraftPassive1_3,
-                btnWitchcraftPassive1_4, btnWitchcraftPassive1_5, btnWitchcraftPassive1_6
+                btnWitchcraftPassive1_4, btnWitchcraftPassive1_5, btnWitchcraftPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
         }
 //endregion
@@ -5576,8 +5726,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnWitchcraft2_4, btnWitchcraft2_8, btnWitchcraft2_12,
-                btnWitchcraftPassive1_1, btnWitchcraftPassive1_2, btnWitchcraftPassive1_3,
-                btnWitchcraftPassive1_4, btnWitchcraftPassive1_5, btnWitchcraftPassive1_6
+                btnWitchcraftPassive2_1, btnWitchcraftPassive2_2, btnWitchcraftPassive2_3,
+                btnWitchcraftPassive2_4, btnWitchcraftPassive2_5, btnWitchcraftPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnWitchcraft2_1.isSelected = !btnWitchcraft2_1.isSelected
         }
@@ -5594,8 +5745,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnWitchcraft2_4, btnWitchcraft2_8, btnWitchcraft2_12,
-                btnWitchcraftPassive1_1, btnWitchcraftPassive1_2, btnWitchcraftPassive1_3,
-                btnWitchcraftPassive1_4, btnWitchcraftPassive1_5, btnWitchcraftPassive1_6
+                btnWitchcraftPassive2_1, btnWitchcraftPassive2_2, btnWitchcraftPassive2_3,
+                btnWitchcraftPassive2_4, btnWitchcraftPassive2_5, btnWitchcraftPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnWitchcraft2_2.isSelected = !btnWitchcraft2_2.isSelected
         }
@@ -5612,8 +5764,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnWitchcraft2_4, btnWitchcraft2_8, btnWitchcraft2_12,
-                btnWitchcraftPassive1_1, btnWitchcraftPassive1_2, btnWitchcraftPassive1_3,
-                btnWitchcraftPassive1_4, btnWitchcraftPassive1_5, btnWitchcraftPassive1_6
+                btnWitchcraftPassive2_1, btnWitchcraftPassive2_2, btnWitchcraftPassive2_3,
+                btnWitchcraftPassive2_4, btnWitchcraftPassive2_5, btnWitchcraftPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnWitchcraft2_3.isSelected = !btnWitchcraft2_3.isSelected
         }
@@ -5631,8 +5784,9 @@ class SkillCalculator : ComponentActivity() {
             btnWitchcraft2_4.isSelected = !btnWitchcraft2_4.isSelected
             skillUnlock(
                 btnWitchcraft2_4, btnWitchcraft2_8, btnWitchcraft2_12,
-                btnWitchcraftPassive1_1, btnWitchcraftPassive1_2, btnWitchcraftPassive1_3,
-                btnWitchcraftPassive1_4, btnWitchcraftPassive1_5, btnWitchcraftPassive1_6
+                btnWitchcraftPassive2_1, btnWitchcraftPassive2_2, btnWitchcraftPassive2_3,
+                btnWitchcraftPassive2_4, btnWitchcraftPassive2_5, btnWitchcraftPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
         }
 
@@ -5648,8 +5802,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnWitchcraft2_4, btnWitchcraft2_8, btnWitchcraft2_12,
-                btnWitchcraftPassive1_1, btnWitchcraftPassive1_2, btnWitchcraftPassive1_3,
-                btnWitchcraftPassive1_4, btnWitchcraftPassive1_5, btnWitchcraftPassive1_6
+                btnWitchcraftPassive2_1, btnWitchcraftPassive2_2, btnWitchcraftPassive2_3,
+                btnWitchcraftPassive2_4, btnWitchcraftPassive2_5, btnWitchcraftPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnWitchcraft2_5.isSelected = !btnWitchcraft2_5.isSelected
         }
@@ -5666,8 +5821,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnWitchcraft2_4, btnWitchcraft2_8, btnWitchcraft2_12,
-                btnWitchcraftPassive1_1, btnWitchcraftPassive1_2, btnWitchcraftPassive1_3,
-                btnWitchcraftPassive1_4, btnWitchcraftPassive1_5, btnWitchcraftPassive1_6
+                btnWitchcraftPassive2_1, btnWitchcraftPassive2_2, btnWitchcraftPassive2_3,
+                btnWitchcraftPassive2_4, btnWitchcraftPassive2_5, btnWitchcraftPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnWitchcraft2_6.isSelected = !btnWitchcraft2_6.isSelected
         }
@@ -5684,8 +5840,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnWitchcraft2_4, btnWitchcraft2_8, btnWitchcraft2_12,
-                btnWitchcraftPassive1_1, btnWitchcraftPassive1_2, btnWitchcraftPassive1_3,
-                btnWitchcraftPassive1_4, btnWitchcraftPassive1_5, btnWitchcraftPassive1_6
+                btnWitchcraftPassive2_1, btnWitchcraftPassive2_2, btnWitchcraftPassive2_3,
+                btnWitchcraftPassive2_4, btnWitchcraftPassive2_5, btnWitchcraftPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnWitchcraft2_7.isSelected = !btnWitchcraft2_7.isSelected
         }
@@ -5703,8 +5860,9 @@ class SkillCalculator : ComponentActivity() {
             btnWitchcraft2_8.isSelected = !btnWitchcraft2_8.isSelected
             skillUnlock(
                 btnWitchcraft2_4, btnWitchcraft2_8, btnWitchcraft2_12,
-                btnWitchcraftPassive1_1, btnWitchcraftPassive1_2, btnWitchcraftPassive1_3,
-                btnWitchcraftPassive1_4, btnWitchcraftPassive1_5, btnWitchcraftPassive1_6
+                btnWitchcraftPassive2_1, btnWitchcraftPassive2_2, btnWitchcraftPassive2_3,
+                btnWitchcraftPassive2_4, btnWitchcraftPassive2_5, btnWitchcraftPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
         }
 
@@ -5720,8 +5878,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnWitchcraft2_4, btnWitchcraft2_8, btnWitchcraft2_12,
-                btnWitchcraftPassive1_1, btnWitchcraftPassive1_2, btnWitchcraftPassive1_3,
-                btnWitchcraftPassive1_4, btnWitchcraftPassive1_5, btnWitchcraftPassive1_6
+                btnWitchcraftPassive2_1, btnWitchcraftPassive2_2, btnWitchcraftPassive2_3,
+                btnWitchcraftPassive2_4, btnWitchcraftPassive2_5, btnWitchcraftPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnWitchcraft2_9.isSelected = !btnWitchcraft2_9.isSelected
         }
@@ -5738,8 +5897,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnWitchcraft2_4, btnWitchcraft2_8, btnWitchcraft2_12,
-                btnWitchcraftPassive1_1, btnWitchcraftPassive1_2, btnWitchcraftPassive1_3,
-                btnWitchcraftPassive1_4, btnWitchcraftPassive1_5, btnWitchcraftPassive1_6
+                btnWitchcraftPassive2_1, btnWitchcraftPassive2_2, btnWitchcraftPassive2_3,
+                btnWitchcraftPassive2_4, btnWitchcraftPassive2_5, btnWitchcraftPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnWitchcraft2_10.isSelected = !btnWitchcraft2_10.isSelected
         }
@@ -5756,8 +5916,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnWitchcraft2_4, btnWitchcraft2_8, btnWitchcraft2_12,
-                btnWitchcraftPassive1_1, btnWitchcraftPassive1_2, btnWitchcraftPassive1_3,
-                btnWitchcraftPassive1_4, btnWitchcraftPassive1_5, btnWitchcraftPassive1_6
+                btnWitchcraftPassive2_1, btnWitchcraftPassive2_2, btnWitchcraftPassive2_3,
+                btnWitchcraftPassive2_4, btnWitchcraftPassive2_5, btnWitchcraftPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnWitchcraft2_11.isSelected = !btnWitchcraft2_11.isSelected
         }
@@ -5775,8 +5936,9 @@ class SkillCalculator : ComponentActivity() {
             btnWitchcraft2_12.isSelected = !btnWitchcraft2_12.isSelected
             skillUnlock(
                 btnWitchcraft2_4, btnWitchcraft2_8, btnWitchcraft2_12,
-                btnWitchcraftPassive1_1, btnWitchcraftPassive1_2, btnWitchcraftPassive1_3,
-                btnWitchcraftPassive1_4, btnWitchcraftPassive1_5, btnWitchcraftPassive1_6
+                btnWitchcraftPassive2_1, btnWitchcraftPassive2_2, btnWitchcraftPassive2_3,
+                btnWitchcraftPassive2_4, btnWitchcraftPassive2_5, btnWitchcraftPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
         }
 //endregion
@@ -5796,7 +5958,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnAuramancy1_4, btnAuramancy1_8, btnAuramancy1_12,
                 btnAuramancyPassive1_1, btnAuramancyPassive1_2, btnAuramancyPassive1_3,
-                btnAuramancyPassive1_4, btnAuramancyPassive1_5, btnAuramancyPassive1_6
+                btnAuramancyPassive1_4, btnAuramancyPassive1_5, btnAuramancyPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnAuramancy1_1.isSelected = !btnAuramancy1_1.isSelected
         }
@@ -5814,7 +5977,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnAuramancy1_4, btnAuramancy1_8, btnAuramancy1_12,
                 btnAuramancyPassive1_1, btnAuramancyPassive1_2, btnAuramancyPassive1_3,
-                btnAuramancyPassive1_4, btnAuramancyPassive1_5, btnAuramancyPassive1_6
+                btnAuramancyPassive1_4, btnAuramancyPassive1_5, btnAuramancyPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnAuramancy1_2.isSelected = !btnAuramancy1_2.isSelected
         }
@@ -5832,7 +5996,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnAuramancy1_4, btnAuramancy1_8, btnAuramancy1_12,
                 btnAuramancyPassive1_1, btnAuramancyPassive1_2, btnAuramancyPassive1_3,
-                btnAuramancyPassive1_4, btnAuramancyPassive1_5, btnAuramancyPassive1_6
+                btnAuramancyPassive1_4, btnAuramancyPassive1_5, btnAuramancyPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnAuramancy1_3.isSelected = !btnAuramancy1_3.isSelected
         }
@@ -5851,7 +6016,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnAuramancy1_4, btnAuramancy1_8, btnAuramancy1_12,
                 btnAuramancyPassive1_1, btnAuramancyPassive1_2, btnAuramancyPassive1_3,
-                btnAuramancyPassive1_4, btnAuramancyPassive1_5, btnAuramancyPassive1_6
+                btnAuramancyPassive1_4, btnAuramancyPassive1_5, btnAuramancyPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
         }
 
@@ -5868,7 +6034,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnAuramancy1_4, btnAuramancy1_8, btnAuramancy1_12,
                 btnAuramancyPassive1_1, btnAuramancyPassive1_2, btnAuramancyPassive1_3,
-                btnAuramancyPassive1_4, btnAuramancyPassive1_5, btnAuramancyPassive1_6
+                btnAuramancyPassive1_4, btnAuramancyPassive1_5, btnAuramancyPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnAuramancy1_5.isSelected = !btnAuramancy1_5.isSelected
         }
@@ -5886,7 +6053,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnAuramancy1_4, btnAuramancy1_8, btnAuramancy1_12,
                 btnAuramancyPassive1_1, btnAuramancyPassive1_2, btnAuramancyPassive1_3,
-                btnAuramancyPassive1_4, btnAuramancyPassive1_5, btnAuramancyPassive1_6
+                btnAuramancyPassive1_4, btnAuramancyPassive1_5, btnAuramancyPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnAuramancy1_6.isSelected = !btnAuramancy1_6.isSelected
         }
@@ -5904,7 +6072,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnAuramancy1_4, btnAuramancy1_8, btnAuramancy1_12,
                 btnAuramancyPassive1_1, btnAuramancyPassive1_2, btnAuramancyPassive1_3,
-                btnAuramancyPassive1_4, btnAuramancyPassive1_5, btnAuramancyPassive1_6
+                btnAuramancyPassive1_4, btnAuramancyPassive1_5, btnAuramancyPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnAuramancy1_7.isSelected = !btnAuramancy1_7.isSelected
         }
@@ -5923,7 +6092,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnAuramancy1_4, btnAuramancy1_8, btnAuramancy1_12,
                 btnAuramancyPassive1_1, btnAuramancyPassive1_2, btnAuramancyPassive1_3,
-                btnAuramancyPassive1_4, btnAuramancyPassive1_5, btnAuramancyPassive1_6
+                btnAuramancyPassive1_4, btnAuramancyPassive1_5, btnAuramancyPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
         }
 
@@ -5940,7 +6110,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnAuramancy1_4, btnAuramancy1_8, btnAuramancy1_12,
                 btnAuramancyPassive1_1, btnAuramancyPassive1_2, btnAuramancyPassive1_3,
-                btnAuramancyPassive1_4, btnAuramancyPassive1_5, btnAuramancyPassive1_6
+                btnAuramancyPassive1_4, btnAuramancyPassive1_5, btnAuramancyPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnAuramancy1_9.isSelected = !btnAuramancy1_9.isSelected
         }
@@ -5958,7 +6129,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnAuramancy1_4, btnAuramancy1_8, btnAuramancy1_12,
                 btnAuramancyPassive1_1, btnAuramancyPassive1_2, btnAuramancyPassive1_3,
-                btnAuramancyPassive1_4, btnAuramancyPassive1_5, btnAuramancyPassive1_6
+                btnAuramancyPassive1_4, btnAuramancyPassive1_5, btnAuramancyPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnAuramancy1_10.isSelected = !btnAuramancy1_10.isSelected
         }
@@ -5976,7 +6148,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnAuramancy1_4, btnAuramancy1_8, btnAuramancy1_12,
                 btnAuramancyPassive1_1, btnAuramancyPassive1_2, btnAuramancyPassive1_3,
-                btnAuramancyPassive1_4, btnAuramancyPassive1_5, btnAuramancyPassive1_6
+                btnAuramancyPassive1_4, btnAuramancyPassive1_5, btnAuramancyPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnAuramancy1_11.isSelected = !btnAuramancy1_11.isSelected
         }
@@ -5995,7 +6168,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnAuramancy1_4, btnAuramancy1_8, btnAuramancy1_12,
                 btnAuramancyPassive1_1, btnAuramancyPassive1_2, btnAuramancyPassive1_3,
-                btnAuramancyPassive1_4, btnAuramancyPassive1_5, btnAuramancyPassive1_6
+                btnAuramancyPassive1_4, btnAuramancyPassive1_5, btnAuramancyPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
         }
 //endregion
@@ -6013,8 +6187,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnAuramancy2_4, btnAuramancy2_8, btnAuramancy2_12,
-                btnAuramancyPassive1_1, btnAuramancyPassive1_2, btnAuramancyPassive1_3,
-                btnAuramancyPassive1_4, btnAuramancyPassive1_5, btnAuramancyPassive1_6
+                btnAuramancyPassive2_1, btnAuramancyPassive2_2, btnAuramancyPassive2_3,
+                btnAuramancyPassive2_4, btnAuramancyPassive2_5, btnAuramancyPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnAuramancy2_1.isSelected = !btnAuramancy2_1.isSelected
         }
@@ -6031,8 +6206,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnAuramancy2_4, btnAuramancy2_8, btnAuramancy2_12,
-                btnAuramancyPassive1_1, btnAuramancyPassive1_2, btnAuramancyPassive1_3,
-                btnAuramancyPassive1_4, btnAuramancyPassive1_5, btnAuramancyPassive1_6
+                btnAuramancyPassive2_1, btnAuramancyPassive2_2, btnAuramancyPassive2_3,
+                btnAuramancyPassive2_4, btnAuramancyPassive2_5, btnAuramancyPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnAuramancy2_2.isSelected = !btnAuramancy2_2.isSelected
         }
@@ -6049,8 +6225,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnAuramancy2_4, btnAuramancy2_8, btnAuramancy2_12,
-                btnAuramancyPassive1_1, btnAuramancyPassive1_2, btnAuramancyPassive1_3,
-                btnAuramancyPassive1_4, btnAuramancyPassive1_5, btnAuramancyPassive1_6
+                btnAuramancyPassive2_1, btnAuramancyPassive2_2, btnAuramancyPassive2_3,
+                btnAuramancyPassive2_4, btnAuramancyPassive2_5, btnAuramancyPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnAuramancy2_3.isSelected = !btnAuramancy2_3.isSelected
         }
@@ -6068,8 +6245,9 @@ class SkillCalculator : ComponentActivity() {
             btnAuramancy2_4.isSelected = !btnAuramancy2_4.isSelected
             skillUnlock(
                 btnAuramancy2_4, btnAuramancy2_8, btnAuramancy2_12,
-                btnAuramancyPassive1_1, btnAuramancyPassive1_2, btnAuramancyPassive1_3,
-                btnAuramancyPassive1_4, btnAuramancyPassive1_5, btnAuramancyPassive1_6
+                btnAuramancyPassive2_1, btnAuramancyPassive2_2, btnAuramancyPassive2_3,
+                btnAuramancyPassive2_4, btnAuramancyPassive2_5, btnAuramancyPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
         }
 
@@ -6085,8 +6263,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnAuramancy2_4, btnAuramancy2_8, btnAuramancy2_12,
-                btnAuramancyPassive1_1, btnAuramancyPassive1_2, btnAuramancyPassive1_3,
-                btnAuramancyPassive1_4, btnAuramancyPassive1_5, btnAuramancyPassive1_6
+                btnAuramancyPassive2_1, btnAuramancyPassive2_2, btnAuramancyPassive2_3,
+                btnAuramancyPassive2_4, btnAuramancyPassive2_5, btnAuramancyPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnAuramancy2_5.isSelected = !btnAuramancy2_5.isSelected
         }
@@ -6103,8 +6282,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnAuramancy2_4, btnAuramancy2_8, btnAuramancy2_12,
-                btnAuramancyPassive1_1, btnAuramancyPassive1_2, btnAuramancyPassive1_3,
-                btnAuramancyPassive1_4, btnAuramancyPassive1_5, btnAuramancyPassive1_6
+                btnAuramancyPassive2_1, btnAuramancyPassive2_2, btnAuramancyPassive2_3,
+                btnAuramancyPassive2_4, btnAuramancyPassive2_5, btnAuramancyPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnAuramancy2_6.isSelected = !btnAuramancy2_6.isSelected
         }
@@ -6121,8 +6301,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnAuramancy2_4, btnAuramancy2_8, btnAuramancy2_12,
-                btnAuramancyPassive1_1, btnAuramancyPassive1_2, btnAuramancyPassive1_3,
-                btnAuramancyPassive1_4, btnAuramancyPassive1_5, btnAuramancyPassive1_6
+                btnAuramancyPassive2_1, btnAuramancyPassive2_2, btnAuramancyPassive2_3,
+                btnAuramancyPassive2_4, btnAuramancyPassive2_5, btnAuramancyPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnAuramancy2_7.isSelected = !btnAuramancy2_7.isSelected
         }
@@ -6140,8 +6321,9 @@ class SkillCalculator : ComponentActivity() {
             btnAuramancy2_8.isSelected = !btnAuramancy2_8.isSelected
             skillUnlock(
                 btnAuramancy2_4, btnAuramancy2_8, btnAuramancy2_12,
-                btnAuramancyPassive1_1, btnAuramancyPassive1_2, btnAuramancyPassive1_3,
-                btnAuramancyPassive1_4, btnAuramancyPassive1_5, btnAuramancyPassive1_6
+                btnAuramancyPassive2_1, btnAuramancyPassive2_2, btnAuramancyPassive2_3,
+                btnAuramancyPassive2_4, btnAuramancyPassive2_5, btnAuramancyPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
         }
 
@@ -6157,8 +6339,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnAuramancy2_4, btnAuramancy2_8, btnAuramancy2_12,
-                btnAuramancyPassive1_1, btnAuramancyPassive1_2, btnAuramancyPassive1_3,
-                btnAuramancyPassive1_4, btnAuramancyPassive1_5, btnAuramancyPassive1_6
+                btnAuramancyPassive2_1, btnAuramancyPassive2_2, btnAuramancyPassive2_3,
+                btnAuramancyPassive2_4, btnAuramancyPassive2_5, btnAuramancyPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnAuramancy2_9.isSelected = !btnAuramancy2_9.isSelected
         }
@@ -6175,8 +6358,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnAuramancy2_4, btnAuramancy2_8, btnAuramancy2_12,
-                btnAuramancyPassive1_1, btnAuramancyPassive1_2, btnAuramancyPassive1_3,
-                btnAuramancyPassive1_4, btnAuramancyPassive1_5, btnAuramancyPassive1_6
+                btnAuramancyPassive2_1, btnAuramancyPassive2_2, btnAuramancyPassive2_3,
+                btnAuramancyPassive2_4, btnAuramancyPassive2_5, btnAuramancyPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnAuramancy2_10.isSelected = !btnAuramancy2_10.isSelected
         }
@@ -6193,8 +6377,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnAuramancy2_4, btnAuramancy2_8, btnAuramancy2_12,
-                btnAuramancyPassive1_1, btnAuramancyPassive1_2, btnAuramancyPassive1_3,
-                btnAuramancyPassive1_4, btnAuramancyPassive1_5, btnAuramancyPassive1_6
+                btnAuramancyPassive2_1, btnAuramancyPassive2_2, btnAuramancyPassive2_3,
+                btnAuramancyPassive2_4, btnAuramancyPassive2_5, btnAuramancyPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnAuramancy2_11.isSelected = !btnAuramancy2_11.isSelected
         }
@@ -6212,8 +6397,9 @@ class SkillCalculator : ComponentActivity() {
             btnAuramancy2_12.isSelected = !btnAuramancy2_12.isSelected
             skillUnlock(
                 btnAuramancy2_4, btnAuramancy2_8, btnAuramancy2_12,
-                btnAuramancyPassive1_1, btnAuramancyPassive1_2, btnAuramancyPassive1_3,
-                btnAuramancyPassive1_4, btnAuramancyPassive1_5, btnAuramancyPassive1_6
+                btnAuramancyPassive2_1, btnAuramancyPassive2_2, btnAuramancyPassive2_3,
+                btnAuramancyPassive2_4, btnAuramancyPassive2_5, btnAuramancyPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
         }
 //endregion
@@ -6233,7 +6419,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnShadowplay1_4, btnShadowplay1_8, btnShadowplay1_12,
                 btnShadowplayPassive1_1, btnShadowplayPassive1_2, btnShadowplayPassive1_3,
-                btnShadowplayPassive1_4, btnShadowplayPassive1_5, btnShadowplayPassive1_6
+                btnShadowplayPassive1_4, btnShadowplayPassive1_5, btnShadowplayPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnShadowplay1_1.isSelected = !btnShadowplay1_1.isSelected
         }
@@ -6251,7 +6438,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnShadowplay1_4, btnShadowplay1_8, btnShadowplay1_12,
                 btnShadowplayPassive1_1, btnShadowplayPassive1_2, btnShadowplayPassive1_3,
-                btnShadowplayPassive1_4, btnShadowplayPassive1_5, btnShadowplayPassive1_6
+                btnShadowplayPassive1_4, btnShadowplayPassive1_5, btnShadowplayPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnShadowplay1_2.isSelected = !btnShadowplay1_2.isSelected
         }
@@ -6269,7 +6457,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnShadowplay1_4, btnShadowplay1_8, btnShadowplay1_12,
                 btnShadowplayPassive1_1, btnShadowplayPassive1_2, btnShadowplayPassive1_3,
-                btnShadowplayPassive1_4, btnShadowplayPassive1_5, btnShadowplayPassive1_6
+                btnShadowplayPassive1_4, btnShadowplayPassive1_5, btnShadowplayPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnShadowplay1_3.isSelected = !btnShadowplay1_3.isSelected
         }
@@ -6288,7 +6477,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnShadowplay1_4, btnShadowplay1_8, btnShadowplay1_12,
                 btnShadowplayPassive1_1, btnShadowplayPassive1_2, btnShadowplayPassive1_3,
-                btnShadowplayPassive1_4, btnShadowplayPassive1_5, btnShadowplayPassive1_6
+                btnShadowplayPassive1_4, btnShadowplayPassive1_5, btnShadowplayPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
         }
 
@@ -6305,7 +6495,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnShadowplay1_4, btnShadowplay1_8, btnShadowplay1_12,
                 btnShadowplayPassive1_1, btnShadowplayPassive1_2, btnShadowplayPassive1_3,
-                btnShadowplayPassive1_4, btnShadowplayPassive1_5, btnShadowplayPassive1_6
+                btnShadowplayPassive1_4, btnShadowplayPassive1_5, btnShadowplayPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnShadowplay1_5.isSelected = !btnShadowplay1_5.isSelected
         }
@@ -6323,7 +6514,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnShadowplay1_4, btnShadowplay1_8, btnShadowplay1_12,
                 btnShadowplayPassive1_1, btnShadowplayPassive1_2, btnShadowplayPassive1_3,
-                btnShadowplayPassive1_4, btnShadowplayPassive1_5, btnShadowplayPassive1_6
+                btnShadowplayPassive1_4, btnShadowplayPassive1_5, btnShadowplayPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnShadowplay1_6.isSelected = !btnShadowplay1_6.isSelected
         }
@@ -6341,7 +6533,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnShadowplay1_4, btnShadowplay1_8, btnShadowplay1_12,
                 btnShadowplayPassive1_1, btnShadowplayPassive1_2, btnShadowplayPassive1_3,
-                btnShadowplayPassive1_4, btnShadowplayPassive1_5, btnShadowplayPassive1_6
+                btnShadowplayPassive1_4, btnShadowplayPassive1_5, btnShadowplayPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnShadowplay1_7.isSelected = !btnShadowplay1_7.isSelected
         }
@@ -6360,7 +6553,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnShadowplay1_4, btnShadowplay1_8, btnShadowplay1_12,
                 btnShadowplayPassive1_1, btnShadowplayPassive1_2, btnShadowplayPassive1_3,
-                btnShadowplayPassive1_4, btnShadowplayPassive1_5, btnShadowplayPassive1_6
+                btnShadowplayPassive1_4, btnShadowplayPassive1_5, btnShadowplayPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
         }
 
@@ -6377,7 +6571,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnShadowplay1_4, btnShadowplay1_8, btnShadowplay1_12,
                 btnShadowplayPassive1_1, btnShadowplayPassive1_2, btnShadowplayPassive1_3,
-                btnShadowplayPassive1_4, btnShadowplayPassive1_5, btnShadowplayPassive1_6
+                btnShadowplayPassive1_4, btnShadowplayPassive1_5, btnShadowplayPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnShadowplay1_9.isSelected = !btnShadowplay1_9.isSelected
         }
@@ -6395,7 +6590,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnShadowplay1_4, btnShadowplay1_8, btnShadowplay1_12,
                 btnShadowplayPassive1_1, btnShadowplayPassive1_2, btnShadowplayPassive1_3,
-                btnShadowplayPassive1_4, btnShadowplayPassive1_5, btnShadowplayPassive1_6
+                btnShadowplayPassive1_4, btnShadowplayPassive1_5, btnShadowplayPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnShadowplay1_10.isSelected = !btnShadowplay1_10.isSelected
         }
@@ -6413,7 +6609,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnShadowplay1_4, btnShadowplay1_8, btnShadowplay1_12,
                 btnShadowplayPassive1_1, btnShadowplayPassive1_2, btnShadowplayPassive1_3,
-                btnShadowplayPassive1_4, btnShadowplayPassive1_5, btnShadowplayPassive1_6
+                btnShadowplayPassive1_4, btnShadowplayPassive1_5, btnShadowplayPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnShadowplay1_11.isSelected = !btnShadowplay1_11.isSelected
         }
@@ -6432,7 +6629,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnShadowplay1_4, btnShadowplay1_8, btnShadowplay1_12,
                 btnShadowplayPassive1_1, btnShadowplayPassive1_2, btnShadowplayPassive1_3,
-                btnShadowplayPassive1_4, btnShadowplayPassive1_5, btnShadowplayPassive1_6
+                btnShadowplayPassive1_4, btnShadowplayPassive1_5, btnShadowplayPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
         }
         //endregion
@@ -6450,8 +6648,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnShadowplay2_4, btnShadowplay2_8, btnShadowplay2_12,
-                btnShadowplayPassive1_1, btnShadowplayPassive1_2, btnShadowplayPassive1_3,
-                btnShadowplayPassive1_4, btnShadowplayPassive1_5, btnShadowplayPassive1_6
+                btnShadowplayPassive2_1, btnShadowplayPassive2_2, btnShadowplayPassive2_3,
+                btnShadowplayPassive2_4, btnShadowplayPassive2_5, btnShadowplayPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnShadowplay2_1.isSelected = !btnShadowplay2_1.isSelected
         }
@@ -6468,8 +6667,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnShadowplay2_4, btnShadowplay2_8, btnShadowplay2_12,
-                btnShadowplayPassive1_1, btnShadowplayPassive1_2, btnShadowplayPassive1_3,
-                btnShadowplayPassive1_4, btnShadowplayPassive1_5, btnShadowplayPassive1_6
+                btnShadowplayPassive2_1, btnShadowplayPassive2_2, btnShadowplayPassive2_3,
+                btnShadowplayPassive2_4, btnShadowplayPassive2_5, btnShadowplayPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnShadowplay2_2.isSelected = !btnShadowplay2_2.isSelected
         }
@@ -6486,8 +6686,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnShadowplay2_4, btnShadowplay2_8, btnShadowplay2_12,
-                btnShadowplayPassive1_1, btnShadowplayPassive1_2, btnShadowplayPassive1_3,
-                btnShadowplayPassive1_4, btnShadowplayPassive1_5, btnShadowplayPassive1_6
+                btnShadowplayPassive2_1, btnShadowplayPassive2_2, btnShadowplayPassive2_3,
+                btnShadowplayPassive2_4, btnShadowplayPassive2_5, btnShadowplayPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnShadowplay2_3.isSelected = !btnShadowplay2_3.isSelected
         }
@@ -6505,8 +6706,9 @@ class SkillCalculator : ComponentActivity() {
             btnShadowplay2_4.isSelected = !btnShadowplay2_4.isSelected
             skillUnlock(
                 btnShadowplay2_4, btnShadowplay2_8, btnShadowplay2_12,
-                btnShadowplayPassive1_1, btnShadowplayPassive1_2, btnShadowplayPassive1_3,
-                btnShadowplayPassive1_4, btnShadowplayPassive1_5, btnShadowplayPassive1_6
+                btnShadowplayPassive2_1, btnShadowplayPassive2_2, btnShadowplayPassive2_3,
+                btnShadowplayPassive2_4, btnShadowplayPassive2_5, btnShadowplayPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
         }
 
@@ -6522,8 +6724,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnShadowplay2_4, btnShadowplay2_8, btnShadowplay2_12,
-                btnShadowplayPassive1_1, btnShadowplayPassive1_2, btnShadowplayPassive1_3,
-                btnShadowplayPassive1_4, btnShadowplayPassive1_5, btnShadowplayPassive1_6
+                btnShadowplayPassive2_1, btnShadowplayPassive2_2, btnShadowplayPassive2_3,
+                btnShadowplayPassive2_4, btnShadowplayPassive2_5, btnShadowplayPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnShadowplay2_5.isSelected = !btnShadowplay2_5.isSelected
         }
@@ -6540,8 +6743,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnShadowplay2_4, btnShadowplay2_8, btnShadowplay2_12,
-                btnShadowplayPassive1_1, btnShadowplayPassive1_2, btnShadowplayPassive1_3,
-                btnShadowplayPassive1_4, btnShadowplayPassive1_5, btnShadowplayPassive1_6
+                btnShadowplayPassive2_1, btnShadowplayPassive2_2, btnShadowplayPassive2_3,
+                btnShadowplayPassive2_4, btnShadowplayPassive2_5, btnShadowplayPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnShadowplay2_6.isSelected = !btnShadowplay2_6.isSelected
         }
@@ -6558,8 +6762,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnShadowplay2_4, btnShadowplay2_8, btnShadowplay2_12,
-                btnShadowplayPassive1_1, btnShadowplayPassive1_2, btnShadowplayPassive1_3,
-                btnShadowplayPassive1_4, btnShadowplayPassive1_5, btnShadowplayPassive1_6
+                btnShadowplayPassive2_1, btnShadowplayPassive2_2, btnShadowplayPassive2_3,
+                btnShadowplayPassive2_4, btnShadowplayPassive2_5, btnShadowplayPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnShadowplay2_7.isSelected = !btnShadowplay2_7.isSelected
         }
@@ -6577,8 +6782,9 @@ class SkillCalculator : ComponentActivity() {
             btnShadowplay2_8.isSelected = !btnShadowplay2_8.isSelected
             skillUnlock(
                 btnShadowplay2_4, btnShadowplay2_8, btnShadowplay2_12,
-                btnShadowplayPassive1_1, btnShadowplayPassive1_2, btnShadowplayPassive1_3,
-                btnShadowplayPassive1_4, btnShadowplayPassive1_5, btnShadowplayPassive1_6
+                btnShadowplayPassive2_1, btnShadowplayPassive2_2, btnShadowplayPassive2_3,
+                btnShadowplayPassive2_4, btnShadowplayPassive2_5, btnShadowplayPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
         }
 
@@ -6594,8 +6800,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnShadowplay2_4, btnShadowplay2_8, btnShadowplay2_12,
-                btnShadowplayPassive1_1, btnShadowplayPassive1_2, btnShadowplayPassive1_3,
-                btnShadowplayPassive1_4, btnShadowplayPassive1_5, btnShadowplayPassive1_6
+                btnShadowplayPassive2_1, btnShadowplayPassive2_2, btnShadowplayPassive2_3,
+                btnShadowplayPassive2_4, btnShadowplayPassive2_5, btnShadowplayPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnShadowplay2_9.isSelected = !btnShadowplay2_9.isSelected
         }
@@ -6612,8 +6819,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnShadowplay2_4, btnShadowplay2_8, btnShadowplay2_12,
-                btnShadowplayPassive1_1, btnShadowplayPassive1_2, btnShadowplayPassive1_3,
-                btnShadowplayPassive1_4, btnShadowplayPassive1_5, btnShadowplayPassive1_6
+                btnShadowplayPassive2_1, btnShadowplayPassive2_2, btnShadowplayPassive2_3,
+                btnShadowplayPassive2_4, btnShadowplayPassive2_5, btnShadowplayPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnShadowplay2_10.isSelected = !btnShadowplay2_10.isSelected
         }
@@ -6630,8 +6838,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnShadowplay2_4, btnShadowplay2_8, btnShadowplay2_12,
-                btnShadowplayPassive1_1, btnShadowplayPassive1_2, btnShadowplayPassive1_3,
-                btnShadowplayPassive1_4, btnShadowplayPassive1_5, btnShadowplayPassive1_6
+                btnShadowplayPassive2_1, btnShadowplayPassive2_2, btnShadowplayPassive2_3,
+                btnShadowplayPassive2_4, btnShadowplayPassive2_5, btnShadowplayPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnShadowplay2_11.isSelected = !btnShadowplay2_11.isSelected
         }
@@ -6649,8 +6858,9 @@ class SkillCalculator : ComponentActivity() {
             btnShadowplay2_12.isSelected = !btnShadowplay2_12.isSelected
             skillUnlock(
                 btnShadowplay2_4, btnShadowplay2_8, btnShadowplay2_12,
-                btnShadowplayPassive1_1, btnShadowplayPassive1_2, btnShadowplayPassive1_3,
-                btnShadowplayPassive1_4, btnShadowplayPassive1_5, btnShadowplayPassive1_6
+                btnShadowplayPassive2_1, btnShadowplayPassive2_2, btnShadowplayPassive2_3,
+                btnShadowplayPassive2_4, btnShadowplayPassive2_5, btnShadowplayPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
         }
         //endregion
@@ -6670,7 +6880,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnVitalism1_4, btnVitalism1_8, btnVitalism1_12,
                 btnVitalismPassive1_1, btnVitalismPassive1_2, btnVitalismPassive1_3,
-                btnVitalismPassive1_4, btnVitalismPassive1_5, btnVitalismPassive1_6
+                btnVitalismPassive1_4, btnVitalismPassive1_5, btnVitalismPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnVitalism1_1.isSelected = !btnVitalism1_1.isSelected
         }
@@ -6688,7 +6899,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnVitalism1_4, btnVitalism1_8, btnVitalism1_12,
                 btnVitalismPassive1_1, btnVitalismPassive1_2, btnVitalismPassive1_3,
-                btnVitalismPassive1_4, btnVitalismPassive1_5, btnVitalismPassive1_6
+                btnVitalismPassive1_4, btnVitalismPassive1_5, btnVitalismPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnVitalism1_2.isSelected = !btnVitalism1_2.isSelected
         }
@@ -6706,7 +6918,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnVitalism1_4, btnVitalism1_8, btnVitalism1_12,
                 btnVitalismPassive1_1, btnVitalismPassive1_2, btnVitalismPassive1_3,
-                btnVitalismPassive1_4, btnVitalismPassive1_5, btnVitalismPassive1_6
+                btnVitalismPassive1_4, btnVitalismPassive1_5, btnVitalismPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnVitalism1_3.isSelected = !btnVitalism1_3.isSelected
         }
@@ -6725,7 +6938,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnVitalism1_4, btnVitalism1_8, btnVitalism1_12,
                 btnVitalismPassive1_1, btnVitalismPassive1_2, btnVitalismPassive1_3,
-                btnVitalismPassive1_4, btnVitalismPassive1_5, btnVitalismPassive1_6
+                btnVitalismPassive1_4, btnVitalismPassive1_5, btnVitalismPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
         }
 
@@ -6742,7 +6956,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnVitalism1_4, btnVitalism1_8, btnVitalism1_12,
                 btnVitalismPassive1_1, btnVitalismPassive1_2, btnVitalismPassive1_3,
-                btnVitalismPassive1_4, btnVitalismPassive1_5, btnVitalismPassive1_6
+                btnVitalismPassive1_4, btnVitalismPassive1_5, btnVitalismPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnVitalism1_5.isSelected = !btnVitalism1_5.isSelected
         }
@@ -6760,7 +6975,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnVitalism1_4, btnVitalism1_8, btnVitalism1_12,
                 btnVitalismPassive1_1, btnVitalismPassive1_2, btnVitalismPassive1_3,
-                btnVitalismPassive1_4, btnVitalismPassive1_5, btnVitalismPassive1_6
+                btnVitalismPassive1_4, btnVitalismPassive1_5, btnVitalismPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnVitalism1_6.isSelected = !btnVitalism1_6.isSelected
         }
@@ -6778,7 +6994,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnVitalism1_4, btnVitalism1_8, btnVitalism1_12,
                 btnVitalismPassive1_1, btnVitalismPassive1_2, btnVitalismPassive1_3,
-                btnVitalismPassive1_4, btnVitalismPassive1_5, btnVitalismPassive1_6
+                btnVitalismPassive1_4, btnVitalismPassive1_5, btnVitalismPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnVitalism1_7.isSelected = !btnVitalism1_7.isSelected
         }
@@ -6797,7 +7014,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnVitalism1_4, btnVitalism1_8, btnVitalism1_12,
                 btnVitalismPassive1_1, btnVitalismPassive1_2, btnVitalismPassive1_3,
-                btnVitalismPassive1_4, btnVitalismPassive1_5, btnVitalismPassive1_6
+                btnVitalismPassive1_4, btnVitalismPassive1_5, btnVitalismPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
         }
 
@@ -6814,7 +7032,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnVitalism1_4, btnVitalism1_8, btnVitalism1_12,
                 btnVitalismPassive1_1, btnVitalismPassive1_2, btnVitalismPassive1_3,
-                btnVitalismPassive1_4, btnVitalismPassive1_5, btnVitalismPassive1_6
+                btnVitalismPassive1_4, btnVitalismPassive1_5, btnVitalismPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnVitalism1_9.isSelected = !btnVitalism1_9.isSelected
         }
@@ -6832,7 +7051,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnVitalism1_4, btnVitalism1_8, btnVitalism1_12,
                 btnVitalismPassive1_1, btnVitalismPassive1_2, btnVitalismPassive1_3,
-                btnVitalismPassive1_4, btnVitalismPassive1_5, btnVitalismPassive1_6
+                btnVitalismPassive1_4, btnVitalismPassive1_5, btnVitalismPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnVitalism1_10.isSelected = !btnVitalism1_10.isSelected
         }
@@ -6850,7 +7070,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnVitalism1_4, btnVitalism1_8, btnVitalism1_12,
                 btnVitalismPassive1_1, btnVitalismPassive1_2, btnVitalismPassive1_3,
-                btnVitalismPassive1_4, btnVitalismPassive1_5, btnVitalismPassive1_6
+                btnVitalismPassive1_4, btnVitalismPassive1_5, btnVitalismPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnVitalism1_11.isSelected = !btnVitalism1_11.isSelected
         }
@@ -6869,7 +7090,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnVitalism1_4, btnVitalism1_8, btnVitalism1_12,
                 btnVitalismPassive1_1, btnVitalismPassive1_2, btnVitalismPassive1_3,
-                btnVitalismPassive1_4, btnVitalismPassive1_5, btnVitalismPassive1_6
+                btnVitalismPassive1_4, btnVitalismPassive1_5, btnVitalismPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
         }
         //endregion
@@ -6887,8 +7109,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnVitalism2_4, btnVitalism2_8, btnVitalism2_12,
-                btnVitalismPassive1_1, btnVitalismPassive1_2, btnVitalismPassive1_3,
-                btnVitalismPassive1_4, btnVitalismPassive1_5, btnVitalismPassive1_6
+                btnVitalismPassive2_1, btnVitalismPassive2_2, btnVitalismPassive2_3,
+                btnVitalismPassive2_4, btnVitalismPassive2_5, btnVitalismPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnVitalism2_1.isSelected = !btnVitalism2_1.isSelected
         }
@@ -6905,8 +7128,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnVitalism2_4, btnVitalism2_8, btnVitalism2_12,
-                btnVitalismPassive1_1, btnVitalismPassive1_2, btnVitalismPassive1_3,
-                btnVitalismPassive1_4, btnVitalismPassive1_5, btnVitalismPassive1_6
+                btnVitalismPassive2_1, btnVitalismPassive2_2, btnVitalismPassive2_3,
+                btnVitalismPassive2_4, btnVitalismPassive2_5, btnVitalismPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnVitalism2_2.isSelected = !btnVitalism2_2.isSelected
         }
@@ -6923,8 +7147,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnVitalism2_4, btnVitalism2_8, btnVitalism2_12,
-                btnVitalismPassive1_1, btnVitalismPassive1_2, btnVitalismPassive1_3,
-                btnVitalismPassive1_4, btnVitalismPassive1_5, btnVitalismPassive1_6
+                btnVitalismPassive2_1, btnVitalismPassive2_2, btnVitalismPassive2_3,
+                btnVitalismPassive2_4, btnVitalismPassive2_5, btnVitalismPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnVitalism2_3.isSelected = !btnVitalism2_3.isSelected
         }
@@ -6942,8 +7167,9 @@ class SkillCalculator : ComponentActivity() {
             btnVitalism2_4.isSelected = !btnVitalism2_4.isSelected
             skillUnlock(
                 btnVitalism2_4, btnVitalism2_8, btnVitalism2_12,
-                btnVitalismPassive1_1, btnVitalismPassive1_2, btnVitalismPassive1_3,
-                btnVitalismPassive1_4, btnVitalismPassive1_5, btnVitalismPassive1_6
+                btnVitalismPassive2_1, btnVitalismPassive2_2, btnVitalismPassive2_3,
+                btnVitalismPassive2_4, btnVitalismPassive2_5, btnVitalismPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
         }
 
@@ -6959,8 +7185,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnVitalism2_4, btnVitalism2_8, btnVitalism2_12,
-                btnVitalismPassive1_1, btnVitalismPassive1_2, btnVitalismPassive1_3,
-                btnVitalismPassive1_4, btnVitalismPassive1_5, btnVitalismPassive1_6
+                btnVitalismPassive2_1, btnVitalismPassive2_2, btnVitalismPassive2_3,
+                btnVitalismPassive2_4, btnVitalismPassive2_5, btnVitalismPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnVitalism2_5.isSelected = !btnVitalism2_5.isSelected
         }
@@ -6977,8 +7204,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnVitalism2_4, btnVitalism2_8, btnVitalism2_12,
-                btnVitalismPassive1_1, btnVitalismPassive1_2, btnVitalismPassive1_3,
-                btnVitalismPassive1_4, btnVitalismPassive1_5, btnVitalismPassive1_6
+                btnVitalismPassive2_1, btnVitalismPassive2_2, btnVitalismPassive2_3,
+                btnVitalismPassive2_4, btnVitalismPassive2_5, btnVitalismPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnVitalism2_6.isSelected = !btnVitalism2_6.isSelected
         }
@@ -6995,8 +7223,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnVitalism2_4, btnVitalism2_8, btnVitalism2_12,
-                btnVitalismPassive1_1, btnVitalismPassive1_2, btnVitalismPassive1_3,
-                btnVitalismPassive1_4, btnVitalismPassive1_5, btnVitalismPassive1_6
+                btnVitalismPassive2_1, btnVitalismPassive2_2, btnVitalismPassive2_3,
+                btnVitalismPassive2_4, btnVitalismPassive2_5, btnVitalismPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnVitalism2_7.isSelected = !btnVitalism2_7.isSelected
         }
@@ -7014,8 +7243,9 @@ class SkillCalculator : ComponentActivity() {
             btnVitalism2_8.isSelected = !btnVitalism2_8.isSelected
             skillUnlock(
                 btnVitalism2_4, btnVitalism2_8, btnVitalism2_12,
-                btnVitalismPassive1_1, btnVitalismPassive1_2, btnVitalismPassive1_3,
-                btnVitalismPassive1_4, btnVitalismPassive1_5, btnVitalismPassive1_6
+                btnVitalismPassive2_1, btnVitalismPassive2_2, btnVitalismPassive2_3,
+                btnVitalismPassive2_4, btnVitalismPassive2_5, btnVitalismPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
         }
 
@@ -7031,8 +7261,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnVitalism2_4, btnVitalism2_8, btnVitalism2_12,
-                btnVitalismPassive1_1, btnVitalismPassive1_2, btnVitalismPassive1_3,
-                btnVitalismPassive1_4, btnVitalismPassive1_5, btnVitalismPassive1_6
+                btnVitalismPassive2_1, btnVitalismPassive2_2, btnVitalismPassive2_3,
+                btnVitalismPassive2_4, btnVitalismPassive2_5, btnVitalismPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnVitalism2_9.isSelected = !btnVitalism2_9.isSelected
         }
@@ -7049,8 +7280,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnVitalism2_4, btnVitalism2_8, btnVitalism2_12,
-                btnVitalismPassive1_1, btnVitalismPassive1_2, btnVitalismPassive1_3,
-                btnVitalismPassive1_4, btnVitalismPassive1_5, btnVitalismPassive1_6
+                btnVitalismPassive2_1, btnVitalismPassive2_2, btnVitalismPassive2_3,
+                btnVitalismPassive2_4, btnVitalismPassive2_5, btnVitalismPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnVitalism2_10.isSelected = !btnVitalism2_10.isSelected
         }
@@ -7067,8 +7299,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnVitalism2_4, btnVitalism2_8, btnVitalism2_12,
-                btnVitalismPassive1_1, btnVitalismPassive1_2, btnVitalismPassive1_3,
-                btnVitalismPassive1_4, btnVitalismPassive1_5, btnVitalismPassive1_6
+                btnVitalismPassive2_1, btnVitalismPassive2_2, btnVitalismPassive2_3,
+                btnVitalismPassive2_4, btnVitalismPassive2_5, btnVitalismPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnVitalism2_11.isSelected = !btnVitalism2_11.isSelected
         }
@@ -7086,8 +7319,9 @@ class SkillCalculator : ComponentActivity() {
             btnVitalism2_12.isSelected = !btnVitalism2_12.isSelected
             skillUnlock(
                 btnVitalism2_4, btnVitalism2_8, btnVitalism2_12,
-                btnVitalismPassive1_1, btnVitalismPassive1_2, btnVitalismPassive1_3,
-                btnVitalismPassive1_4, btnVitalismPassive1_5, btnVitalismPassive1_6
+                btnVitalismPassive2_1, btnVitalismPassive2_2, btnVitalismPassive2_3,
+                btnVitalismPassive2_4, btnVitalismPassive2_5, btnVitalismPassive2_6,
+                skillPoints2Text, skillTree2Points
             )
         }
         //endregion
@@ -7107,7 +7341,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnMalediction1_4, btnMalediction1_8, btnMalediction1_12,
                 btnMaledictionPassive1_1, btnMaledictionPassive1_2, btnMaledictionPassive1_3,
-                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6
+                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnMalediction1_1.isSelected = !btnMalediction1_1.isSelected
         }
@@ -7125,7 +7360,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnMalediction1_4, btnMalediction1_8, btnMalediction1_12,
                 btnMaledictionPassive1_1, btnMaledictionPassive1_2, btnMaledictionPassive1_3,
-                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6
+                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnMalediction1_2.isSelected = !btnMalediction1_2.isSelected
         }
@@ -7143,7 +7379,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnMalediction1_4, btnMalediction1_8, btnMalediction1_12,
                 btnMaledictionPassive1_1, btnMaledictionPassive1_2, btnMaledictionPassive1_3,
-                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6
+                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnMalediction1_3.isSelected = !btnMalediction1_3.isSelected
         }
@@ -7162,7 +7399,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnMalediction1_4, btnMalediction1_8, btnMalediction1_12,
                 btnMaledictionPassive1_1, btnMaledictionPassive1_2, btnMaledictionPassive1_3,
-                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6
+                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
         }
 
@@ -7179,7 +7417,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnMalediction1_4, btnMalediction1_8, btnMalediction1_12,
                 btnMaledictionPassive1_1, btnMaledictionPassive1_2, btnMaledictionPassive1_3,
-                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6
+                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnMalediction1_5.isSelected = !btnMalediction1_5.isSelected
         }
@@ -7197,7 +7436,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnMalediction1_4, btnMalediction1_8, btnMalediction1_12,
                 btnMaledictionPassive1_1, btnMaledictionPassive1_2, btnMaledictionPassive1_3,
-                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6
+                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnMalediction1_6.isSelected = !btnMalediction1_6.isSelected
         }
@@ -7215,7 +7455,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnMalediction1_4, btnMalediction1_8, btnMalediction1_12,
                 btnMaledictionPassive1_1, btnMaledictionPassive1_2, btnMaledictionPassive1_3,
-                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6
+                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnMalediction1_7.isSelected = !btnMalediction1_7.isSelected
         }
@@ -7234,7 +7475,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnMalediction1_4, btnMalediction1_8, btnMalediction1_12,
                 btnMaledictionPassive1_1, btnMaledictionPassive1_2, btnMaledictionPassive1_3,
-                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6
+                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
         }
 
@@ -7251,7 +7493,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnMalediction1_4, btnMalediction1_8, btnMalediction1_12,
                 btnMaledictionPassive1_1, btnMaledictionPassive1_2, btnMaledictionPassive1_3,
-                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6
+                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnMalediction1_9.isSelected = !btnMalediction1_9.isSelected
         }
@@ -7269,7 +7512,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnMalediction1_4, btnMalediction1_8, btnMalediction1_12,
                 btnMaledictionPassive1_1, btnMaledictionPassive1_2, btnMaledictionPassive1_3,
-                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6
+                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnMalediction1_10.isSelected = !btnMalediction1_10.isSelected
         }
@@ -7287,7 +7531,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnMalediction1_4, btnMalediction1_8, btnMalediction1_12,
                 btnMaledictionPassive1_1, btnMaledictionPassive1_2, btnMaledictionPassive1_3,
-                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6
+                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnMalediction1_11.isSelected = !btnMalediction1_11.isSelected
         }
@@ -7306,7 +7551,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnMalediction1_4, btnMalediction1_8, btnMalediction1_12,
                 btnMaledictionPassive1_1, btnMaledictionPassive1_2, btnMaledictionPassive1_3,
-                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6
+                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
         }
         //endregion
@@ -7325,7 +7571,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnMalediction2_4, btnMalediction2_8, btnMalediction2_12,
                 btnMaledictionPassive1_1, btnMaledictionPassive1_2, btnMaledictionPassive1_3,
-                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6
+                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6,
+                skillPoints2Text, skillTree2Points
             )
             btnMalediction2_1.isSelected = !btnMalediction2_1.isSelected
         }
@@ -7343,7 +7590,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnMalediction2_4, btnMalediction2_8, btnMalediction2_12,
                 btnMaledictionPassive1_1, btnMaledictionPassive1_2, btnMaledictionPassive1_3,
-                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6
+                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6,
+                skillPoints2Text, skillTree2Points
             )
             btnMalediction2_2.isSelected = !btnMalediction2_2.isSelected
         }
@@ -7361,7 +7609,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnMalediction2_4, btnMalediction2_8, btnMalediction2_12,
                 btnMaledictionPassive1_1, btnMaledictionPassive1_2, btnMaledictionPassive1_3,
-                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6
+                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6,
+                skillPoints2Text, skillTree2Points
             )
             btnMalediction2_3.isSelected = !btnMalediction2_3.isSelected
         }
@@ -7380,7 +7629,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnMalediction2_4, btnMalediction2_8, btnMalediction2_12,
                 btnMaledictionPassive1_1, btnMaledictionPassive1_2, btnMaledictionPassive1_3,
-                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6
+                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6,
+                skillPoints2Text, skillTree2Points
             )
         }
 
@@ -7397,7 +7647,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnMalediction2_4, btnMalediction2_8, btnMalediction2_12,
                 btnMaledictionPassive1_1, btnMaledictionPassive1_2, btnMaledictionPassive1_3,
-                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6
+                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6,
+                skillPoints2Text, skillTree2Points
             )
             btnMalediction2_5.isSelected = !btnMalediction2_5.isSelected
         }
@@ -7415,7 +7666,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnMalediction2_4, btnMalediction2_8, btnMalediction2_12,
                 btnMaledictionPassive1_1, btnMaledictionPassive1_2, btnMaledictionPassive1_3,
-                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6
+                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6,
+                skillPoints2Text, skillTree2Points
             )
             btnMalediction2_6.isSelected = !btnMalediction2_6.isSelected
         }
@@ -7433,7 +7685,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnMalediction2_4, btnMalediction2_8, btnMalediction2_12,
                 btnMaledictionPassive1_1, btnMaledictionPassive1_2, btnMaledictionPassive1_3,
-                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6
+                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6,
+                skillPoints2Text, skillTree2Points
             )
             btnMalediction2_7.isSelected = !btnMalediction2_7.isSelected
         }
@@ -7452,7 +7705,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnMalediction2_4, btnMalediction2_8, btnMalediction2_12,
                 btnMaledictionPassive1_1, btnMaledictionPassive1_2, btnMaledictionPassive1_3,
-                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6
+                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6,
+                skillPoints2Text, skillTree2Points
             )
         }
 
@@ -7469,7 +7723,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnMalediction2_4, btnMalediction2_8, btnMalediction2_12,
                 btnMaledictionPassive1_1, btnMaledictionPassive1_2, btnMaledictionPassive1_3,
-                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6
+                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6,
+                skillPoints2Text, skillTree2Points
             )
             btnMalediction2_9.isSelected = !btnMalediction2_9.isSelected
         }
@@ -7487,7 +7742,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnMalediction2_4, btnMalediction2_8, btnMalediction2_12,
                 btnMaledictionPassive1_1, btnMaledictionPassive1_2, btnMaledictionPassive1_3,
-                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6
+                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6,
+                skillPoints2Text, skillTree2Points
             )
             btnMalediction2_10.isSelected = !btnMalediction2_10.isSelected
         }
@@ -7505,7 +7761,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnMalediction2_4, btnMalediction2_8, btnMalediction2_12,
                 btnMaledictionPassive1_1, btnMaledictionPassive1_2, btnMaledictionPassive1_3,
-                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6
+                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6,
+                skillPoints2Text, skillTree2Points
             )
             btnMalediction2_11.isSelected = !btnMalediction2_11.isSelected
         }
@@ -7524,7 +7781,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnMalediction2_4, btnMalediction2_8, btnMalediction2_12,
                 btnMaledictionPassive1_1, btnMaledictionPassive1_2, btnMaledictionPassive1_3,
-                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6
+                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6,
+                skillPoints2Text, skillTree2Points
             )
         }
         //endregion
@@ -7544,7 +7802,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnSwiftblade1_4, btnSwiftblade1_8, btnSwiftblade1_12,
                 btnSwiftbladePassive1_1, btnSwiftbladePassive1_2, btnSwiftbladePassive1_3,
-                btnSwiftbladePassive1_4, btnSwiftbladePassive1_5, btnSwiftbladePassive1_6
+                btnSwiftbladePassive1_4, btnSwiftbladePassive1_5, btnSwiftbladePassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnSwiftblade1_1.isSelected = !btnSwiftblade1_1.isSelected
         }
@@ -7562,7 +7821,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnSwiftblade1_4, btnSwiftblade1_8, btnSwiftblade1_12,
                 btnSwiftbladePassive1_1, btnSwiftbladePassive1_2, btnSwiftbladePassive1_3,
-                btnSwiftbladePassive1_4, btnSwiftbladePassive1_5, btnSwiftbladePassive1_6
+                btnSwiftbladePassive1_4, btnSwiftbladePassive1_5, btnSwiftbladePassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnSwiftblade1_2.isSelected = !btnSwiftblade1_2.isSelected
         }
@@ -7580,7 +7840,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnSwiftblade1_4, btnSwiftblade1_8, btnSwiftblade1_12,
                 btnSwiftbladePassive1_1, btnSwiftbladePassive1_2, btnSwiftbladePassive1_3,
-                btnSwiftbladePassive1_4, btnSwiftbladePassive1_5, btnSwiftbladePassive1_6
+                btnSwiftbladePassive1_4, btnSwiftbladePassive1_5, btnSwiftbladePassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnSwiftblade1_3.isSelected = !btnSwiftblade1_3.isSelected
         }
@@ -7599,7 +7860,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnSwiftblade1_4, btnSwiftblade1_8, btnSwiftblade1_12,
                 btnSwiftbladePassive1_1, btnSwiftbladePassive1_2, btnSwiftbladePassive1_3,
-                btnSwiftbladePassive1_4, btnSwiftbladePassive1_5, btnSwiftbladePassive1_6
+                btnSwiftbladePassive1_4, btnSwiftbladePassive1_5, btnSwiftbladePassive1_6,
+                skillPoints1Text, skillTree1Points
             )
         }
 
@@ -7616,7 +7878,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnSwiftblade1_4, btnSwiftblade1_8, btnSwiftblade1_12,
                 btnSwiftbladePassive1_1, btnSwiftbladePassive1_2, btnSwiftbladePassive1_3,
-                btnSwiftbladePassive1_4, btnSwiftbladePassive1_5, btnSwiftbladePassive1_6
+                btnSwiftbladePassive1_4, btnSwiftbladePassive1_5, btnSwiftbladePassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnSwiftblade1_5.isSelected = !btnSwiftblade1_5.isSelected
         }
@@ -7634,7 +7897,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnSwiftblade1_4, btnSwiftblade1_8, btnSwiftblade1_12,
                 btnSwiftbladePassive1_1, btnSwiftbladePassive1_2, btnSwiftbladePassive1_3,
-                btnSwiftbladePassive1_4, btnSwiftbladePassive1_5, btnSwiftbladePassive1_6
+                btnSwiftbladePassive1_4, btnSwiftbladePassive1_5, btnSwiftbladePassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnSwiftblade1_6.isSelected = !btnSwiftblade1_6.isSelected
         }
@@ -7652,7 +7916,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnSwiftblade1_4, btnSwiftblade1_8, btnSwiftblade1_12,
                 btnSwiftbladePassive1_1, btnSwiftbladePassive1_2, btnSwiftbladePassive1_3,
-                btnSwiftbladePassive1_4, btnSwiftbladePassive1_5, btnSwiftbladePassive1_6
+                btnSwiftbladePassive1_4, btnSwiftbladePassive1_5, btnSwiftbladePassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnSwiftblade1_7.isSelected = !btnSwiftblade1_7.isSelected
         }
@@ -7671,7 +7936,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnSwiftblade1_4, btnSwiftblade1_8, btnSwiftblade1_12,
                 btnSwiftbladePassive1_1, btnSwiftbladePassive1_2, btnSwiftbladePassive1_3,
-                btnSwiftbladePassive1_4, btnSwiftbladePassive1_5, btnSwiftbladePassive1_6
+                btnSwiftbladePassive1_4, btnSwiftbladePassive1_5, btnSwiftbladePassive1_6,
+                skillPoints1Text, skillTree1Points
             )
         }
 
@@ -7688,7 +7954,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnSwiftblade1_4, btnSwiftblade1_8, btnSwiftblade1_12,
                 btnSwiftbladePassive1_1, btnSwiftbladePassive1_2, btnSwiftbladePassive1_3,
-                btnSwiftbladePassive1_4, btnSwiftbladePassive1_5, btnSwiftbladePassive1_6
+                btnSwiftbladePassive1_4, btnSwiftbladePassive1_5, btnSwiftbladePassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnSwiftblade1_9.isSelected = !btnSwiftblade1_9.isSelected
         }
@@ -7706,7 +7973,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnSwiftblade1_4, btnSwiftblade1_8, btnSwiftblade1_12,
                 btnSwiftbladePassive1_1, btnSwiftbladePassive1_2, btnSwiftbladePassive1_3,
-                btnSwiftbladePassive1_4, btnSwiftbladePassive1_5, btnSwiftbladePassive1_6
+                btnSwiftbladePassive1_4, btnSwiftbladePassive1_5, btnSwiftbladePassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnSwiftblade1_10.isSelected = !btnSwiftblade1_10.isSelected
         }
@@ -7724,7 +7992,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnSwiftblade1_4, btnSwiftblade1_8, btnSwiftblade1_12,
                 btnSwiftbladePassive1_1, btnSwiftbladePassive1_2, btnSwiftbladePassive1_3,
-                btnSwiftbladePassive1_4, btnSwiftbladePassive1_5, btnSwiftbladePassive1_6
+                btnSwiftbladePassive1_4, btnSwiftbladePassive1_5, btnSwiftbladePassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnSwiftblade1_11.isSelected = !btnSwiftblade1_11.isSelected
         }
@@ -7743,7 +8012,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnSwiftblade1_4, btnSwiftblade1_8, btnSwiftblade1_12,
                 btnSwiftbladePassive1_1, btnSwiftbladePassive1_2, btnSwiftbladePassive1_3,
-                btnSwiftbladePassive1_4, btnSwiftbladePassive1_5, btnSwiftbladePassive1_6
+                btnSwiftbladePassive1_4, btnSwiftbladePassive1_5, btnSwiftbladePassive1_6,
+                skillPoints1Text, skillTree1Points
             )
         }
         //endregion
@@ -7761,8 +8031,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnSwiftblade2_4, btnSwiftblade2_8, btnSwiftblade2_12,
-                btnSwiftbladePassive1_1, btnSwiftbladePassive1_2, btnSwiftbladePassive1_3,
-                btnSwiftbladePassive1_4, btnSwiftbladePassive1_5, btnSwiftbladePassive1_6
+                btnSwiftbladePassive2_1, btnSwiftbladePassive2_2, btnSwiftbladePassive2_3,
+                btnSwiftbladePassive2_4, btnSwiftbladePassive2_5, btnSwiftbladePassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnSwiftblade2_1.isSelected = !btnSwiftblade2_1.isSelected
         }
@@ -7779,8 +8050,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnSwiftblade2_4, btnSwiftblade2_8, btnSwiftblade2_12,
-                btnSwiftbladePassive1_1, btnSwiftbladePassive1_2, btnSwiftbladePassive1_3,
-                btnSwiftbladePassive1_4, btnSwiftbladePassive1_5, btnSwiftbladePassive1_6
+                btnSwiftbladePassive2_1, btnSwiftbladePassive2_2, btnSwiftbladePassive2_3,
+                btnSwiftbladePassive2_4, btnSwiftbladePassive2_5, btnSwiftbladePassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnSwiftblade2_2.isSelected = !btnSwiftblade2_2.isSelected
         }
@@ -7797,8 +8069,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnSwiftblade2_4, btnSwiftblade2_8, btnSwiftblade2_12,
-                btnSwiftbladePassive1_1, btnSwiftbladePassive1_2, btnSwiftbladePassive1_3,
-                btnSwiftbladePassive1_4, btnSwiftbladePassive1_5, btnSwiftbladePassive1_6
+                btnSwiftbladePassive2_1, btnSwiftbladePassive2_2, btnSwiftbladePassive2_3,
+                btnSwiftbladePassive2_4, btnSwiftbladePassive2_5, btnSwiftbladePassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnSwiftblade2_3.isSelected = !btnSwiftblade2_3.isSelected
         }
@@ -7816,8 +8089,9 @@ class SkillCalculator : ComponentActivity() {
             btnSwiftblade2_4.isSelected = !btnSwiftblade2_4.isSelected
             skillUnlock(
                 btnSwiftblade2_4, btnSwiftblade2_8, btnSwiftblade2_12,
-                btnSwiftbladePassive1_1, btnSwiftbladePassive1_2, btnSwiftbladePassive1_3,
-                btnSwiftbladePassive1_4, btnSwiftbladePassive1_5, btnSwiftbladePassive1_6
+                btnSwiftbladePassive2_1, btnSwiftbladePassive2_2, btnSwiftbladePassive2_3,
+                btnSwiftbladePassive2_4, btnSwiftbladePassive2_5, btnSwiftbladePassive2_6,
+                skillPoints2Text, skillTree2Points
             )
         }
 
@@ -7833,8 +8107,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnSwiftblade2_4, btnSwiftblade2_8, btnSwiftblade2_12,
-                btnSwiftbladePassive1_1, btnSwiftbladePassive1_2, btnSwiftbladePassive1_3,
-                btnSwiftbladePassive1_4, btnSwiftbladePassive1_5, btnSwiftbladePassive1_6
+                btnSwiftbladePassive2_1, btnSwiftbladePassive2_2, btnSwiftbladePassive2_3,
+                btnSwiftbladePassive2_4, btnSwiftbladePassive2_5, btnSwiftbladePassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnSwiftblade2_5.isSelected = !btnSwiftblade2_5.isSelected
         }
@@ -7851,8 +8126,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnSwiftblade2_4, btnSwiftblade2_8, btnSwiftblade2_12,
-                btnSwiftbladePassive1_1, btnSwiftbladePassive1_2, btnSwiftbladePassive1_3,
-                btnSwiftbladePassive1_4, btnSwiftbladePassive1_5, btnSwiftbladePassive1_6
+                btnSwiftbladePassive2_1, btnSwiftbladePassive2_2, btnSwiftbladePassive2_3,
+                btnSwiftbladePassive2_4, btnSwiftbladePassive2_5, btnSwiftbladePassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnSwiftblade2_6.isSelected = !btnSwiftblade2_6.isSelected
         }
@@ -7869,8 +8145,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnSwiftblade2_4, btnSwiftblade2_8, btnSwiftblade2_12,
-                btnSwiftbladePassive1_1, btnSwiftbladePassive1_2, btnSwiftbladePassive1_3,
-                btnSwiftbladePassive1_4, btnSwiftbladePassive1_5, btnSwiftbladePassive1_6
+                btnSwiftbladePassive2_1, btnSwiftbladePassive2_2, btnSwiftbladePassive2_3,
+                btnSwiftbladePassive2_4, btnSwiftbladePassive2_5, btnSwiftbladePassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnSwiftblade2_7.isSelected = !btnSwiftblade2_7.isSelected
         }
@@ -7888,8 +8165,9 @@ class SkillCalculator : ComponentActivity() {
             btnSwiftblade2_8.isSelected = !btnSwiftblade2_8.isSelected
             skillUnlock(
                 btnSwiftblade2_4, btnSwiftblade2_8, btnSwiftblade2_12,
-                btnSwiftbladePassive1_1, btnSwiftbladePassive1_2, btnSwiftbladePassive1_3,
-                btnSwiftbladePassive1_4, btnSwiftbladePassive1_5, btnSwiftbladePassive1_6
+                btnSwiftbladePassive2_1, btnSwiftbladePassive2_2, btnSwiftbladePassive2_3,
+                btnSwiftbladePassive2_4, btnSwiftbladePassive2_5, btnSwiftbladePassive2_6,
+                skillPoints2Text, skillTree2Points
             )
         }
 
@@ -7905,8 +8183,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnSwiftblade2_4, btnSwiftblade2_8, btnSwiftblade2_12,
-                btnSwiftbladePassive1_1, btnSwiftbladePassive1_2, btnSwiftbladePassive1_3,
-                btnSwiftbladePassive1_4, btnSwiftbladePassive1_5, btnSwiftbladePassive1_6
+                btnSwiftbladePassive2_1, btnSwiftbladePassive2_2, btnSwiftbladePassive2_3,
+                btnSwiftbladePassive2_4, btnSwiftbladePassive2_5, btnSwiftbladePassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnSwiftblade2_9.isSelected = !btnSwiftblade2_9.isSelected
         }
@@ -7923,8 +8202,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnSwiftblade2_4, btnSwiftblade2_8, btnSwiftblade2_12,
-                btnSwiftbladePassive1_1, btnSwiftbladePassive1_2, btnSwiftbladePassive1_3,
-                btnSwiftbladePassive1_4, btnSwiftbladePassive1_5, btnSwiftbladePassive1_6
+                btnSwiftbladePassive2_1, btnSwiftbladePassive2_2, btnSwiftbladePassive2_3,
+                btnSwiftbladePassive2_4, btnSwiftbladePassive2_5, btnSwiftbladePassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnSwiftblade2_10.isSelected = !btnSwiftblade2_10.isSelected
         }
@@ -7941,8 +8221,9 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock(
                 btnSwiftblade2_4, btnSwiftblade2_8, btnSwiftblade2_12,
-                btnSwiftbladePassive1_1, btnSwiftbladePassive1_2, btnSwiftbladePassive1_3,
-                btnSwiftbladePassive1_4, btnSwiftbladePassive1_5, btnSwiftbladePassive1_6
+                btnSwiftbladePassive2_1, btnSwiftbladePassive2_2, btnSwiftbladePassive2_3,
+                btnSwiftbladePassive2_4, btnSwiftbladePassive2_5, btnSwiftbladePassive2_6,
+                skillPoints2Text, skillTree2Points
             )
             btnSwiftblade2_11.isSelected = !btnSwiftblade2_11.isSelected
         }
@@ -7960,8 +8241,9 @@ class SkillCalculator : ComponentActivity() {
             btnSwiftblade2_12.isSelected = !btnSwiftblade2_12.isSelected
             skillUnlock(
                 btnSwiftblade2_4, btnSwiftblade2_8, btnSwiftblade2_12,
-                btnSwiftbladePassive1_1, btnSwiftbladePassive1_2, btnSwiftbladePassive1_3,
-                btnSwiftbladePassive1_4, btnSwiftbladePassive1_5, btnSwiftbladePassive1_6
+                btnSwiftbladePassive2_1, btnSwiftbladePassive2_2, btnSwiftbladePassive2_3,
+                btnSwiftbladePassive2_4, btnSwiftbladePassive2_5, btnSwiftbladePassive2_6,
+                skillPoints2Text, skillTree2Points
             )
         }
         //endregion
@@ -7981,7 +8263,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnGunslinger1_4, btnGunslinger1_8, btnGunslinger1_12,
                 btnGunslingerPassive1_1, btnGunslingerPassive1_2, btnGunslingerPassive1_3,
-                btnGunslingerPassive1_4, btnGunslingerPassive1_5, btnGunslingerPassive1_6
+                btnGunslingerPassive1_4, btnGunslingerPassive1_5, btnGunslingerPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnGunslinger1_1.isSelected = !btnGunslinger1_1.isSelected
         }
@@ -7999,7 +8282,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnGunslinger1_4, btnGunslinger1_8, btnGunslinger1_12,
                 btnGunslingerPassive1_1, btnGunslingerPassive1_2, btnGunslingerPassive1_3,
-                btnGunslingerPassive1_4, btnGunslingerPassive1_5, btnGunslingerPassive1_6
+                btnGunslingerPassive1_4, btnGunslingerPassive1_5, btnGunslingerPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnGunslinger1_2.isSelected = !btnGunslinger1_2.isSelected
         }
@@ -8017,7 +8301,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnGunslinger1_4, btnGunslinger1_8, btnGunslinger1_12,
                 btnGunslingerPassive1_1, btnGunslingerPassive1_2, btnGunslingerPassive1_3,
-                btnGunslingerPassive1_4, btnGunslingerPassive1_5, btnGunslingerPassive1_6
+                btnGunslingerPassive1_4, btnGunslingerPassive1_5, btnGunslingerPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnGunslinger1_3.isSelected = !btnGunslinger1_3.isSelected
         }
@@ -8036,7 +8321,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnGunslinger1_4, btnGunslinger1_8, btnGunslinger1_12,
                 btnGunslingerPassive1_1, btnGunslingerPassive1_2, btnGunslingerPassive1_3,
-                btnGunslingerPassive1_4, btnGunslingerPassive1_5, btnGunslingerPassive1_6
+                btnGunslingerPassive1_4, btnGunslingerPassive1_5, btnGunslingerPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
         }
 
@@ -8053,7 +8339,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnGunslinger1_4, btnGunslinger1_8, btnGunslinger1_12,
                 btnGunslingerPassive1_1, btnGunslingerPassive1_2, btnGunslingerPassive1_3,
-                btnGunslingerPassive1_4, btnGunslingerPassive1_5, btnGunslingerPassive1_6
+                btnGunslingerPassive1_4, btnGunslingerPassive1_5, btnGunslingerPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnGunslinger1_5.isSelected = !btnGunslinger1_5.isSelected
         }
@@ -8071,7 +8358,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnGunslinger1_4, btnGunslinger1_8, btnGunslinger1_12,
                 btnGunslingerPassive1_1, btnGunslingerPassive1_2, btnGunslingerPassive1_3,
-                btnGunslingerPassive1_4, btnGunslingerPassive1_5, btnGunslingerPassive1_6
+                btnGunslingerPassive1_4, btnGunslingerPassive1_5, btnGunslingerPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnGunslinger1_6.isSelected = !btnGunslinger1_6.isSelected
         }
@@ -8089,7 +8377,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnGunslinger1_4, btnGunslinger1_8, btnGunslinger1_12,
                 btnGunslingerPassive1_1, btnGunslingerPassive1_2, btnGunslingerPassive1_3,
-                btnGunslingerPassive1_4, btnGunslingerPassive1_5, btnGunslingerPassive1_6
+                btnGunslingerPassive1_4, btnGunslingerPassive1_5, btnGunslingerPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnGunslinger1_7.isSelected = !btnGunslinger1_7.isSelected
         }
@@ -8108,7 +8397,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnGunslinger1_4, btnGunslinger1_8, btnGunslinger1_12,
                 btnGunslingerPassive1_1, btnGunslingerPassive1_2, btnGunslingerPassive1_3,
-                btnGunslingerPassive1_4, btnGunslingerPassive1_5, btnGunslingerPassive1_6
+                btnGunslingerPassive1_4, btnGunslingerPassive1_5, btnGunslingerPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
         }
 
@@ -8125,7 +8415,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnGunslinger1_4, btnGunslinger1_8, btnGunslinger1_12,
                 btnGunslingerPassive1_1, btnGunslingerPassive1_2, btnGunslingerPassive1_3,
-                btnGunslingerPassive1_4, btnGunslingerPassive1_5, btnGunslingerPassive1_6
+                btnGunslingerPassive1_4, btnGunslingerPassive1_5, btnGunslingerPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnGunslinger1_9.isSelected = !btnGunslinger1_9.isSelected
         }
@@ -8143,7 +8434,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnGunslinger1_4, btnGunslinger1_8, btnGunslinger1_12,
                 btnGunslingerPassive1_1, btnGunslingerPassive1_2, btnGunslingerPassive1_3,
-                btnGunslingerPassive1_4, btnGunslingerPassive1_5, btnGunslingerPassive1_6
+                btnGunslingerPassive1_4, btnGunslingerPassive1_5, btnGunslingerPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnGunslinger1_10.isSelected = !btnGunslinger1_10.isSelected
         }
@@ -8161,7 +8453,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnGunslinger1_4, btnGunslinger1_8, btnGunslinger1_12,
                 btnGunslingerPassive1_1, btnGunslingerPassive1_2, btnGunslingerPassive1_3,
-                btnGunslingerPassive1_4, btnGunslingerPassive1_5, btnGunslingerPassive1_6
+                btnGunslingerPassive1_4, btnGunslingerPassive1_5, btnGunslingerPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
             btnGunslinger1_11.isSelected = !btnGunslinger1_11.isSelected
         }
@@ -8180,7 +8473,8 @@ class SkillCalculator : ComponentActivity() {
             skillUnlock(
                 btnGunslinger1_4, btnGunslinger1_8, btnGunslinger1_12,
                 btnGunslingerPassive1_1, btnGunslingerPassive1_2, btnGunslingerPassive1_3,
-                btnGunslingerPassive1_4, btnGunslingerPassive1_5, btnGunslingerPassive1_6
+                btnGunslingerPassive1_4, btnGunslingerPassive1_5, btnGunslingerPassive1_6,
+                skillPoints1Text, skillTree1Points
             )
         }
         //endregion
