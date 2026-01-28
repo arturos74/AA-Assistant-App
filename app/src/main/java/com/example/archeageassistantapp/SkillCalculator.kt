@@ -2150,7 +2150,7 @@ class SkillCalculator : ComponentActivity() {
         btnBattlerage2.setOnClickListener {
             gridSkillsets2.visibility = View.GONE
             tvPanel2Title.visibility = View.GONE
-            btnBattlerage2.visibility = View.GONE
+            btnBattlerage1.visibility = View.GONE
             btnBattlerage3.visibility = View.GONE
 
             battlerageText2.visibility = View.VISIBLE
@@ -2385,6 +2385,8 @@ class SkillCalculator : ComponentActivity() {
             btnReset2.visibility = View.VISIBLE
         }
 
+        //endregion
+
         //region Panel 2 Reset Button
         btnReset2.setOnClickListener {
             //Enables Visibility of Original Skill Select Panel
@@ -2447,59 +2449,59 @@ class SkillCalculator : ComponentActivity() {
             gridSpelldancePassive2.visibility = View.GONE
 
             //Enables Visibility of any invisible buttons
-            btnBattlerage2.visibility = View.VISIBLE
+            btnBattlerage1.visibility = View.VISIBLE
             btnBattlerage2.visibility = View.VISIBLE
             btnBattlerage3.visibility = View.VISIBLE
 
-            btnArchery2.visibility = View.VISIBLE
+            btnArchery1.visibility = View.VISIBLE
             btnArchery2.visibility = View.VISIBLE
             btnArchery3.visibility = View.VISIBLE
 
-            btnDefense2.visibility = View.VISIBLE
+            btnDefense1.visibility = View.VISIBLE
             btnDefense2.visibility = View.VISIBLE
             btnDefense3.visibility = View.VISIBLE
 
-            btnOccultism2.visibility = View.VISIBLE
+            btnOccultism1.visibility = View.VISIBLE
             btnOccultism2.visibility = View.VISIBLE
             btnOccultism3.visibility = View.VISIBLE
 
-            btnSorcery2.visibility = View.VISIBLE
+            btnSorcery1.visibility = View.VISIBLE
             btnSorcery2.visibility = View.VISIBLE
             btnSorcery3.visibility = View.VISIBLE
 
-            btnSongcraft2.visibility = View.VISIBLE
+            btnSongcraft1.visibility = View.VISIBLE
             btnSongcraft2.visibility = View.VISIBLE
             btnSongcraft3.visibility = View.VISIBLE
 
-            btnWitchcraft2.visibility = View.VISIBLE
+            btnWitchcraft1.visibility = View.VISIBLE
             btnWitchcraft2.visibility = View.VISIBLE
             btnWitchcraft3.visibility = View.VISIBLE
 
-            btnAuramancy2.visibility = View.VISIBLE
+            btnAuramancy1.visibility = View.VISIBLE
             btnAuramancy2.visibility = View.VISIBLE
             btnAuramancy3.visibility = View.VISIBLE
 
-            btnShadowplay2.visibility = View.VISIBLE
+            btnShadowplay1.visibility = View.VISIBLE
             btnShadowplay2.visibility = View.VISIBLE
             btnShadowplay3.visibility = View.VISIBLE
 
-            btnVitalism2.visibility = View.VISIBLE
+            btnVitalism1.visibility = View.VISIBLE
             btnVitalism2.visibility = View.VISIBLE
             btnVitalism3.visibility = View.VISIBLE
 
-            btnMalediction2.visibility = View.VISIBLE
+            btnMalediction1.visibility = View.VISIBLE
             btnMalediction2.visibility = View.VISIBLE
             btnMalediction3.visibility = View.VISIBLE
 
-            btnSwiftblade2.visibility = View.VISIBLE
+            btnSwiftblade1.visibility = View.VISIBLE
             btnSwiftblade2.visibility = View.VISIBLE
             btnSwiftblade3.visibility = View.VISIBLE
 
-            btnGunslinger2.visibility = View.VISIBLE
+            btnGunslinger1.visibility = View.VISIBLE
             btnGunslinger2.visibility = View.VISIBLE
             btnGunslinger3.visibility = View.VISIBLE
 
-            btnSpelldance2.visibility = View.VISIBLE
+            btnSpelldance1.visibility = View.VISIBLE
             btnSpelldance2.visibility = View.VISIBLE
             btnSpelldance3.visibility = View.VISIBLE
 
