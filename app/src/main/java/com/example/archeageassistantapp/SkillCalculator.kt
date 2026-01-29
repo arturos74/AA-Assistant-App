@@ -93,16 +93,22 @@ class SkillCalculator : ComponentActivity() {
         val gridBattleragePassive1 = findViewById<GridLayout>(R.id.gridBattleragePassive1)
         val gridBattlerage2 = findViewById<GridLayout>(R.id.gridBattlerage2)
         val gridBattleragePassive2 = findViewById<GridLayout>(R.id.gridBattleragePassive2)
+        val gridBattlerage3 = findViewById<GridLayout>(R.id.gridBattlerage3)
+        val gridBattleragePassive3 = findViewById<GridLayout>(R.id.gridBattleragePassive3)
 
         val gridArchery1 = findViewById<GridLayout>(R.id.gridArchery1)
         val gridArcheryPassive1 = findViewById<GridLayout>(R.id.gridArcheryPassive1)
         val gridArchery2 = findViewById<GridLayout>(R.id.gridArchery2)
         val gridArcheryPassive2 = findViewById<GridLayout>(R.id.gridArcheryPassive2)
+        val gridArchery3 = findViewById<GridLayout>(R.id.gridArchery3)
+        val gridArcheryPassive3 = findViewById<GridLayout>(R.id.gridArcheryPassive3)
 
         val gridDefense1 = findViewById<GridLayout>(R.id.gridDefense1)
         val gridDefensePassive1 = findViewById<GridLayout>(R.id.gridDefensePassive1)
         val gridDefense2 = findViewById<GridLayout>(R.id.gridDefense2)
         val gridDefensePassive2 = findViewById<GridLayout>(R.id.gridDefensePassive2)
+        val gridDefense3 = findViewById<GridLayout>(R.id.gridDefense3)
+        val gridDefensePassive3 = findViewById<GridLayout>(R.id.gridDefensePassive3)
 
         val gridOccultism1 = findViewById<GridLayout>(R.id.gridOccultism1)
         val gridOccultismPassive1 = findViewById<GridLayout>(R.id.gridOccultismPassive1)
@@ -112,67 +118,91 @@ class SkillCalculator : ComponentActivity() {
         val gridSorcery1 = findViewById<GridLayout>(R.id.gridSorcery1)
         val gridSorceryPassive1 = findViewById<GridLayout>(R.id.gridSorceryPassive1)
         val gridSorcery2 = findViewById<GridLayout>(R.id.gridSorcery2)
-        val gridSorceryPassive2 = findViewById<GridLayout>(R.id.gridSorceryPassive1)
+        val gridSorceryPassive2 = findViewById<GridLayout>(R.id.gridSorceryPassive2)
+        val gridSorcery3 = findViewById<GridLayout>(R.id.gridSorcery3)
+        val gridSorceryPassive3 = findViewById<GridLayout>(R.id.gridSorceryPassive3)
 
         val gridSongcraft1 = findViewById<GridLayout>(R.id.gridSongcraft1)
         val gridSongcraftPassive1 = findViewById<GridLayout>(R.id.gridSongcraftPassive1)
         val gridSongcraft2 = findViewById<GridLayout>(R.id.gridSongcraft2)
         val gridSongcraftPassive2 = findViewById<GridLayout>(R.id.gridSongcraftPassive2)
+        val gridSongcraft3 = findViewById<GridLayout>(R.id.gridSongcraft3)
+        val gridSongcraftPassive3 = findViewById<GridLayout>(R.id.gridSongcraftPassive3)
 
         val gridWitchcraft1 = findViewById<GridLayout>(R.id.gridWitchcraft1)
         val gridWitchcraftPassive1 = findViewById<GridLayout>(R.id.gridWitchcraftPassive1)
         val gridWitchcraft2 = findViewById<GridLayout>(R.id.gridWitchcraft2)
         val gridWitchcraftPassive2 = findViewById<GridLayout>(R.id.gridWitchcraftPassive2)
+        val gridWitchcraft3 = findViewById<GridLayout>(R.id.gridWitchcraft3)
+        val gridWitchcraftPassive3 = findViewById<GridLayout>(R.id.gridWitchcraftPassive3)
 
         val gridAuramancy1 = findViewById<GridLayout>(R.id.gridAuramancy1)
         val gridAuramancyPassive1 = findViewById<GridLayout>(R.id.gridAuramancyPassive1)
         val gridAuramancy2 = findViewById<GridLayout>(R.id.gridAuramancy2)
         val gridAuramancyPassive2 = findViewById<GridLayout>(R.id.gridAuramancyPassive2)
+        val gridAuramancy3 = findViewById<GridLayout>(R.id.gridAuramancy3)
+        val gridAuramancyPassive3 = findViewById<GridLayout>(R.id.gridAuramancyPassive3)
 
         val gridShadowplay1 = findViewById<GridLayout>(R.id.gridShadowplay1)
         val gridShadowplayPassive1 = findViewById<GridLayout>(R.id.gridShadowplayPassive1)
         val gridShadowplay2 = findViewById<GridLayout>(R.id.gridShadowplay2)
         val gridShadowplayPassive2 = findViewById<GridLayout>(R.id.gridShadowplayPassive2)
+        val gridShadowplay3 = findViewById<GridLayout>(R.id.gridShadowplay3)
+        val gridShadowplayPassive3 = findViewById<GridLayout>(R.id.gridShadowplayPassive3)
 
         val gridVitalism1 = findViewById<GridLayout>(R.id.gridVitalism1)
         val gridVitalismPassive1 = findViewById<GridLayout>(R.id.gridVitalismPassive1)
         val gridVitalism2 = findViewById<GridLayout>(R.id.gridVitalism2)
         val gridVitalismPassive2 = findViewById<GridLayout>(R.id.gridVitalismPassive2)
+        val gridVitalism3 = findViewById<GridLayout>(R.id.gridVitalism3)
+        val gridVitalismPassive3 = findViewById<GridLayout>(R.id.gridVitalismPassive3)
 
         val gridMalediction1 = findViewById<GridLayout>(R.id.gridMalediction1)
         val gridMaledictionPassive1 = findViewById<GridLayout>(R.id.gridMaledictionPassive1)
         val gridMalediction2 = findViewById<GridLayout>(R.id.gridMalediction2)
         val gridMaledictionPassive2 = findViewById<GridLayout>(R.id.gridMaledictionPassive2)
+        val gridMalediction3 = findViewById<GridLayout>(R.id.gridMalediction3)
+        val gridMaledictionPassive3 = findViewById<GridLayout>(R.id.gridMaledictionPassive3)
 
         val gridSwiftblade1 = findViewById<GridLayout>(R.id.gridSwiftblade1)
         val gridSwiftbladePassive1 = findViewById<GridLayout>(R.id.gridSwiftbladePassive1)
         val gridSwiftblade2 = findViewById<GridLayout>(R.id.gridSwiftblade2)
         val gridSwiftbladePassive2 = findViewById<GridLayout>(R.id.gridSwiftbladePassive2)
+        val gridSwiftblade3 = findViewById<GridLayout>(R.id.gridSwiftblade3)
+        val gridSwiftbladePassive3 = findViewById<GridLayout>(R.id.gridSwiftbladePassive3)
 
         val gridGunslinger1 = findViewById<GridLayout>(R.id.gridGunslinger1)
         val gridGunslingerPassive1 = findViewById<GridLayout>(R.id.gridGunslingerPassive1)
         val gridGunslinger2 = findViewById<GridLayout>(R.id.gridGunslinger2)
         val gridGunslingerPassive2 = findViewById<GridLayout>(R.id.gridGunslingerPassive2)
+        val gridGunslinger3 = findViewById<GridLayout>(R.id.gridGunslinger3)
+        val gridGunslingerPassive3 = findViewById<GridLayout>(R.id.gridGunslingerPassive3)
 
         val gridSpelldance1 = findViewById<GridLayout>(R.id.gridSpelldance1)
         val gridSpelldancePassive1 = findViewById<GridLayout>(R.id.gridSpelldancePassive1)
         val gridSpelldance2 = findViewById<GridLayout>(R.id.gridSpelldance2)
         val gridSpelldancePassive2 = findViewById<GridLayout>(R.id.gridSpelldancePassive2)
+        val gridSpelldance3 = findViewById<GridLayout>(R.id.gridSpelldance3)
+        val gridSpelldancePassive3 = findViewById<GridLayout>(R.id.gridSpelldancePassive3)
 
         val btnReset1 = findViewById<Button>(R.id.btnReset1)
         val btnReset2 = findViewById<Button>(R.id.btnReset2)
+        val btnReset3 = findViewById<Button>(R.id.btnReset3)
         //endregion
 
 
         //region Text Values
         val tvPanel1Title = findViewById<TextView>(R.id.tvPanel1Title)
         val tvPanel2Title = findViewById<TextView>(R.id.tvPanel2Title)
+        val tvPanel3Title = findViewById<TextView>(R.id.tvPanel3Title)
         val tvPointsLeft = findViewById<TextView>(R.id.tvPointsLeft)
         tvPointsLeft.text = " ${skillPoints} points left"
         val skillPoints1Text = findViewById<TextView>(R.id.skillPointsText)
         val skillPoints2Text = findViewById<TextView>(R.id.skillPointsText2)
+        val skillPoints3Text = findViewById<TextView>(R.id.skillPointsText3)
         skillPoints1Text.text = " ${skillTree1Points} / 12"
-        skillPoints2Text.text = " ${skillTree1Points} / 12"
+        skillPoints2Text.text = " ${skillTree2Points} / 12"
+        skillPoints3Text.text = " ${skillTree3Points} / 12"
         
         val combatText1 = findViewById<TextView>(R.id.combatText1)
         val passiveText1 = findViewById<TextView>(R.id.passiveText1)
@@ -207,6 +237,23 @@ class SkillCalculator : ComponentActivity() {
         val swiftbladeText2 = findViewById<TextView>(R.id.swiftbladeText2)
         val gunslingerText2 = findViewById<TextView>(R.id.gunslingerText2)
         val spelldanceText2 = findViewById<TextView>(R.id.spelldanceText2)
+
+        val combatText3 = findViewById<TextView>(R.id.combatText3)
+        val passiveText3 = findViewById<TextView>(R.id.passiveText3)
+        val battlerageText3 = findViewById<TextView>(R.id.battlerageText3)
+        val archeryText3 = findViewById<TextView>(R.id.archeryText3)
+        val defenseText3 = findViewById<TextView>(R.id.defenseText3)
+        val occultismText3 = findViewById<TextView>(R.id.occultismText3)
+        val sorceryText3 = findViewById<TextView>(R.id.sorceryText3)
+        val songcraftText3 = findViewById<TextView>(R.id.songcraftText3)
+        val witchcraftText3 = findViewById<TextView>(R.id.witchcraftText3)
+        val auramancyText3 = findViewById<TextView>(R.id.auramancyText3)
+        val shadowplayText3 = findViewById<TextView>(R.id.shadowplayText3)
+        val vitalismText3 = findViewById<TextView>(R.id.vitalismText3)
+        val maledictionText3 = findViewById<TextView>(R.id.maledictionText3)
+        val swiftbladeText3 = findViewById<TextView>(R.id.swiftbladeText3)
+        val gunslingerText3 = findViewById<TextView>(R.id.gunslingerText3)
+        val spelldanceText3 = findViewById<TextView>(R.id.spelldanceText3)
         //endregion
 
 
@@ -300,6 +347,51 @@ class SkillCalculator : ComponentActivity() {
         btnBattleragePassive2_6.alpha = 0.3f
         //endregion
 
+        //region Battlerage Skill Values Panel 3
+        val btnBattlerage3_1 = findViewById<ImageButton>(R.id.btnBattlerage3_1)
+        btnBattlerage3_1.alpha = 0.3f
+        val btnBattlerage3_2 = findViewById<ImageButton>(R.id.btnBattlerage3_2)
+        btnBattlerage3_2.alpha = 0.3f
+        val btnBattlerage3_3 = findViewById<ImageButton>(R.id.btnBattlerage3_3)
+        btnBattlerage3_3.alpha = 0.3f
+        val btnBattlerage3_4 = findViewById<ImageButton>(R.id.btnBattlerage3_4)
+        btnBattlerage3_4.alpha = 0.3f
+        btnBattlerage3_4.isEnabled = false
+        val btnBattlerage3_5 = findViewById<ImageButton>(R.id.btnBattlerage3_5)
+        btnBattlerage3_5.alpha = 0.3f
+        val btnBattlerage3_6 = findViewById<ImageButton>(R.id.btnBattlerage3_6)
+        btnBattlerage3_6.alpha = 0.3f
+        val btnBattlerage3_7 = findViewById<ImageButton>(R.id.btnBattlerage3_7)
+        btnBattlerage3_7.alpha = 0.3f
+        val btnBattlerage3_8 = findViewById<ImageButton>(R.id.btnBattlerage3_8)
+        btnBattlerage3_8.alpha = 0.3f
+        btnBattlerage3_8.isEnabled = false
+        val btnBattlerage3_9 = findViewById<ImageButton>(R.id.btnBattlerage3_9)
+        btnBattlerage3_9.alpha = 0.3f
+        val btnBattlerage3_10 = findViewById<ImageButton>(R.id.btnBattlerage3_10)
+        btnBattlerage3_10.alpha = 0.3f
+        val btnBattlerage3_11 = findViewById<ImageButton>(R.id.btnBattlerage3_11)
+        btnBattlerage3_11.alpha = 0.3f
+        val btnBattlerage3_12 = findViewById<ImageButton>(R.id.btnBattlerage3_12)
+        btnBattlerage3_12.alpha = 0.3f
+        btnBattlerage3_12.isEnabled = false
+        //endregion
+
+        //region Battlerage Passive Values Panel 3
+        val btnBattleragePassive3_1 = findViewById<ImageButton>(R.id.btnBattleragePassive3_1)
+        btnBattleragePassive3_1.alpha = 0.3f
+        val btnBattleragePassive3_2 = findViewById<ImageButton>(R.id.btnBattleragePassive3_2)
+        btnBattleragePassive3_2.alpha = 0.3f
+        val btnBattleragePassive3_3 = findViewById<ImageButton>(R.id.btnBattleragePassive3_3)
+        btnBattleragePassive3_3.alpha = 0.3f
+        val btnBattleragePassive3_4 = findViewById<ImageButton>(R.id.btnBattleragePassive3_4)
+        btnBattleragePassive3_4.alpha = 0.3f
+        val btnBattleragePassive3_5 = findViewById<ImageButton>(R.id.btnBattleragePassive3_5)
+        btnBattleragePassive3_5.alpha = 0.3f
+        val btnBattleragePassive3_6 = findViewById<ImageButton>(R.id.btnBattleragePassive3_6)
+        btnBattleragePassive3_6.alpha = 0.3f
+        //endregion
+
         //region Archery Skill Values Panel 1
         val btnArchery1_1 = findViewById<ImageButton>(R.id.btnArchery1_1)
         btnArchery1_1.alpha = 0.3f
@@ -390,6 +482,51 @@ class SkillCalculator : ComponentActivity() {
         btnArcheryPassive2_6.alpha = 0.3f
         //endregion
 
+        //region Archery Skill Values Panel 3
+        val btnArchery3_1 = findViewById<ImageButton>(R.id.btnArchery3_1)
+        btnArchery3_1.alpha = 0.3f
+        val btnArchery3_2 = findViewById<ImageButton>(R.id.btnArchery3_2)
+        btnArchery3_2.alpha = 0.3f
+        val btnArchery3_3 = findViewById<ImageButton>(R.id.btnArchery3_3)
+        btnArchery3_3.alpha = 0.3f
+        val btnArchery3_4 = findViewById<ImageButton>(R.id.btnArchery3_4)
+        btnArchery3_4.alpha = 0.3f
+        btnArchery3_4.isEnabled = false
+        val btnArchery3_5 = findViewById<ImageButton>(R.id.btnArchery3_5)
+        btnArchery3_5.alpha = 0.3f
+        val btnArchery3_6 = findViewById<ImageButton>(R.id.btnArchery3_6)
+        btnArchery3_6.alpha = 0.3f
+        val btnArchery3_7 = findViewById<ImageButton>(R.id.btnArchery3_7)
+        btnArchery3_7.alpha = 0.3f
+        val btnArchery3_8 = findViewById<ImageButton>(R.id.btnArchery3_8)
+        btnArchery3_8.alpha = 0.3f
+        btnArchery3_8.isEnabled = false
+        val btnArchery3_9 = findViewById<ImageButton>(R.id.btnArchery3_9)
+        btnArchery3_9.alpha = 0.3f
+        val btnArchery3_10 = findViewById<ImageButton>(R.id.btnArchery3_10)
+        btnArchery3_10.alpha = 0.3f
+        val btnArchery3_11 = findViewById<ImageButton>(R.id.btnArchery3_11)
+        btnArchery3_11.alpha = 0.3f
+        val btnArchery3_12 = findViewById<ImageButton>(R.id.btnArchery3_12)
+        btnArchery3_12.alpha = 0.3f
+        btnArchery3_12.isEnabled = false
+        //endregion
+
+        //region Archery Passive Values Panel 3
+        val btnArcheryPassive3_1 = findViewById<ImageButton>(R.id.btnArcheryPassive3_1)
+        btnArcheryPassive3_1.alpha = 0.3f
+        val btnArcheryPassive3_2 = findViewById<ImageButton>(R.id.btnArcheryPassive3_2)
+        btnArcheryPassive3_2.alpha = 0.3f
+        val btnArcheryPassive3_3 = findViewById<ImageButton>(R.id.btnArcheryPassive3_3)
+        btnArcheryPassive3_3.alpha = 0.3f
+        val btnArcheryPassive3_4 = findViewById<ImageButton>(R.id.btnArcheryPassive3_4)
+        btnArcheryPassive3_4.alpha = 0.3f
+        val btnArcheryPassive3_5 = findViewById<ImageButton>(R.id.btnArcheryPassive3_5)
+        btnArcheryPassive3_5.alpha = 0.3f
+        val btnArcheryPassive3_6 = findViewById<ImageButton>(R.id.btnArcheryPassive3_6)
+        btnArcheryPassive3_6.alpha = 0.3f
+        //endregion
+
         //region Defense Skill Values Panel 1
         val btnDefense1_1 = findViewById<ImageButton>(R.id.btnDefense1_1)
         btnDefense1_1.alpha = 0.3f
@@ -476,6 +613,49 @@ class SkillCalculator : ComponentActivity() {
         btnDefensePassive2_6.alpha = 0.3f
         //endregion
 
+        //region Defense Skill Values Panel 3
+        val btnDefense3_1 = findViewById<ImageButton>(R.id.btnDefense3_1)
+        btnDefense3_1.alpha = 0.3f
+        val btnDefense3_2 = findViewById<ImageButton>(R.id.btnDefense3_2)
+        btnDefense3_2.alpha = 0.3f
+        val btnDefense3_3 = findViewById<ImageButton>(R.id.btnDefense3_3)
+        btnDefense3_3.alpha = 0.3f
+        val btnDefense3_4 = findViewById<ImageButton>(R.id.btnDefense3_4)
+        btnDefense3_4.alpha = 0.3f
+        val btnDefense3_5 = findViewById<ImageButton>(R.id.btnDefense3_5)
+        btnDefense3_5.alpha = 0.3f
+        val btnDefense3_6 = findViewById<ImageButton>(R.id.btnDefense3_6)
+        btnDefense3_6.alpha = 0.3f
+        val btnDefense3_7 = findViewById<ImageButton>(R.id.btnDefense3_7)
+        btnDefense3_7.alpha = 0.3f
+        val btnDefense3_8 = findViewById<ImageButton>(R.id.btnDefense3_8)
+        btnDefense3_8.alpha = 0.3f
+        val btnDefense3_9 = findViewById<ImageButton>(R.id.btnDefense3_9)
+        btnDefense3_9.alpha = 0.3f
+        val btnDefense3_10 = findViewById<ImageButton>(R.id.btnDefense3_10)
+        btnDefense3_10.alpha = 0.3f
+        val btnDefense3_11 = findViewById<ImageButton>(R.id.btnDefense3_11)
+        btnDefense3_11.alpha = 0.3f
+        val btnDefense3_12 = findViewById<ImageButton>(R.id.btnDefense3_12)
+        btnDefense3_12.alpha = 0.3f
+
+        //endregion
+
+        //region Defense Passive Values Panel 3
+        val btnDefensePassive3_1 = findViewById<ImageButton>(R.id.btnDefensePassive3_1)
+        btnDefensePassive3_1.alpha = 0.3f
+        val btnDefensePassive3_2 = findViewById<ImageButton>(R.id.btnDefensePassive3_2)
+        btnDefensePassive3_2.alpha = 0.3f
+        val btnDefensePassive3_3 = findViewById<ImageButton>(R.id.btnDefensePassive3_3)
+        btnDefensePassive3_3.alpha = 0.3f
+        val btnDefensePassive3_4 = findViewById<ImageButton>(R.id.btnDefensePassive3_4)
+        btnDefensePassive3_4.alpha = 0.3f
+        val btnDefensePassive3_5 = findViewById<ImageButton>(R.id.btnDefensePassive3_5)
+        btnDefensePassive3_5.alpha = 0.3f
+        val btnDefensePassive3_6 = findViewById<ImageButton>(R.id.btnDefensePassive3_6)
+        btnDefensePassive3_6.alpha = 0.3f
+        //endregion
+
         //region Occultism Skill Values Panel 1
         val btnOccultism1_1 = findViewById<ImageButton>(R.id.btnOccultism1_1)
         btnOccultism1_1.alpha = 0.3f
@@ -558,6 +738,48 @@ class SkillCalculator : ComponentActivity() {
         btnOccultismPassive2_5.alpha = 0.3f
         val btnOccultismPassive2_6 = findViewById<ImageButton>(R.id.btnOccultismPassive2_6)
         btnOccultismPassive2_6.alpha = 0.3f
+        //endregion
+
+        //region Occultism Skill Values Panel 3
+        val btnOccultism3_1 = findViewById<ImageButton>(R.id.btnOccultism3_1)
+        btnOccultism3_1.alpha = 0.3f
+        val btnOccultism3_2 = findViewById<ImageButton>(R.id.btnOccultism3_2)
+        btnOccultism3_2.alpha = 0.3f
+        val btnOccultism3_3 = findViewById<ImageButton>(R.id.btnOccultism3_3)
+        btnOccultism3_3.alpha = 0.3f
+        val btnOccultism3_4 = findViewById<ImageButton>(R.id.btnOccultism3_4)
+        btnOccultism3_4.alpha = 0.3f
+        val btnOccultism3_5 = findViewById<ImageButton>(R.id.btnOccultism3_5)
+        btnOccultism3_5.alpha = 0.3f
+        val btnOccultism3_6 = findViewById<ImageButton>(R.id.btnOccultism3_6)
+        btnOccultism3_6.alpha = 0.3f
+        val btnOccultism3_7 = findViewById<ImageButton>(R.id.btnOccultism3_7)
+        btnOccultism3_7.alpha = 0.3f
+        val btnOccultism3_8 = findViewById<ImageButton>(R.id.btnOccultism3_8)
+        btnOccultism3_8.alpha = 0.3f
+        val btnOccultism3_9 = findViewById<ImageButton>(R.id.btnOccultism3_9)
+        btnOccultism3_9.alpha = 0.3f
+        val btnOccultism3_10 = findViewById<ImageButton>(R.id.btnOccultism3_10)
+        btnOccultism3_10.alpha = 0.3f
+        val btnOccultism3_11 = findViewById<ImageButton>(R.id.btnOccultism3_11)
+        btnOccultism3_11.alpha = 0.3f
+        val btnOccultism3_12 = findViewById<ImageButton>(R.id.btnOccultism3_12)
+        btnOccultism3_12.alpha = 0.3f
+        //endregion
+
+        //region Occultism Passive Values Panel 3
+        val btnOccultismPassive3_1 = findViewById<ImageButton>(R.id.btnOccultismPassive3_1)
+        btnOccultismPassive3_1.alpha = 0.3f
+        val btnOccultismPassive3_2 = findViewById<ImageButton>(R.id.btnOccultismPassive3_2)
+        btnOccultismPassive3_2.alpha = 0.3f
+        val btnOccultismPassive3_3 = findViewById<ImageButton>(R.id.btnOccultismPassive3_3)
+        btnOccultismPassive3_3.alpha = 0.3f
+        val btnOccultismPassive3_4 = findViewById<ImageButton>(R.id.btnOccultismPassive3_4)
+        btnOccultismPassive3_4.alpha = 0.3f
+        val btnOccultismPassive3_5 = findViewById<ImageButton>(R.id.btnOccultismPassive3_5)
+        btnOccultismPassive3_5.alpha = 0.3f
+        val btnOccultismPassive3_6 = findViewById<ImageButton>(R.id.btnOccultismPassive3_6)
+        btnOccultismPassive3_6.alpha = 0.3f
         //endregion
 
         //region Sorcery Skill Values Panel 1
@@ -645,6 +867,50 @@ class SkillCalculator : ComponentActivity() {
         btnSorceryPassive2_5.alpha = 0.3f
         val btnSorceryPassive2_6 = findViewById<ImageButton>(R.id.btnSorceryPassive2_6)
         btnSorceryPassive2_6.alpha = 0.3f
+
+        //endregion
+
+        //region Sorcery Skill Values Panel 3
+        val btnSorcery3_1 = findViewById<ImageButton>(R.id.btnSorcery3_1)
+        btnSorcery3_1.alpha = 0.3f
+        val btnSorcery3_2 = findViewById<ImageButton>(R.id.btnSorcery3_2)
+        btnSorcery3_2.alpha = 0.3f
+        val btnSorcery3_3 = findViewById<ImageButton>(R.id.btnSorcery3_3)
+        btnSorcery3_3.alpha = 0.3f
+        val btnSorcery3_4 = findViewById<ImageButton>(R.id.btnSorcery3_4)
+        btnSorcery3_4.alpha = 0.3f
+        val btnSorcery3_5 = findViewById<ImageButton>(R.id.btnSorcery3_5)
+        btnSorcery3_5.alpha = 0.3f
+        val btnSorcery3_6 = findViewById<ImageButton>(R.id.btnSorcery3_6)
+        btnSorcery3_6.alpha = 0.3f
+        val btnSorcery3_7 = findViewById<ImageButton>(R.id.btnSorcery3_7)
+        btnSorcery3_7.alpha = 0.3f
+        val btnSorcery3_8 = findViewById<ImageButton>(R.id.btnSorcery3_8)
+        btnSorcery3_8.alpha = 0.3f
+        val btnSorcery3_9 = findViewById<ImageButton>(R.id.btnSorcery3_9)
+        btnSorcery3_9.alpha = 0.3f
+        val btnSorcery3_10 = findViewById<ImageButton>(R.id.btnSorcery3_10)
+        btnSorcery3_10.alpha = 0.3f
+        val btnSorcery3_11 = findViewById<ImageButton>(R.id.btnSorcery3_11)
+        btnSorcery3_11.alpha = 0.3f
+        val btnSorcery3_12 = findViewById<ImageButton>(R.id.btnSorcery3_12)
+        btnSorcery3_12.alpha = 0.3f
+
+        //endregion
+
+        //region Sorcery Passive Values Panel 3
+        val btnSorceryPassive3_1 = findViewById<ImageButton>(R.id.btnSorceryPassive3_1)
+        btnSorceryPassive3_1.alpha = 0.3f
+        val btnSorceryPassive3_2 = findViewById<ImageButton>(R.id.btnSorceryPassive3_2)
+        btnSorceryPassive3_2.alpha = 0.3f
+        val btnSorceryPassive3_3 = findViewById<ImageButton>(R.id.btnSorceryPassive3_3)
+        btnSorceryPassive3_3.alpha = 0.3f
+        val btnSorceryPassive3_4 = findViewById<ImageButton>(R.id.btnSorceryPassive3_4)
+        btnSorceryPassive3_4.alpha = 0.3f
+        val btnSorceryPassive3_5 = findViewById<ImageButton>(R.id.btnSorceryPassive3_5)
+        btnSorceryPassive3_5.alpha = 0.3f
+        val btnSorceryPassive3_6 = findViewById<ImageButton>(R.id.btnSorceryPassive3_6)
+        btnSorceryPassive3_6.alpha = 0.3f
 
         //endregion
 
@@ -764,6 +1030,64 @@ class SkillCalculator : ComponentActivity() {
         btnSongcraftPassive2_6.alpha = 0.3f
         //endregion
 
+        //region Songcraft Skill Values Panel 3
+        val btnSongcraft3_1 = findViewById<ImageButton>(R.id.btnSongcraft3_1)
+        btnSongcraft3_1.alpha = 0.3f
+
+        val btnSongcraft3_2 = findViewById<ImageButton>(R.id.btnSongcraft3_2)
+        btnSongcraft3_2.alpha = 0.3f
+
+        val btnSongcraft3_3 = findViewById<ImageButton>(R.id.btnSongcraft3_3)
+        btnSongcraft3_3.alpha = 0.3f
+
+        val btnSongcraft3_4 = findViewById<ImageButton>(R.id.btnSongcraft3_4)
+        btnSongcraft3_4.alpha = 0.3f
+
+        val btnSongcraft3_5 = findViewById<ImageButton>(R.id.btnSongcraft3_5)
+        btnSongcraft3_5.alpha = 0.3f
+
+        val btnSongcraft3_6 = findViewById<ImageButton>(R.id.btnSongcraft3_6)
+        btnSongcraft3_6.alpha = 0.3f
+
+        val btnSongcraft3_7 = findViewById<ImageButton>(R.id.btnSongcraft3_7)
+        btnSongcraft3_7.alpha = 0.3f
+
+        val btnSongcraft3_8 = findViewById<ImageButton>(R.id.btnSongcraft3_8)
+        btnSongcraft3_8.alpha = 0.3f
+
+        val btnSongcraft3_9 = findViewById<ImageButton>(R.id.btnSongcraft3_9)
+        btnSongcraft3_9.alpha = 0.3f
+
+        val btnSongcraft3_10 = findViewById<ImageButton>(R.id.btnSongcraft3_10)
+        btnSongcraft3_10.alpha = 0.3f
+
+        val btnSongcraft3_11 = findViewById<ImageButton>(R.id.btnSongcraft3_11)
+        btnSongcraft3_11.alpha = 0.3f
+
+        val btnSongcraft3_12 = findViewById<ImageButton>(R.id.btnSongcraft3_12)
+        btnSongcraft3_12.alpha = 0.3f
+        //endregion
+
+        //region Songcraft Passive Values Panel 3
+        val btnSongcraftPassive3_1 = findViewById<ImageButton>(R.id.btnSongcraftPassive3_1)
+        btnSongcraftPassive3_1.alpha = 0.3f
+
+        val btnSongcraftPassive3_2 = findViewById<ImageButton>(R.id.btnSongcraftPassive3_2)
+        btnSongcraftPassive3_2.alpha = 0.3f
+
+        val btnSongcraftPassive3_3 = findViewById<ImageButton>(R.id.btnSongcraftPassive3_3)
+        btnSongcraftPassive3_3.alpha = 0.3f
+
+        val btnSongcraftPassive3_4 = findViewById<ImageButton>(R.id.btnSongcraftPassive3_4)
+        btnSongcraftPassive3_4.alpha = 0.3f
+
+        val btnSongcraftPassive3_5 = findViewById<ImageButton>(R.id.btnSongcraftPassive3_5)
+        btnSongcraftPassive3_5.alpha = 0.3f
+
+        val btnSongcraftPassive3_6 = findViewById<ImageButton>(R.id.btnSongcraftPassive3_6)
+        btnSongcraftPassive3_6.alpha = 0.3f
+        //endregion
+
         //region Witchcraft Skill Values Panel 1
         val btnWitchcraft1_1 = findViewById<ImageButton>(R.id.btnWitchcraft1_1)
         btnWitchcraft1_1.alpha = 0.3f
@@ -878,6 +1202,64 @@ class SkillCalculator : ComponentActivity() {
 
         val btnWitchcraftPassive2_6 = findViewById<ImageButton>(R.id.btnWitchcraftPassive2_6)
         btnWitchcraftPassive2_6.alpha = 0.3f
+        //endregion
+
+        //region Witchcraft Skill Values Panel 3
+        val btnWitchcraft3_1 = findViewById<ImageButton>(R.id.btnWitchcraft3_1)
+        btnWitchcraft3_1.alpha = 0.3f
+
+        val btnWitchcraft3_2 = findViewById<ImageButton>(R.id.btnWitchcraft3_2)
+        btnWitchcraft3_2.alpha = 0.3f
+
+        val btnWitchcraft3_3 = findViewById<ImageButton>(R.id.btnWitchcraft3_3)
+        btnWitchcraft3_3.alpha = 0.3f
+
+        val btnWitchcraft3_4 = findViewById<ImageButton>(R.id.btnWitchcraft3_4)
+        btnWitchcraft3_4.alpha = 0.3f
+
+        val btnWitchcraft3_5 = findViewById<ImageButton>(R.id.btnWitchcraft3_5)
+        btnWitchcraft3_5.alpha = 0.3f
+
+        val btnWitchcraft3_6 = findViewById<ImageButton>(R.id.btnWitchcraft3_6)
+        btnWitchcraft3_6.alpha = 0.3f
+
+        val btnWitchcraft3_7 = findViewById<ImageButton>(R.id.btnWitchcraft3_7)
+        btnWitchcraft3_7.alpha = 0.3f
+
+        val btnWitchcraft3_8 = findViewById<ImageButton>(R.id.btnWitchcraft3_8)
+        btnWitchcraft3_8.alpha = 0.3f
+
+        val btnWitchcraft3_9 = findViewById<ImageButton>(R.id.btnWitchcraft3_9)
+        btnWitchcraft3_9.alpha = 0.3f
+
+        val btnWitchcraft3_10 = findViewById<ImageButton>(R.id.btnWitchcraft3_10)
+        btnWitchcraft3_10.alpha = 0.3f
+
+        val btnWitchcraft3_11 = findViewById<ImageButton>(R.id.btnWitchcraft3_11)
+        btnWitchcraft3_11.alpha = 0.3f
+
+        val btnWitchcraft3_12 = findViewById<ImageButton>(R.id.btnWitchcraft3_12)
+        btnWitchcraft3_12.alpha = 0.3f
+        //endregion
+
+        //region Witchcraft Passive Values Panel 3
+        val btnWitchcraftPassive3_1 = findViewById<ImageButton>(R.id.btnWitchcraftPassive3_1)
+        btnWitchcraftPassive3_1.alpha = 0.3f
+
+        val btnWitchcraftPassive3_2 = findViewById<ImageButton>(R.id.btnWitchcraftPassive3_2)
+        btnWitchcraftPassive3_2.alpha = 0.3f
+
+        val btnWitchcraftPassive3_3 = findViewById<ImageButton>(R.id.btnWitchcraftPassive3_3)
+        btnWitchcraftPassive3_3.alpha = 0.3f
+
+        val btnWitchcraftPassive3_4 = findViewById<ImageButton>(R.id.btnWitchcraftPassive3_4)
+        btnWitchcraftPassive3_4.alpha = 0.3f
+
+        val btnWitchcraftPassive3_5 = findViewById<ImageButton>(R.id.btnWitchcraftPassive3_5)
+        btnWitchcraftPassive3_5.alpha = 0.3f
+
+        val btnWitchcraftPassive3_6 = findViewById<ImageButton>(R.id.btnWitchcraftPassive3_6)
+        btnWitchcraftPassive3_6.alpha = 0.3f
         //endregion
 
         //region Auramancy Skill Values Panel 1
@@ -996,6 +1378,64 @@ class SkillCalculator : ComponentActivity() {
         btnAuramancyPassive2_6.alpha = 0.3f
 //endregion
 
+        //region Auramancy Skill Values Panel 3
+        val btnAuramancy3_1 = findViewById<ImageButton>(R.id.btnAuramancy3_1)
+        btnAuramancy3_1.alpha = 0.3f
+
+        val btnAuramancy3_2 = findViewById<ImageButton>(R.id.btnAuramancy3_2)
+        btnAuramancy3_2.alpha = 0.3f
+
+        val btnAuramancy3_3 = findViewById<ImageButton>(R.id.btnAuramancy3_3)
+        btnAuramancy3_3.alpha = 0.3f
+
+        val btnAuramancy3_4 = findViewById<ImageButton>(R.id.btnAuramancy3_4)
+        btnAuramancy3_4.alpha = 0.3f
+
+        val btnAuramancy3_5 = findViewById<ImageButton>(R.id.btnAuramancy3_5)
+        btnAuramancy3_5.alpha = 0.3f
+
+        val btnAuramancy3_6 = findViewById<ImageButton>(R.id.btnAuramancy3_6)
+        btnAuramancy3_6.alpha = 0.3f
+
+        val btnAuramancy3_7 = findViewById<ImageButton>(R.id.btnAuramancy3_7)
+        btnAuramancy3_7.alpha = 0.3f
+
+        val btnAuramancy3_8 = findViewById<ImageButton>(R.id.btnAuramancy3_8)
+        btnAuramancy3_8.alpha = 0.3f
+
+        val btnAuramancy3_9 = findViewById<ImageButton>(R.id.btnAuramancy3_9)
+        btnAuramancy3_9.alpha = 0.3f
+
+        val btnAuramancy3_10 = findViewById<ImageButton>(R.id.btnAuramancy3_10)
+        btnAuramancy3_10.alpha = 0.3f
+
+        val btnAuramancy3_11 = findViewById<ImageButton>(R.id.btnAuramancy3_11)
+        btnAuramancy3_11.alpha = 0.3f
+
+        val btnAuramancy3_12 = findViewById<ImageButton>(R.id.btnAuramancy3_12)
+        btnAuramancy3_12.alpha = 0.3f
+//endregion
+
+        //region Auramancy Passive Values Panel 3
+        val btnAuramancyPassive3_1 = findViewById<ImageButton>(R.id.btnAuramancyPassive3_1)
+        btnAuramancyPassive3_1.alpha = 0.3f
+
+        val btnAuramancyPassive3_2 = findViewById<ImageButton>(R.id.btnAuramancyPassive3_2)
+        btnAuramancyPassive3_2.alpha = 0.3f
+
+        val btnAuramancyPassive3_3 = findViewById<ImageButton>(R.id.btnAuramancyPassive3_3)
+        btnAuramancyPassive3_3.alpha = 0.3f
+
+        val btnAuramancyPassive3_4 = findViewById<ImageButton>(R.id.btnAuramancyPassive3_4)
+        btnAuramancyPassive3_4.alpha = 0.3f
+
+        val btnAuramancyPassive3_5 = findViewById<ImageButton>(R.id.btnAuramancyPassive3_5)
+        btnAuramancyPassive3_5.alpha = 0.3f
+
+        val btnAuramancyPassive3_6 = findViewById<ImageButton>(R.id.btnAuramancyPassive3_6)
+        btnAuramancyPassive3_6.alpha = 0.3f
+//endregion
+
         //region Shadowplay Skill Values Panel 1
         val btnShadowplay1_1 = findViewById<ImageButton>(R.id.btnShadowplay1_1)
         btnShadowplay1_1.alpha = 0.3f
@@ -1110,6 +1550,64 @@ class SkillCalculator : ComponentActivity() {
 
         val btnShadowplayPassive2_6 = findViewById<ImageButton>(R.id.btnShadowplayPassive2_6)
         btnShadowplayPassive2_6.alpha = 0.3f
+        //endregion
+
+        //region Shadowplay Skill Values Panel 3
+        val btnShadowplay3_1 = findViewById<ImageButton>(R.id.btnShadowplay3_1)
+        btnShadowplay3_1.alpha = 0.3f
+
+        val btnShadowplay3_2 = findViewById<ImageButton>(R.id.btnShadowplay3_2)
+        btnShadowplay3_2.alpha = 0.3f
+
+        val btnShadowplay3_3 = findViewById<ImageButton>(R.id.btnShadowplay3_3)
+        btnShadowplay3_3.alpha = 0.3f
+
+        val btnShadowplay3_4 = findViewById<ImageButton>(R.id.btnShadowplay3_4)
+        btnShadowplay3_4.alpha = 0.3f
+
+        val btnShadowplay3_5 = findViewById<ImageButton>(R.id.btnShadowplay3_5)
+        btnShadowplay3_5.alpha = 0.3f
+
+        val btnShadowplay3_6 = findViewById<ImageButton>(R.id.btnShadowplay3_6)
+        btnShadowplay3_6.alpha = 0.3f
+
+        val btnShadowplay3_7 = findViewById<ImageButton>(R.id.btnShadowplay3_7)
+        btnShadowplay3_7.alpha = 0.3f
+
+        val btnShadowplay3_8 = findViewById<ImageButton>(R.id.btnShadowplay3_8)
+        btnShadowplay3_8.alpha = 0.3f
+
+        val btnShadowplay3_9 = findViewById<ImageButton>(R.id.btnShadowplay3_9)
+        btnShadowplay3_9.alpha = 0.3f
+
+        val btnShadowplay3_10 = findViewById<ImageButton>(R.id.btnShadowplay3_10)
+        btnShadowplay3_10.alpha = 0.3f
+
+        val btnShadowplay3_11 = findViewById<ImageButton>(R.id.btnShadowplay3_11)
+        btnShadowplay3_11.alpha = 0.3f
+
+        val btnShadowplay3_12 = findViewById<ImageButton>(R.id.btnShadowplay3_12)
+        btnShadowplay3_12.alpha = 0.3f
+        //endregion
+
+        //region Shadowplay Passive Values Panel 3
+        val btnShadowplayPassive3_1 = findViewById<ImageButton>(R.id.btnShadowplayPassive3_1)
+        btnShadowplayPassive3_1.alpha = 0.3f
+
+        val btnShadowplayPassive3_2 = findViewById<ImageButton>(R.id.btnShadowplayPassive3_2)
+        btnShadowplayPassive3_2.alpha = 0.3f
+
+        val btnShadowplayPassive3_3 = findViewById<ImageButton>(R.id.btnShadowplayPassive3_3)
+        btnShadowplayPassive3_3.alpha = 0.3f
+
+        val btnShadowplayPassive3_4 = findViewById<ImageButton>(R.id.btnShadowplayPassive3_4)
+        btnShadowplayPassive3_4.alpha = 0.3f
+
+        val btnShadowplayPassive3_5 = findViewById<ImageButton>(R.id.btnShadowplayPassive3_5)
+        btnShadowplayPassive3_5.alpha = 0.3f
+
+        val btnShadowplayPassive3_6 = findViewById<ImageButton>(R.id.btnShadowplayPassive3_6)
+        btnShadowplayPassive3_6.alpha = 0.3f
         //endregion
 
         //region Vitalism Skill Values Panel 1
@@ -1228,6 +1726,64 @@ class SkillCalculator : ComponentActivity() {
         btnVitalismPassive2_6.alpha = 0.3f
         //endregion
 
+        //region Vitalism Skill Values Panel 3
+        val btnVitalism3_1 = findViewById<ImageButton>(R.id.btnVitalism3_1)
+        btnVitalism3_1.alpha = 0.3f
+
+        val btnVitalism3_2 = findViewById<ImageButton>(R.id.btnVitalism3_2)
+        btnVitalism3_2.alpha = 0.3f
+
+        val btnVitalism3_3 = findViewById<ImageButton>(R.id.btnVitalism3_3)
+        btnVitalism3_3.alpha = 0.3f
+
+        val btnVitalism3_4 = findViewById<ImageButton>(R.id.btnVitalism3_4)
+        btnVitalism3_4.alpha = 0.3f
+
+        val btnVitalism3_5 = findViewById<ImageButton>(R.id.btnVitalism3_5)
+        btnVitalism3_5.alpha = 0.3f
+
+        val btnVitalism3_6 = findViewById<ImageButton>(R.id.btnVitalism3_6)
+        btnVitalism3_6.alpha = 0.3f
+
+        val btnVitalism3_7 = findViewById<ImageButton>(R.id.btnVitalism3_7)
+        btnVitalism3_7.alpha = 0.3f
+
+        val btnVitalism3_8 = findViewById<ImageButton>(R.id.btnVitalism3_8)
+        btnVitalism3_8.alpha = 0.3f
+
+        val btnVitalism3_9 = findViewById<ImageButton>(R.id.btnVitalism3_9)
+        btnVitalism3_9.alpha = 0.3f
+
+        val btnVitalism3_10 = findViewById<ImageButton>(R.id.btnVitalism3_10)
+        btnVitalism3_10.alpha = 0.3f
+
+        val btnVitalism3_11 = findViewById<ImageButton>(R.id.btnVitalism3_11)
+        btnVitalism3_11.alpha = 0.3f
+
+        val btnVitalism3_12 = findViewById<ImageButton>(R.id.btnVitalism3_12)
+        btnVitalism3_12.alpha = 0.3f
+        //endregion
+
+        //region Vitalism Passive Values Panel 3
+        val btnVitalismPassive3_1 = findViewById<ImageButton>(R.id.btnVitalismPassive3_1)
+        btnVitalismPassive3_1.alpha = 0.3f
+
+        val btnVitalismPassive3_2 = findViewById<ImageButton>(R.id.btnVitalismPassive3_2)
+        btnVitalismPassive3_2.alpha = 0.3f
+
+        val btnVitalismPassive3_3 = findViewById<ImageButton>(R.id.btnVitalismPassive3_3)
+        btnVitalismPassive3_3.alpha = 0.3f
+
+        val btnVitalismPassive3_4 = findViewById<ImageButton>(R.id.btnVitalismPassive3_4)
+        btnVitalismPassive3_4.alpha = 0.3f
+
+        val btnVitalismPassive3_5 = findViewById<ImageButton>(R.id.btnVitalismPassive3_5)
+        btnVitalismPassive3_5.alpha = 0.3f
+
+        val btnVitalismPassive3_6 = findViewById<ImageButton>(R.id.btnVitalismPassive3_6)
+        btnVitalismPassive3_6.alpha = 0.3f
+        //endregion
+
         //region Malediction Skill Values Panel 1
         val btnMalediction1_1 = findViewById<ImageButton>(R.id.btnMalediction1_1)
         btnMalediction1_1.alpha = 0.3f
@@ -1344,6 +1900,64 @@ class SkillCalculator : ComponentActivity() {
         btnMaledictionPassive2_6.alpha = 0.3f
         //endregion
 
+        //region Malediction Skill Values Panel 3
+        val btnMalediction3_1 = findViewById<ImageButton>(R.id.btnMalediction3_1)
+        btnMalediction3_1.alpha = 0.3f
+
+        val btnMalediction3_2 = findViewById<ImageButton>(R.id.btnMalediction3_2)
+        btnMalediction3_2.alpha = 0.3f
+
+        val btnMalediction3_3 = findViewById<ImageButton>(R.id.btnMalediction3_3)
+        btnMalediction3_3.alpha = 0.3f
+
+        val btnMalediction3_4 = findViewById<ImageButton>(R.id.btnMalediction3_4)
+        btnMalediction3_4.alpha = 0.3f
+
+        val btnMalediction3_5 = findViewById<ImageButton>(R.id.btnMalediction3_5)
+        btnMalediction3_5.alpha = 0.3f
+
+        val btnMalediction3_6 = findViewById<ImageButton>(R.id.btnMalediction3_6)
+        btnMalediction3_6.alpha = 0.3f
+
+        val btnMalediction3_7 = findViewById<ImageButton>(R.id.btnMalediction3_7)
+        btnMalediction3_7.alpha = 0.3f
+
+        val btnMalediction3_8 = findViewById<ImageButton>(R.id.btnMalediction3_8)
+        btnMalediction3_8.alpha = 0.3f
+
+        val btnMalediction3_9 = findViewById<ImageButton>(R.id.btnMalediction3_9)
+        btnMalediction3_9.alpha = 0.3f
+
+        val btnMalediction3_10 = findViewById<ImageButton>(R.id.btnMalediction3_10)
+        btnMalediction3_10.alpha = 0.3f
+
+        val btnMalediction3_11 = findViewById<ImageButton>(R.id.btnMalediction3_11)
+        btnMalediction3_11.alpha = 0.3f
+
+        val btnMalediction3_12 = findViewById<ImageButton>(R.id.btnMalediction3_12)
+        btnMalediction3_12.alpha = 0.3f
+        //endregion
+
+        //region Malediction Passive Values Panel 3
+        val btnMaledictionPassive3_1 = findViewById<ImageButton>(R.id.btnMaledictionPassive3_1)
+        btnMaledictionPassive3_1.alpha = 0.3f
+
+        val btnMaledictionPassive3_2 = findViewById<ImageButton>(R.id.btnMaledictionPassive3_2)
+        btnMaledictionPassive3_2.alpha = 0.3f
+
+        val btnMaledictionPassive3_3 = findViewById<ImageButton>(R.id.btnMaledictionPassive3_3)
+        btnMaledictionPassive3_3.alpha = 0.3f
+
+        val btnMaledictionPassive3_4 = findViewById<ImageButton>(R.id.btnMaledictionPassive3_4)
+        btnMaledictionPassive3_4.alpha = 0.3f
+
+        val btnMaledictionPassive3_5 = findViewById<ImageButton>(R.id.btnMaledictionPassive3_5)
+        btnMaledictionPassive3_5.alpha = 0.3f
+
+        val btnMaledictionPassive3_6 = findViewById<ImageButton>(R.id.btnMaledictionPassive3_6)
+        btnMaledictionPassive3_6.alpha = 0.3f
+        //endregion
+
         //region Swiftblade Skill Values Panel 1
         val btnSwiftblade1_1 = findViewById<ImageButton>(R.id.btnSwiftblade1_1)
         btnSwiftblade1_1.alpha = 0.3f
@@ -1458,6 +2072,64 @@ class SkillCalculator : ComponentActivity() {
 
         val btnSwiftbladePassive2_6 = findViewById<ImageButton>(R.id.btnSwiftbladePassive2_6)
         btnSwiftbladePassive2_6.alpha = 0.3f
+        //endregion
+
+        //region Swiftblade Skill Values Panel 3
+        val btnSwiftblade3_1 = findViewById<ImageButton>(R.id.btnSwiftblade3_1)
+        btnSwiftblade3_1.alpha = 0.3f
+
+        val btnSwiftblade3_2 = findViewById<ImageButton>(R.id.btnSwiftblade3_2)
+        btnSwiftblade3_2.alpha = 0.3f
+
+        val btnSwiftblade3_3 = findViewById<ImageButton>(R.id.btnSwiftblade3_3)
+        btnSwiftblade3_3.alpha = 0.3f
+
+        val btnSwiftblade3_4 = findViewById<ImageButton>(R.id.btnSwiftblade3_4)
+        btnSwiftblade3_4.alpha = 0.3f
+
+        val btnSwiftblade3_5 = findViewById<ImageButton>(R.id.btnSwiftblade3_5)
+        btnSwiftblade3_5.alpha = 0.3f
+
+        val btnSwiftblade3_6 = findViewById<ImageButton>(R.id.btnSwiftblade3_6)
+        btnSwiftblade3_6.alpha = 0.3f
+
+        val btnSwiftblade3_7 = findViewById<ImageButton>(R.id.btnSwiftblade3_7)
+        btnSwiftblade3_7.alpha = 0.3f
+
+        val btnSwiftblade3_8 = findViewById<ImageButton>(R.id.btnSwiftblade3_8)
+        btnSwiftblade3_8.alpha = 0.3f
+
+        val btnSwiftblade3_9 = findViewById<ImageButton>(R.id.btnSwiftblade3_9)
+        btnSwiftblade3_9.alpha = 0.3f
+
+        val btnSwiftblade3_10 = findViewById<ImageButton>(R.id.btnSwiftblade3_10)
+        btnSwiftblade3_10.alpha = 0.3f
+
+        val btnSwiftblade3_11 = findViewById<ImageButton>(R.id.btnSwiftblade3_11)
+        btnSwiftblade3_11.alpha = 0.3f
+
+        val btnSwiftblade3_12 = findViewById<ImageButton>(R.id.btnSwiftblade3_12)
+        btnSwiftblade3_12.alpha = 0.3f
+        //endregion
+
+        //region Swiftblade Passive Values Panel 3
+        val btnSwiftbladePassive3_1 = findViewById<ImageButton>(R.id.btnSwiftbladePassive3_1)
+        btnSwiftbladePassive3_1.alpha = 0.3f
+
+        val btnSwiftbladePassive3_2 = findViewById<ImageButton>(R.id.btnSwiftbladePassive3_2)
+        btnSwiftbladePassive3_2.alpha = 0.3f
+
+        val btnSwiftbladePassive3_3 = findViewById<ImageButton>(R.id.btnSwiftbladePassive3_3)
+        btnSwiftbladePassive3_3.alpha = 0.3f
+
+        val btnSwiftbladePassive3_4 = findViewById<ImageButton>(R.id.btnSwiftbladePassive3_4)
+        btnSwiftbladePassive3_4.alpha = 0.3f
+
+        val btnSwiftbladePassive3_5 = findViewById<ImageButton>(R.id.btnSwiftbladePassive3_5)
+        btnSwiftbladePassive3_5.alpha = 0.3f
+
+        val btnSwiftbladePassive3_6 = findViewById<ImageButton>(R.id.btnSwiftbladePassive3_6)
+        btnSwiftbladePassive3_6.alpha = 0.3f
         //endregion
         
         //region Gunslinger Skill Values Panel 1
@@ -1576,6 +2248,64 @@ class SkillCalculator : ComponentActivity() {
         btnGunslingerPassive2_6.alpha = 0.3f
         //endregion
 
+        //region Gunslinger Skill Values Panel 3
+        val btnGunslinger3_1 = findViewById<ImageButton>(R.id.btnGunslinger3_1)
+        btnGunslinger3_1.alpha = 0.3f
+
+        val btnGunslinger3_2 = findViewById<ImageButton>(R.id.btnGunslinger3_2)
+        btnGunslinger3_2.alpha = 0.3f
+
+        val btnGunslinger3_3 = findViewById<ImageButton>(R.id.btnGunslinger3_3)
+        btnGunslinger3_3.alpha = 0.3f
+
+        val btnGunslinger3_4 = findViewById<ImageButton>(R.id.btnGunslinger3_4)
+        btnGunslinger3_4.alpha = 0.3f
+
+        val btnGunslinger3_5 = findViewById<ImageButton>(R.id.btnGunslinger3_5)
+        btnGunslinger3_5.alpha = 0.3f
+
+        val btnGunslinger3_6 = findViewById<ImageButton>(R.id.btnGunslinger3_6)
+        btnGunslinger3_6.alpha = 0.3f
+
+        val btnGunslinger3_7 = findViewById<ImageButton>(R.id.btnGunslinger3_7)
+        btnGunslinger3_7.alpha = 0.3f
+
+        val btnGunslinger3_8 = findViewById<ImageButton>(R.id.btnGunslinger3_8)
+        btnGunslinger3_8.alpha = 0.3f
+
+        val btnGunslinger3_9 = findViewById<ImageButton>(R.id.btnGunslinger3_9)
+        btnGunslinger3_9.alpha = 0.3f
+
+        val btnGunslinger3_10 = findViewById<ImageButton>(R.id.btnGunslinger3_10)
+        btnGunslinger3_10.alpha = 0.3f
+
+        val btnGunslinger3_11 = findViewById<ImageButton>(R.id.btnGunslinger3_11)
+        btnGunslinger3_11.alpha = 0.3f
+
+        val btnGunslinger3_12 = findViewById<ImageButton>(R.id.btnGunslinger3_12)
+        btnGunslinger3_12.alpha = 0.3f
+        //endregion
+
+        //region Gunslinger Passive Values Panel 3
+        val btnGunslingerPassive3_1 = findViewById<ImageButton>(R.id.btnGunslingerPassive3_1)
+        btnGunslingerPassive3_1.alpha = 0.3f
+
+        val btnGunslingerPassive3_2 = findViewById<ImageButton>(R.id.btnGunslingerPassive3_2)
+        btnGunslingerPassive3_2.alpha = 0.3f
+
+        val btnGunslingerPassive3_3 = findViewById<ImageButton>(R.id.btnGunslingerPassive3_3)
+        btnGunslingerPassive3_3.alpha = 0.3f
+
+        val btnGunslingerPassive3_4 = findViewById<ImageButton>(R.id.btnGunslingerPassive3_4)
+        btnGunslingerPassive3_4.alpha = 0.3f
+
+        val btnGunslingerPassive3_5 = findViewById<ImageButton>(R.id.btnGunslingerPassive3_5)
+        btnGunslingerPassive3_5.alpha = 0.3f
+
+        val btnGunslingerPassive3_6 = findViewById<ImageButton>(R.id.btnGunslingerPassive3_6)
+        btnGunslingerPassive3_6.alpha = 0.3f
+        //endregion
+
         //region Spelldance Skill Values Panel 1
         val btnSpelldance1_1 = findViewById<ImageButton>(R.id.btnSpelldance1_1)
         btnSpelldance1_1.alpha = 0.3f
@@ -1690,6 +2420,64 @@ class SkillCalculator : ComponentActivity() {
 
         val btnSpelldancePassive2_6 = findViewById<ImageButton>(R.id.btnSpelldancePassive2_6)
         btnSpelldancePassive2_6.alpha = 0.3f
+        //endregion
+
+        //region Spelldance Skill Values Panel 3
+        val btnSpelldance3_1 = findViewById<ImageButton>(R.id.btnSpelldance3_1)
+        btnSpelldance3_1.alpha = 0.3f
+
+        val btnSpelldance3_2 = findViewById<ImageButton>(R.id.btnSpelldance3_2)
+        btnSpelldance3_2.alpha = 0.3f
+
+        val btnSpelldance3_3 = findViewById<ImageButton>(R.id.btnSpelldance3_3)
+        btnSpelldance3_3.alpha = 0.3f
+
+        val btnSpelldance3_4 = findViewById<ImageButton>(R.id.btnSpelldance3_4)
+        btnSpelldance3_4.alpha = 0.3f
+
+        val btnSpelldance3_5 = findViewById<ImageButton>(R.id.btnSpelldance3_5)
+        btnSpelldance3_5.alpha = 0.3f
+
+        val btnSpelldance3_6 = findViewById<ImageButton>(R.id.btnSpelldance3_6)
+        btnSpelldance3_6.alpha = 0.3f
+
+        val btnSpelldance3_7 = findViewById<ImageButton>(R.id.btnSpelldance3_7)
+        btnSpelldance3_7.alpha = 0.3f
+
+        val btnSpelldance3_8 = findViewById<ImageButton>(R.id.btnSpelldance3_8)
+        btnSpelldance3_8.alpha = 0.3f
+
+        val btnSpelldance3_9 = findViewById<ImageButton>(R.id.btnSpelldance3_9)
+        btnSpelldance3_9.alpha = 0.3f
+
+        val btnSpelldance3_10 = findViewById<ImageButton>(R.id.btnSpelldance3_10)
+        btnSpelldance3_10.alpha = 0.3f
+
+        val btnSpelldance3_11 = findViewById<ImageButton>(R.id.btnSpelldance3_11)
+        btnSpelldance3_11.alpha = 0.3f
+
+        val btnSpelldance3_12 = findViewById<ImageButton>(R.id.btnSpelldance3_12)
+        btnSpelldance3_12.alpha = 0.3f
+        //endregion
+
+        //region Spelldance Passive Values Panel 3
+        val btnSpelldancePassive3_1 = findViewById<ImageButton>(R.id.btnSpelldancePassive3_1)
+        btnSpelldancePassive3_1.alpha = 0.3f
+
+        val btnSpelldancePassive3_2 = findViewById<ImageButton>(R.id.btnSpelldancePassive3_2)
+        btnSpelldancePassive3_2.alpha = 0.3f
+
+        val btnSpelldancePassive3_3 = findViewById<ImageButton>(R.id.btnSpelldancePassive3_3)
+        btnSpelldancePassive3_3.alpha = 0.3f
+
+        val btnSpelldancePassive3_4 = findViewById<ImageButton>(R.id.btnSpelldancePassive3_4)
+        btnSpelldancePassive3_4.alpha = 0.3f
+
+        val btnSpelldancePassive3_5 = findViewById<ImageButton>(R.id.btnSpelldancePassive3_5)
+        btnSpelldancePassive3_5.alpha = 0.3f
+
+        val btnSpelldancePassive3_6 = findViewById<ImageButton>(R.id.btnSpelldancePassive3_6)
+        btnSpelldancePassive3_6.alpha = 0.3f
         //endregion
 
 
@@ -2162,6 +2950,417 @@ class SkillCalculator : ComponentActivity() {
             gridBattleragePassive2.visibility = View.VISIBLE
 
             btnReset2.visibility = View.VISIBLE
+        }
+
+        btnArchery2.setOnClickListener {
+            gridSkillsets2.visibility = View.GONE
+            tvPanel2Title.visibility = View.GONE
+            btnArchery2.visibility = View.GONE
+            btnArchery3.visibility = View.GONE
+
+            archeryText2.visibility = View.VISIBLE
+            combatText2.visibility = View.VISIBLE
+            skillPoints2Text.visibility = View.VISIBLE
+            gridArchery2.visibility = View.VISIBLE
+
+            passiveText2.visibility = View.VISIBLE
+            gridArcheryPassive2.visibility = View.VISIBLE
+
+            btnReset2.visibility = View.VISIBLE
+        }
+
+        btnDefense2.setOnClickListener {
+            gridSkillsets2.visibility = View.GONE
+            tvPanel2Title.visibility = View.GONE
+            btnDefense2.visibility = View.GONE
+            btnDefense3.visibility = View.GONE
+
+            defenseText2.visibility = View.VISIBLE
+            combatText2.visibility = View.VISIBLE
+            skillPoints2Text.visibility = View.VISIBLE
+            gridDefense2.visibility = View.VISIBLE
+
+            passiveText2.visibility = View.VISIBLE
+            gridDefensePassive2.visibility = View.VISIBLE
+
+            btnReset2.visibility = View.VISIBLE
+        }
+
+        btnOccultism2.setOnClickListener {
+            gridSkillsets2.visibility = View.GONE
+            tvPanel2Title.visibility = View.GONE
+            btnOccultism2.visibility = View.GONE
+            btnOccultism3.visibility = View.GONE
+
+            occultismText2.visibility = View.VISIBLE
+            combatText2.visibility = View.VISIBLE
+            skillPoints2Text.visibility = View.VISIBLE
+            gridOccultism2.visibility = View.VISIBLE
+
+            passiveText2.visibility = View.VISIBLE
+            gridOccultismPassive2.visibility = View.VISIBLE
+
+            btnReset2.visibility = View.VISIBLE
+        }
+
+        btnSorcery2.setOnClickListener {
+            gridSkillsets2.visibility = View.GONE
+            tvPanel2Title.visibility = View.GONE
+            btnSorcery2.visibility = View.GONE
+            btnSorcery3.visibility = View.GONE
+
+            sorceryText2.visibility = View.VISIBLE
+            combatText2.visibility = View.VISIBLE
+            skillPoints2Text.visibility = View.VISIBLE
+            gridSorcery2.visibility = View.VISIBLE
+
+            passiveText2.visibility = View.VISIBLE
+            gridSorceryPassive2.visibility = View.VISIBLE
+
+            btnReset2.visibility = View.VISIBLE
+        }
+
+        btnSongcraft2.setOnClickListener {
+            gridSkillsets2.visibility = View.GONE
+            tvPanel2Title.visibility = View.GONE
+            btnSongcraft2.visibility = View.GONE
+            btnSongcraft3.visibility = View.GONE
+
+            songcraftText2.visibility = View.VISIBLE
+            combatText2.visibility = View.VISIBLE
+            skillPoints2Text.visibility = View.VISIBLE
+            gridSongcraft2.visibility = View.VISIBLE
+
+            passiveText2.visibility = View.VISIBLE
+            gridSongcraftPassive2.visibility = View.VISIBLE
+
+            btnReset2.visibility = View.VISIBLE
+        }
+
+        btnWitchcraft2.setOnClickListener {
+            gridSkillsets2.visibility = View.GONE
+            tvPanel2Title.visibility = View.GONE
+            btnWitchcraft2.visibility = View.GONE
+            btnWitchcraft3.visibility = View.GONE
+
+            witchcraftText2.visibility = View.VISIBLE
+            combatText2.visibility = View.VISIBLE
+            skillPoints2Text.visibility = View.VISIBLE
+            gridWitchcraft2.visibility = View.VISIBLE
+
+            passiveText2.visibility = View.VISIBLE
+            gridWitchcraftPassive2.visibility = View.VISIBLE
+
+            btnReset2.visibility = View.VISIBLE
+        }
+
+        btnAuramancy2.setOnClickListener {
+            gridSkillsets2.visibility = View.GONE
+            tvPanel2Title.visibility = View.GONE
+            btnAuramancy2.visibility = View.GONE
+            btnAuramancy3.visibility = View.GONE
+
+            auramancyText2.visibility = View.VISIBLE
+            combatText2.visibility = View.VISIBLE
+            skillPoints2Text.visibility = View.VISIBLE
+            gridAuramancy2.visibility = View.VISIBLE
+
+            passiveText2.visibility = View.VISIBLE
+            gridAuramancyPassive2.visibility = View.VISIBLE
+
+            btnReset2.visibility = View.VISIBLE
+        }
+
+        btnShadowplay2.setOnClickListener {
+            gridSkillsets2.visibility = View.GONE
+            tvPanel2Title.visibility = View.GONE
+            btnShadowplay2.visibility = View.GONE
+            btnShadowplay3.visibility = View.GONE
+
+            shadowplayText2.visibility = View.VISIBLE
+            combatText2.visibility = View.VISIBLE
+            skillPoints2Text.visibility = View.VISIBLE
+            gridShadowplay2.visibility = View.VISIBLE
+
+            passiveText2.visibility = View.VISIBLE
+            gridShadowplayPassive2.visibility = View.VISIBLE
+
+            btnReset2.visibility = View.VISIBLE
+        }
+
+        btnVitalism2.setOnClickListener {
+            gridSkillsets2.visibility = View.GONE
+            tvPanel2Title.visibility = View.GONE
+            btnVitalism2.visibility = View.GONE
+            btnVitalism3.visibility = View.GONE
+
+            vitalismText2.visibility = View.VISIBLE
+            combatText2.visibility = View.VISIBLE
+            skillPoints2Text.visibility = View.VISIBLE
+            gridVitalism2.visibility = View.VISIBLE
+
+            passiveText2.visibility = View.VISIBLE
+            gridVitalismPassive2.visibility = View.VISIBLE
+
+            btnReset2.visibility = View.VISIBLE
+        }
+
+        btnMalediction2.setOnClickListener {
+            gridSkillsets2.visibility = View.GONE
+            tvPanel2Title.visibility = View.GONE
+            btnMalediction2.visibility = View.GONE
+            btnMalediction3.visibility = View.GONE
+
+            maledictionText2.visibility = View.VISIBLE
+            combatText2.visibility = View.VISIBLE
+            skillPoints2Text.visibility = View.VISIBLE
+            gridMalediction2.visibility = View.VISIBLE
+
+            passiveText2.visibility = View.VISIBLE
+            gridMaledictionPassive2.visibility = View.VISIBLE
+
+            btnReset2.visibility = View.VISIBLE
+        }
+
+        btnSwiftblade2.setOnClickListener {
+            gridSkillsets2.visibility = View.GONE
+            tvPanel2Title.visibility = View.GONE
+            btnSwiftblade2.visibility = View.GONE
+            btnSwiftblade3.visibility = View.GONE
+
+            swiftbladeText2.visibility = View.VISIBLE
+            combatText2.visibility = View.VISIBLE
+            skillPoints2Text.visibility = View.VISIBLE
+            gridSwiftblade2.visibility = View.VISIBLE
+
+            passiveText2.visibility = View.VISIBLE
+            gridSwiftbladePassive2.visibility = View.VISIBLE
+
+            btnReset2.visibility = View.VISIBLE
+        }
+
+        btnGunslinger2.setOnClickListener {
+            gridSkillsets2.visibility = View.GONE
+            tvPanel2Title.visibility = View.GONE
+            btnGunslinger2.visibility = View.GONE
+            btnGunslinger3.visibility = View.GONE
+
+            gunslingerText2.visibility = View.VISIBLE
+            combatText2.visibility = View.VISIBLE
+            skillPoints2Text.visibility = View.VISIBLE
+            gridGunslinger2.visibility = View.VISIBLE
+
+            passiveText2.visibility = View.VISIBLE
+            gridGunslingerPassive2.visibility = View.VISIBLE
+
+            btnReset2.visibility = View.VISIBLE
+        }
+
+        btnSpelldance2.setOnClickListener {
+            gridSkillsets2.visibility = View.GONE
+            tvPanel2Title.visibility = View.GONE
+            btnSpelldance2.visibility = View.GONE
+            btnSpelldance3.visibility = View.GONE
+
+            spelldanceText2.visibility = View.VISIBLE
+            combatText2.visibility = View.VISIBLE
+            skillPoints2Text.visibility = View.VISIBLE
+            gridSpelldance2.visibility = View.VISIBLE
+
+            passiveText2.visibility = View.VISIBLE
+            gridSpelldancePassive2.visibility = View.VISIBLE
+
+            btnReset2.visibility = View.VISIBLE
+        }
+
+        //endregion
+
+        //region Panel 2 Reset Button
+        btnReset2.setOnClickListener {
+            //Enables Visibility of Original Skill Select Panel
+            gridSkillsets2.visibility = View.VISIBLE
+            tvPanel2Title.visibility = View.VISIBLE
+
+            //Disables Visibility of Skill Texts for the ones enabled
+            battlerageText2.visibility = View.GONE
+            archeryText2.visibility = View.GONE
+            defenseText2.visibility = View.GONE
+            occultismText2.visibility = View.GONE
+            sorceryText2.visibility = View.GONE
+            songcraftText2.visibility = View.GONE
+            witchcraftText2.visibility = View.GONE
+            auramancyText2.visibility = View.GONE
+            shadowplayText2.visibility = View.GONE
+            vitalismText2.visibility = View.GONE
+            maledictionText2.visibility = View.GONE
+            swiftbladeText2.visibility = View.GONE
+            gunslingerText2.visibility = View.GONE
+            spelldanceText2.visibility = View.GONE
+
+            //Disables Visibility of 'Combat' Text and the Skill Points Text
+            combatText2.visibility = View.GONE
+            skillPoints2Text.visibility = View.GONE
+
+            //Disables visibility of any visible skill grids
+            gridBattlerage2.visibility = View.GONE
+            gridArchery2.visibility = View.GONE
+            gridDefense2.visibility = View.GONE
+            gridOccultism2.visibility = View.GONE
+            gridSorcery2.visibility = View.GONE
+            gridSongcraft2.visibility = View.GONE
+            gridWitchcraft2.visibility = View.GONE
+            gridAuramancy2.visibility = View.GONE
+            gridShadowplay2.visibility = View.GONE
+            gridVitalism2.visibility = View.GONE
+            gridMalediction2.visibility = View.GONE
+            gridSwiftblade2.visibility = View.GONE
+            gridGunslinger2.visibility = View.GONE
+            gridSpelldance2.visibility = View.GONE
+
+            //Disables Visibility of 'Passives' Text
+            passiveText2.visibility = View.GONE
+
+            //Disables Visibility of Passive Grid for Skill Sets
+            gridBattleragePassive2.visibility = View.GONE
+            gridArcheryPassive2.visibility = View.GONE
+            gridDefensePassive2.visibility = View.GONE
+            gridOccultismPassive2.visibility = View.GONE
+            gridSorceryPassive2.visibility = View.GONE
+            gridSongcraftPassive2.visibility = View.GONE
+            gridWitchcraftPassive2.visibility = View.GONE
+            gridAuramancyPassive2.visibility = View.GONE
+            gridShadowplayPassive2.visibility = View.GONE
+            gridVitalismPassive2.visibility = View.GONE
+            gridMaledictionPassive2.visibility = View.GONE
+            gridSwiftbladePassive2.visibility = View.GONE
+            gridGunslingerPassive2.visibility = View.GONE
+            gridSpelldancePassive2.visibility = View.GONE
+
+            //Enables Visibility of any invisible buttons
+            btnBattlerage1.visibility = View.VISIBLE
+            btnBattlerage2.visibility = View.VISIBLE
+            btnBattlerage3.visibility = View.VISIBLE
+
+            btnArchery1.visibility = View.VISIBLE
+            btnArchery2.visibility = View.VISIBLE
+            btnArchery3.visibility = View.VISIBLE
+
+            btnDefense1.visibility = View.VISIBLE
+            btnDefense2.visibility = View.VISIBLE
+            btnDefense3.visibility = View.VISIBLE
+
+            btnOccultism1.visibility = View.VISIBLE
+            btnOccultism2.visibility = View.VISIBLE
+            btnOccultism3.visibility = View.VISIBLE
+
+            btnSorcery1.visibility = View.VISIBLE
+            btnSorcery2.visibility = View.VISIBLE
+            btnSorcery3.visibility = View.VISIBLE
+
+            btnSongcraft1.visibility = View.VISIBLE
+            btnSongcraft2.visibility = View.VISIBLE
+            btnSongcraft3.visibility = View.VISIBLE
+
+            btnWitchcraft1.visibility = View.VISIBLE
+            btnWitchcraft2.visibility = View.VISIBLE
+            btnWitchcraft3.visibility = View.VISIBLE
+
+            btnAuramancy1.visibility = View.VISIBLE
+            btnAuramancy2.visibility = View.VISIBLE
+            btnAuramancy3.visibility = View.VISIBLE
+
+            btnShadowplay1.visibility = View.VISIBLE
+            btnShadowplay2.visibility = View.VISIBLE
+            btnShadowplay3.visibility = View.VISIBLE
+
+            btnVitalism1.visibility = View.VISIBLE
+            btnVitalism2.visibility = View.VISIBLE
+            btnVitalism3.visibility = View.VISIBLE
+
+            btnMalediction1.visibility = View.VISIBLE
+            btnMalediction2.visibility = View.VISIBLE
+            btnMalediction3.visibility = View.VISIBLE
+
+            btnSwiftblade1.visibility = View.VISIBLE
+            btnSwiftblade2.visibility = View.VISIBLE
+            btnSwiftblade3.visibility = View.VISIBLE
+
+            btnGunslinger1.visibility = View.VISIBLE
+            btnGunslinger2.visibility = View.VISIBLE
+            btnGunslinger3.visibility = View.VISIBLE
+
+            btnSpelldance1.visibility = View.VISIBLE
+            btnSpelldance2.visibility = View.VISIBLE
+            btnSpelldance3.visibility = View.VISIBLE
+
+            btnReset2.visibility = View.GONE
+
+            skillPoints += skillTree2Points
+            skillTree2Points = 0
+            tvPointsLeft.text = " $skillPoints points left"
+            skillPoints2Text.text = "$skillTree2Points / 12"
+
+            resetGrid(gridBattlerage2)
+            resetGrid(gridBattleragePassive2)
+
+            resetGrid(gridArchery2)
+            resetGrid(gridArcheryPassive2)
+
+            resetGrid(gridDefense2)
+            resetGrid(gridDefensePassive2)
+
+            resetGrid(gridOccultism2)
+            resetGrid(gridOccultismPassive2)
+
+            resetGrid(gridSorcery2)
+            resetGrid(gridSorceryPassive2)
+
+            resetGrid(gridSongcraft2)
+            resetGrid(gridSongcraftPassive2)
+
+            resetGrid(gridWitchcraft2)
+            resetGrid(gridWitchcraftPassive2)
+
+            resetGrid(gridAuramancy2)
+            resetGrid(gridAuramancyPassive2)
+
+            resetGrid(gridShadowplay2)
+            resetGrid(gridShadowplayPassive2)
+
+            resetGrid(gridVitalism2)
+            resetGrid(gridVitalismPassive2)
+
+            resetGrid(gridMalediction2)
+            resetGrid(gridMaledictionPassive2)
+
+            resetGrid(gridSwiftblade2)
+            resetGrid(gridSwiftbladePassive2)
+
+            resetGrid(gridGunslinger2)
+            resetGrid(gridGunslingerPassive2)
+
+            resetGrid(gridSpelldance2)
+            resetGrid(gridSpelldancePassive2)
+        }
+        //endregion
+
+
+        //region Panel 3 Skill Tree Button Actions
+        btnBattlerage3.setOnClickListener {
+            gridSkillsets3.visibility = View.GONE
+            tvPanel3Title.visibility = View.GONE
+            btnBattlerage1.visibility = View.GONE
+            btnBattlerage2.visibility = View.GONE
+
+            battlerageText3.visibility = View.VISIBLE
+            combatText3.visibility = View.VISIBLE
+            skillPoints3Text.visibility = View.VISIBLE
+            gridBattlerage3.visibility = View.VISIBLE
+
+            passiveText3.visibility = View.VISIBLE
+            gridBattleragePassive3.visibility = View.VISIBLE
+
+            btnReset3.visibility = View.VISIBLE
         }
 
         btnArchery2.setOnClickListener {
