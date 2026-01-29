@@ -1,5 +1,6 @@
 package com.example.archeageassistantapp
 
+import android.content.Intent
 import android.media.Image
 import android.os.Bundle
 import android.view.View
@@ -21,6 +22,12 @@ class SkillCalculator : ComponentActivity() {
         var skillTree1Points = 0
         var skillTree2Points = 0
         var skillTree3Points = 0
+
+        val btnMenu = findViewById<ImageButton>(R.id.btnMenu)
+        btnMenu.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
 
         val addPoint1 = findViewById<CheckBox>(R.id.addPoint1)
         val addPoint2 = findViewById<CheckBox>(R.id.addPoint2)
@@ -3938,7 +3945,7 @@ class SkillCalculator : ComponentActivity() {
             }
 
             // 🔹 skill 8: requires 4 points
-            if (skillTree2Points < 5 && btn8.isSelected) {
+            if (skillTree3Points < 5 && btn8.isSelected) {
                 btn8.isSelected = false
                 btn8.isEnabled = false
                 btn8.alpha = 0.3f
@@ -4182,13 +4189,13 @@ class SkillCalculator : ComponentActivity() {
 
             updateButtons1(btnBattlerage1_8)
 
+            btnBattlerage1_8.isSelected = !btnBattlerage1_8.isSelected
             skillUnlock1(
                 btnBattlerage1_4, btnBattlerage1_8, btnBattlerage1_12,
                 btnBattleragePassive1_1, btnBattleragePassive1_2, btnBattleragePassive1_3,
                 btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6,
                 skillPoints1Text, skillTree1Points
             )
-            btnBattlerage1_8.isSelected = !btnBattlerage1_8.isSelected
         }
 
         btnBattlerage1_9.setOnClickListener {
@@ -4266,13 +4273,13 @@ class SkillCalculator : ComponentActivity() {
 
             updateButtons1(btnBattlerage1_12)
 
+            btnBattlerage1_12.isSelected = !btnBattlerage1_12.isSelected
             skillUnlock1(
                 btnBattlerage1_4, btnBattlerage1_8, btnBattlerage1_12,
                 btnBattleragePassive1_1, btnBattleragePassive1_2, btnBattleragePassive1_3,
                 btnBattleragePassive1_4, btnBattleragePassive1_5, btnBattleragePassive1_6,
                 skillPoints1Text, skillTree1Points
             )
-            btnBattlerage1_12.isSelected = !btnBattlerage1_12.isSelected
         }
 
 
@@ -4435,13 +4442,13 @@ class SkillCalculator : ComponentActivity() {
 
             updateButtons2(btnBattlerage2_8)
 
+            btnBattlerage2_8.isSelected = !btnBattlerage2_8.isSelected
             skillUnlock2(
                 btnBattlerage2_4, btnBattlerage2_8, btnBattlerage2_12,
                 btnBattleragePassive2_1, btnBattleragePassive2_2, btnBattleragePassive2_3,
                 btnBattleragePassive2_4, btnBattleragePassive2_5, btnBattleragePassive2_6,
                 skillPoints2Text, skillTree2Points
             )
-            btnBattlerage2_8.isSelected = !btnBattlerage2_8.isSelected
         }
 
         btnBattlerage2_9.setOnClickListener {
@@ -4519,13 +4526,13 @@ class SkillCalculator : ComponentActivity() {
 
             updateButtons2(btnBattlerage2_12)
 
+            btnBattlerage2_12.isSelected = !btnBattlerage2_12.isSelected
             skillUnlock2(
                 btnBattlerage2_4, btnBattlerage2_8, btnBattlerage2_12,
                 btnBattleragePassive2_1, btnBattleragePassive2_2, btnBattleragePassive2_3,
                 btnBattleragePassive2_4, btnBattleragePassive2_5, btnBattleragePassive2_6,
                 skillPoints2Text, skillTree2Points
             )
-            btnBattlerage2_12.isSelected = !btnBattlerage2_12.isSelected
         }
 
 
@@ -4546,7 +4553,7 @@ class SkillCalculator : ComponentActivity() {
                 btnBattlerage3_4, btnBattlerage3_8, btnBattlerage3_12,
                 btnBattleragePassive3_1, btnBattleragePassive3_2, btnBattleragePassive3_3,
                 btnBattleragePassive3_4, btnBattleragePassive3_5, btnBattleragePassive3_6,
-                skillPoints2Text, skillTree2Points
+                skillPoints3Text, skillTree3Points
             )
             btnBattlerage3_1.isSelected = !btnBattlerage3_1.isSelected
         }
@@ -4567,7 +4574,7 @@ class SkillCalculator : ComponentActivity() {
                 btnBattlerage3_4, btnBattlerage3_8, btnBattlerage3_12,
                 btnBattleragePassive3_1, btnBattleragePassive3_2, btnBattleragePassive3_3,
                 btnBattleragePassive3_4, btnBattleragePassive3_5, btnBattleragePassive3_6,
-                skillPoints2Text, skillTree2Points
+                skillPoints3Text, skillTree3Points
             )
             btnBattlerage3_2.isSelected = !btnBattlerage3_2.isSelected
         }
@@ -4587,7 +4594,7 @@ class SkillCalculator : ComponentActivity() {
                 btnBattlerage3_4, btnBattlerage3_8, btnBattlerage3_12,
                 btnBattleragePassive3_1, btnBattleragePassive3_2, btnBattleragePassive3_3,
                 btnBattleragePassive3_4, btnBattleragePassive3_5, btnBattleragePassive3_6,
-                skillPoints2Text, skillTree2Points
+                skillPoints3Text, skillTree3Points
             )
             btnBattlerage3_3.isSelected = !btnBattlerage3_3.isSelected
         }
@@ -4609,7 +4616,7 @@ class SkillCalculator : ComponentActivity() {
                 btnBattlerage3_4, btnBattlerage3_8, btnBattlerage3_12,
                 btnBattleragePassive3_1, btnBattleragePassive3_2, btnBattleragePassive3_3,
                 btnBattleragePassive3_4, btnBattleragePassive3_5, btnBattleragePassive3_6,
-                skillPoints2Text, skillTree2Points
+                skillPoints3Text, skillTree3Points
             )
         }
 
@@ -4629,7 +4636,7 @@ class SkillCalculator : ComponentActivity() {
                 btnBattlerage3_4, btnBattlerage3_8, btnBattlerage3_12,
                 btnBattleragePassive3_1, btnBattleragePassive3_2, btnBattleragePassive3_3,
                 btnBattleragePassive3_4, btnBattleragePassive3_5, btnBattleragePassive3_6,
-                skillPoints2Text, skillTree2Points
+                skillPoints3Text, skillTree3Points
             )
             btnBattlerage3_5.isSelected = !btnBattlerage3_5.isSelected
         }
@@ -4650,7 +4657,7 @@ class SkillCalculator : ComponentActivity() {
                 btnBattlerage3_4, btnBattlerage3_8, btnBattlerage3_12,
                 btnBattleragePassive3_1, btnBattleragePassive3_2, btnBattleragePassive3_3,
                 btnBattleragePassive3_4, btnBattleragePassive3_5, btnBattleragePassive3_6,
-                skillPoints2Text, skillTree2Points
+                skillPoints3Text, skillTree3Points
             )
             btnBattlerage3_6.isSelected = !btnBattlerage3_6.isSelected
         }
@@ -4671,7 +4678,7 @@ class SkillCalculator : ComponentActivity() {
                 btnBattlerage3_4, btnBattlerage3_8, btnBattlerage3_12,
                 btnBattleragePassive3_1, btnBattleragePassive3_2, btnBattleragePassive3_3,
                 btnBattleragePassive3_4, btnBattleragePassive3_5, btnBattleragePassive3_6,
-                skillPoints2Text, skillTree2Points
+                skillPoints3Text, skillTree3Points
             )
             btnBattlerage3_7.isSelected = !btnBattlerage3_7.isSelected
         }
@@ -4688,13 +4695,13 @@ class SkillCalculator : ComponentActivity() {
 
             updateButtons3(btnBattlerage3_8)
 
+            btnBattlerage3_8.isSelected = !btnBattlerage3_8.isSelected
             skillUnlock3(
                 btnBattlerage3_4, btnBattlerage3_8, btnBattlerage3_12,
                 btnBattleragePassive3_1, btnBattleragePassive3_2, btnBattleragePassive3_3,
                 btnBattleragePassive3_4, btnBattleragePassive3_5, btnBattleragePassive3_6,
-                skillPoints2Text, skillTree2Points
+                skillPoints3Text, skillTree3Points
             )
-            btnBattlerage3_8.isSelected = !btnBattlerage3_8.isSelected
         }
 
         btnBattlerage3_9.setOnClickListener {
@@ -4713,7 +4720,7 @@ class SkillCalculator : ComponentActivity() {
                 btnBattlerage3_4, btnBattlerage3_8, btnBattlerage3_12,
                 btnBattleragePassive3_1, btnBattleragePassive3_2, btnBattleragePassive3_3,
                 btnBattleragePassive3_4, btnBattleragePassive3_5, btnBattleragePassive3_6,
-                skillPoints2Text, skillTree2Points
+                skillPoints3Text, skillTree3Points
             )
             btnBattlerage3_9.isSelected = !btnBattlerage3_9.isSelected
         }
@@ -4734,7 +4741,7 @@ class SkillCalculator : ComponentActivity() {
                 btnBattlerage3_4, btnBattlerage3_8, btnBattlerage3_12,
                 btnBattleragePassive3_1, btnBattleragePassive3_2, btnBattleragePassive3_3,
                 btnBattleragePassive3_4, btnBattleragePassive3_5, btnBattleragePassive3_6,
-                skillPoints2Text, skillTree2Points
+                skillPoints3Text, skillTree3Points
             )
             btnBattlerage3_10.isSelected = !btnBattlerage3_10.isSelected
         }
@@ -4755,7 +4762,7 @@ class SkillCalculator : ComponentActivity() {
                 btnBattlerage3_4, btnBattlerage3_8, btnBattlerage3_12,
                 btnBattleragePassive3_1, btnBattleragePassive3_2, btnBattleragePassive3_3,
                 btnBattleragePassive3_4, btnBattleragePassive3_5, btnBattleragePassive3_6,
-                skillPoints2Text, skillTree2Points
+                skillPoints3Text, skillTree3Points
             )
             btnBattlerage3_11.isSelected = !btnBattlerage3_11.isSelected
         }
@@ -4772,13 +4779,13 @@ class SkillCalculator : ComponentActivity() {
 
             updateButtons3(btnBattlerage3_12)
 
+            btnBattlerage3_12.isSelected = !btnBattlerage3_12.isSelected
             skillUnlock3(
                 btnBattlerage3_4, btnBattlerage3_8, btnBattlerage3_12,
                 btnBattleragePassive3_1, btnBattleragePassive3_2, btnBattleragePassive3_3,
                 btnBattleragePassive3_4, btnBattleragePassive3_5, btnBattleragePassive3_6,
-                skillPoints2Text, skillTree2Points
+                skillPoints3Text, skillTree3Points
             )
-            btnBattlerage3_12.isSelected = !btnBattlerage3_12.isSelected
         }
 
 
@@ -10774,6 +10781,236 @@ class SkillCalculator : ComponentActivity() {
         }
         //endregion
         
+        //region Vitalism3 Button Actions
+        btnVitalism3_1.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnVitalism3_1.isSelected) {
+                    updateButtons3(btnVitalism3_1)
+                    btnVitalism3_1.isSelected = !btnVitalism3_1.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnVitalism3_1)
+
+            skillUnlock3(
+                btnVitalism3_4, btnVitalism3_8, btnVitalism3_12,
+                btnVitalismPassive3_1, btnVitalismPassive3_2, btnVitalismPassive3_3,
+                btnVitalismPassive3_4, btnVitalismPassive3_5, btnVitalismPassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnVitalism3_1.isSelected = !btnVitalism3_1.isSelected
+        }
+
+        btnVitalism3_2.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnVitalism3_2.isSelected) {
+                    updateButtons3(btnVitalism3_2)
+                    btnVitalism3_2.isSelected = !btnVitalism3_2.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnVitalism3_2)
+
+            skillUnlock3(
+                btnVitalism3_4, btnVitalism3_8, btnVitalism3_12,
+                btnVitalismPassive3_1, btnVitalismPassive3_2, btnVitalismPassive3_3,
+                btnVitalismPassive3_4, btnVitalismPassive3_5, btnVitalismPassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnVitalism3_2.isSelected = !btnVitalism3_2.isSelected
+        }
+
+        btnVitalism3_3.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnVitalism3_3.isSelected) {
+                    updateButtons3(btnVitalism3_3)
+                    btnVitalism3_3.isSelected = !btnVitalism3_3.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnVitalism3_3)
+
+            skillUnlock3(
+                btnVitalism3_4, btnVitalism3_8, btnVitalism3_12,
+                btnVitalismPassive3_1, btnVitalismPassive3_2, btnVitalismPassive3_3,
+                btnVitalismPassive3_4, btnVitalismPassive3_5, btnVitalismPassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnVitalism3_3.isSelected = !btnVitalism3_3.isSelected
+        }
+
+        btnVitalism3_4.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnVitalism3_4.isSelected) {
+                    updateButtons3(btnVitalism3_4)
+                    btnVitalism3_4.isSelected = !btnVitalism3_4.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnVitalism3_4)
+
+            btnVitalism3_4.isSelected = !btnVitalism3_4.isSelected
+            skillUnlock3(
+                btnVitalism3_4, btnVitalism3_8, btnVitalism3_12,
+                btnVitalismPassive3_1, btnVitalismPassive3_2, btnVitalismPassive3_3,
+                btnVitalismPassive3_4, btnVitalismPassive3_5, btnVitalismPassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+        }
+
+        btnVitalism3_5.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnVitalism3_5.isSelected) {
+                    updateButtons3(btnVitalism3_5)
+                    btnVitalism3_5.isSelected = !btnVitalism3_5.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnVitalism3_5)
+
+            skillUnlock3(
+                btnVitalism3_4, btnVitalism3_8, btnVitalism3_12,
+                btnVitalismPassive3_1, btnVitalismPassive3_2, btnVitalismPassive3_3,
+                btnVitalismPassive3_4, btnVitalismPassive3_5, btnVitalismPassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnVitalism3_5.isSelected = !btnVitalism3_5.isSelected
+        }
+
+        btnVitalism3_6.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnVitalism3_6.isSelected) {
+                    updateButtons3(btnVitalism3_6)
+                    btnVitalism3_6.isSelected = !btnVitalism3_6.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnVitalism3_6)
+
+            skillUnlock3(
+                btnVitalism3_4, btnVitalism3_8, btnVitalism3_12,
+                btnVitalismPassive3_1, btnVitalismPassive3_2, btnVitalismPassive3_3,
+                btnVitalismPassive3_4, btnVitalismPassive3_5, btnVitalismPassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnVitalism3_6.isSelected = !btnVitalism3_6.isSelected
+        }
+
+        btnVitalism3_7.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnVitalism3_7.isSelected) {
+                    updateButtons3(btnVitalism3_7)
+                    btnVitalism3_7.isSelected = !btnVitalism3_7.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnVitalism3_7)
+
+            skillUnlock3(
+                btnVitalism3_4, btnVitalism3_8, btnVitalism3_12,
+                btnVitalismPassive3_1, btnVitalismPassive3_2, btnVitalismPassive3_3,
+                btnVitalismPassive3_4, btnVitalismPassive3_5, btnVitalismPassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnVitalism3_7.isSelected = !btnVitalism3_7.isSelected
+        }
+
+        btnVitalism3_8.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnVitalism3_8.isSelected) {
+                    updateButtons3(btnVitalism3_8)
+                    btnVitalism3_8.isSelected = !btnVitalism3_8.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnVitalism3_8)
+
+            btnVitalism3_8.isSelected = !btnVitalism3_8.isSelected
+            skillUnlock3(
+                btnVitalism3_4, btnVitalism3_8, btnVitalism3_12,
+                btnVitalismPassive3_1, btnVitalismPassive3_2, btnVitalismPassive3_3,
+                btnVitalismPassive3_4, btnVitalismPassive3_5, btnVitalismPassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+        }
+
+        btnVitalism3_9.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnVitalism3_9.isSelected) {
+                    updateButtons3(btnVitalism3_9)
+                    btnVitalism3_9.isSelected = !btnVitalism3_9.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnVitalism3_9)
+
+            skillUnlock3(
+                btnVitalism3_4, btnVitalism3_8, btnVitalism3_12,
+                btnVitalismPassive3_1, btnVitalismPassive3_2, btnVitalismPassive3_3,
+                btnVitalismPassive3_4, btnVitalismPassive3_5, btnVitalismPassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnVitalism3_9.isSelected = !btnVitalism3_9.isSelected
+        }
+
+        btnVitalism3_10.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnVitalism3_10.isSelected) {
+                    updateButtons3(btnVitalism3_10)
+                    btnVitalism3_10.isSelected = !btnVitalism3_10.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnVitalism3_10)
+
+            skillUnlock3(
+                btnVitalism3_4, btnVitalism3_8, btnVitalism3_12,
+                btnVitalismPassive3_1, btnVitalismPassive3_2, btnVitalismPassive3_3,
+                btnVitalismPassive3_4, btnVitalismPassive3_5, btnVitalismPassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnVitalism3_10.isSelected = !btnVitalism3_10.isSelected
+        }
+
+        btnVitalism3_11.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnVitalism3_11.isSelected) {
+                    updateButtons3(btnVitalism3_11)
+                    btnVitalism3_11.isSelected = !btnVitalism3_11.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnVitalism3_11)
+
+            skillUnlock3(
+                btnVitalism3_4, btnVitalism3_8, btnVitalism3_12,
+                btnVitalismPassive3_1, btnVitalismPassive3_2, btnVitalismPassive3_3,
+                btnVitalismPassive3_4, btnVitalismPassive3_5, btnVitalismPassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnVitalism3_11.isSelected = !btnVitalism3_11.isSelected
+        }
+
+        btnVitalism3_12.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnVitalism3_12.isSelected) {
+                    updateButtons3(btnVitalism3_12)
+                    btnVitalism3_12.isSelected = !btnVitalism3_12.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnVitalism3_12)
+
+            btnVitalism3_12.isSelected = !btnVitalism3_12.isSelected
+            skillUnlock3(
+                btnVitalism3_4, btnVitalism3_8, btnVitalism3_12,
+                btnVitalismPassive3_1, btnVitalismPassive3_2, btnVitalismPassive3_3,
+                btnVitalismPassive3_4, btnVitalismPassive3_5, btnVitalismPassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+        }
+        //endregion
+        
 
         //region Malediction1 Button Actions
         btnMalediction1_1.setOnClickListener {
@@ -11018,8 +11255,8 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock2(
                 btnMalediction2_4, btnMalediction2_8, btnMalediction2_12,
-                btnMaledictionPassive1_1, btnMaledictionPassive1_2, btnMaledictionPassive1_3,
-                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6,
+                btnMaledictionPassive2_1, btnMaledictionPassive2_2, btnMaledictionPassive2_3,
+                btnMaledictionPassive2_4, btnMaledictionPassive2_5, btnMaledictionPassive2_6,
                 skillPoints2Text, skillTree2Points
             )
             btnMalediction2_1.isSelected = !btnMalediction2_1.isSelected
@@ -11037,8 +11274,8 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock2(
                 btnMalediction2_4, btnMalediction2_8, btnMalediction2_12,
-                btnMaledictionPassive1_1, btnMaledictionPassive1_2, btnMaledictionPassive1_3,
-                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6,
+                btnMaledictionPassive2_1, btnMaledictionPassive2_2, btnMaledictionPassive2_3,
+                btnMaledictionPassive2_4, btnMaledictionPassive2_5, btnMaledictionPassive2_6,
                 skillPoints2Text, skillTree2Points
             )
             btnMalediction2_2.isSelected = !btnMalediction2_2.isSelected
@@ -11056,8 +11293,8 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock2(
                 btnMalediction2_4, btnMalediction2_8, btnMalediction2_12,
-                btnMaledictionPassive1_1, btnMaledictionPassive1_2, btnMaledictionPassive1_3,
-                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6,
+                btnMaledictionPassive2_1, btnMaledictionPassive2_2, btnMaledictionPassive2_3,
+                btnMaledictionPassive2_4, btnMaledictionPassive2_5, btnMaledictionPassive2_6,
                 skillPoints2Text, skillTree2Points
             )
             btnMalediction2_3.isSelected = !btnMalediction2_3.isSelected
@@ -11076,8 +11313,8 @@ class SkillCalculator : ComponentActivity() {
             btnMalediction2_4.isSelected = !btnMalediction2_4.isSelected
             skillUnlock2(
                 btnMalediction2_4, btnMalediction2_8, btnMalediction2_12,
-                btnMaledictionPassive1_1, btnMaledictionPassive1_2, btnMaledictionPassive1_3,
-                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6,
+                btnMaledictionPassive2_1, btnMaledictionPassive2_2, btnMaledictionPassive2_3,
+                btnMaledictionPassive2_4, btnMaledictionPassive2_5, btnMaledictionPassive2_6,
                 skillPoints2Text, skillTree2Points
             )
         }
@@ -11094,8 +11331,8 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock2(
                 btnMalediction2_4, btnMalediction2_8, btnMalediction2_12,
-                btnMaledictionPassive1_1, btnMaledictionPassive1_2, btnMaledictionPassive1_3,
-                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6,
+                btnMaledictionPassive2_1, btnMaledictionPassive2_2, btnMaledictionPassive2_3,
+                btnMaledictionPassive2_4, btnMaledictionPassive2_5, btnMaledictionPassive2_6,
                 skillPoints2Text, skillTree2Points
             )
             btnMalediction2_5.isSelected = !btnMalediction2_5.isSelected
@@ -11113,8 +11350,8 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock2(
                 btnMalediction2_4, btnMalediction2_8, btnMalediction2_12,
-                btnMaledictionPassive1_1, btnMaledictionPassive1_2, btnMaledictionPassive1_3,
-                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6,
+                btnMaledictionPassive2_1, btnMaledictionPassive2_2, btnMaledictionPassive2_3,
+                btnMaledictionPassive2_4, btnMaledictionPassive2_5, btnMaledictionPassive2_6,
                 skillPoints2Text, skillTree2Points
             )
             btnMalediction2_6.isSelected = !btnMalediction2_6.isSelected
@@ -11132,8 +11369,8 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock2(
                 btnMalediction2_4, btnMalediction2_8, btnMalediction2_12,
-                btnMaledictionPassive1_1, btnMaledictionPassive1_2, btnMaledictionPassive1_3,
-                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6,
+                btnMaledictionPassive2_1, btnMaledictionPassive2_2, btnMaledictionPassive2_3,
+                btnMaledictionPassive2_4, btnMaledictionPassive2_5, btnMaledictionPassive2_6,
                 skillPoints2Text, skillTree2Points
             )
             btnMalediction2_7.isSelected = !btnMalediction2_7.isSelected
@@ -11152,8 +11389,8 @@ class SkillCalculator : ComponentActivity() {
             btnMalediction2_8.isSelected = !btnMalediction2_8.isSelected
             skillUnlock2(
                 btnMalediction2_4, btnMalediction2_8, btnMalediction2_12,
-                btnMaledictionPassive1_1, btnMaledictionPassive1_2, btnMaledictionPassive1_3,
-                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6,
+                btnMaledictionPassive2_1, btnMaledictionPassive2_2, btnMaledictionPassive2_3,
+                btnMaledictionPassive2_4, btnMaledictionPassive2_5, btnMaledictionPassive2_6,
                 skillPoints2Text, skillTree2Points
             )
         }
@@ -11170,8 +11407,8 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock2(
                 btnMalediction2_4, btnMalediction2_8, btnMalediction2_12,
-                btnMaledictionPassive1_1, btnMaledictionPassive1_2, btnMaledictionPassive1_3,
-                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6,
+                btnMaledictionPassive2_1, btnMaledictionPassive2_2, btnMaledictionPassive2_3,
+                btnMaledictionPassive2_4, btnMaledictionPassive2_5, btnMaledictionPassive2_6,
                 skillPoints2Text, skillTree2Points
             )
             btnMalediction2_9.isSelected = !btnMalediction2_9.isSelected
@@ -11189,8 +11426,8 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock2(
                 btnMalediction2_4, btnMalediction2_8, btnMalediction2_12,
-                btnMaledictionPassive1_1, btnMaledictionPassive1_2, btnMaledictionPassive1_3,
-                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6,
+                btnMaledictionPassive2_1, btnMaledictionPassive2_2, btnMaledictionPassive2_3,
+                btnMaledictionPassive2_4, btnMaledictionPassive2_5, btnMaledictionPassive2_6,
                 skillPoints2Text, skillTree2Points
             )
             btnMalediction2_10.isSelected = !btnMalediction2_10.isSelected
@@ -11208,8 +11445,8 @@ class SkillCalculator : ComponentActivity() {
 
             skillUnlock2(
                 btnMalediction2_4, btnMalediction2_8, btnMalediction2_12,
-                btnMaledictionPassive1_1, btnMaledictionPassive1_2, btnMaledictionPassive1_3,
-                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6,
+                btnMaledictionPassive2_1, btnMaledictionPassive2_2, btnMaledictionPassive2_3,
+                btnMaledictionPassive2_4, btnMaledictionPassive2_5, btnMaledictionPassive2_6,
                 skillPoints2Text, skillTree2Points
             )
             btnMalediction2_11.isSelected = !btnMalediction2_11.isSelected
@@ -11228,8 +11465,238 @@ class SkillCalculator : ComponentActivity() {
             btnMalediction2_12.isSelected = !btnMalediction2_12.isSelected
             skillUnlock2(
                 btnMalediction2_4, btnMalediction2_8, btnMalediction2_12,
-                btnMaledictionPassive1_1, btnMaledictionPassive1_2, btnMaledictionPassive1_3,
-                btnMaledictionPassive1_4, btnMaledictionPassive1_5, btnMaledictionPassive1_6,
+                btnMaledictionPassive2_1, btnMaledictionPassive2_2, btnMaledictionPassive2_3,
+                btnMaledictionPassive2_4, btnMaledictionPassive2_5, btnMaledictionPassive2_6,
+                skillPoints2Text, skillTree2Points
+            )
+        }
+        //endregion
+
+        //region Malediction3 Button Actions
+        btnMalediction3_1.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnMalediction3_1.isSelected) {
+                    updateButtons3(btnMalediction3_1)
+                    btnMalediction3_1.isSelected = !btnMalediction3_1.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnMalediction3_1)
+
+            skillUnlock3(
+                btnMalediction3_4, btnMalediction3_8, btnMalediction3_12,
+                btnMaledictionPassive3_1, btnMaledictionPassive3_2, btnMaledictionPassive3_3,
+                btnMaledictionPassive3_4, btnMaledictionPassive3_5, btnMaledictionPassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnMalediction3_1.isSelected = !btnMalediction3_1.isSelected
+        }
+
+        btnMalediction3_2.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnMalediction3_2.isSelected) {
+                    updateButtons3(btnMalediction3_2)
+                    btnMalediction3_2.isSelected = !btnMalediction3_2.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnMalediction3_2)
+
+            skillUnlock3(
+                btnMalediction3_4, btnMalediction3_8, btnMalediction3_12,
+                btnMaledictionPassive3_1, btnMaledictionPassive3_2, btnMaledictionPassive3_3,
+                btnMaledictionPassive3_4, btnMaledictionPassive3_5, btnMaledictionPassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnMalediction3_2.isSelected = !btnMalediction3_2.isSelected
+        }
+
+        btnMalediction3_3.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnMalediction3_3.isSelected) {
+                    updateButtons3(btnMalediction3_3)
+                    btnMalediction3_3.isSelected = !btnMalediction3_3.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnMalediction3_3)
+
+            skillUnlock3(
+                btnMalediction3_4, btnMalediction3_8, btnMalediction3_12,
+                btnMaledictionPassive3_1, btnMaledictionPassive3_2, btnMaledictionPassive3_3,
+                btnMaledictionPassive3_4, btnMaledictionPassive3_5, btnMaledictionPassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnMalediction3_3.isSelected = !btnMalediction3_3.isSelected
+        }
+
+        btnMalediction3_4.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnMalediction3_4.isSelected) {
+                    updateButtons3(btnMalediction3_4)
+                    btnMalediction3_4.isSelected = !btnMalediction3_4.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnMalediction3_4)
+
+            btnMalediction3_4.isSelected = !btnMalediction3_4.isSelected
+            skillUnlock3(
+                btnMalediction3_4, btnMalediction3_8, btnMalediction3_12,
+                btnMaledictionPassive3_1, btnMaledictionPassive3_2, btnMaledictionPassive3_3,
+                btnMaledictionPassive3_4, btnMaledictionPassive3_5, btnMaledictionPassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+        }
+
+        btnMalediction3_5.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnMalediction3_5.isSelected) {
+                    updateButtons3(btnMalediction3_5)
+                    btnMalediction3_5.isSelected = !btnMalediction3_5.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnMalediction3_5)
+
+            skillUnlock3(
+                btnMalediction3_4, btnMalediction3_8, btnMalediction3_12,
+                btnMaledictionPassive3_1, btnMaledictionPassive3_2, btnMaledictionPassive3_3,
+                btnMaledictionPassive3_4, btnMaledictionPassive3_5, btnMaledictionPassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnMalediction3_5.isSelected = !btnMalediction3_5.isSelected
+        }
+
+        btnMalediction3_6.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnMalediction3_6.isSelected) {
+                    updateButtons3(btnMalediction3_6)
+                    btnMalediction3_6.isSelected = !btnMalediction3_6.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnMalediction3_6)
+
+            skillUnlock3(
+                btnMalediction3_4, btnMalediction3_8, btnMalediction3_12,
+                btnMaledictionPassive3_1, btnMaledictionPassive3_2, btnMaledictionPassive3_3,
+                btnMaledictionPassive3_4, btnMaledictionPassive3_5, btnMaledictionPassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnMalediction3_6.isSelected = !btnMalediction3_6.isSelected
+        }
+
+        btnMalediction3_7.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnMalediction3_7.isSelected) {
+                    updateButtons3(btnMalediction3_7)
+                    btnMalediction3_7.isSelected = !btnMalediction3_7.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnMalediction3_7)
+
+            skillUnlock3(
+                btnMalediction3_4, btnMalediction3_8, btnMalediction3_12,
+                btnMaledictionPassive3_1, btnMaledictionPassive3_2, btnMaledictionPassive3_3,
+                btnMaledictionPassive3_4, btnMaledictionPassive3_5, btnMaledictionPassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnMalediction3_7.isSelected = !btnMalediction3_7.isSelected
+        }
+
+        btnMalediction3_8.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnMalediction3_8.isSelected) {
+                    updateButtons3(btnMalediction3_8)
+                    btnMalediction3_8.isSelected = !btnMalediction3_8.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnMalediction3_8)
+
+            btnMalediction3_8.isSelected = !btnMalediction3_8.isSelected
+            skillUnlock3(
+                btnMalediction3_4, btnMalediction3_8, btnMalediction3_12,
+                btnMaledictionPassive3_1, btnMaledictionPassive3_2, btnMaledictionPassive3_3,
+                btnMaledictionPassive3_4, btnMaledictionPassive3_5, btnMaledictionPassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+        }
+
+        btnMalediction3_9.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnMalediction3_9.isSelected) {
+                    updateButtons3(btnMalediction3_9)
+                    btnMalediction3_9.isSelected = !btnMalediction3_9.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnMalediction3_9)
+
+            skillUnlock3(
+                btnMalediction3_4, btnMalediction3_8, btnMalediction3_12,
+                btnMaledictionPassive3_1, btnMaledictionPassive3_2, btnMaledictionPassive3_3,
+                btnMaledictionPassive3_4, btnMaledictionPassive3_5, btnMaledictionPassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnMalediction3_9.isSelected = !btnMalediction3_9.isSelected
+        }
+
+        btnMalediction3_10.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnMalediction3_10.isSelected) {
+                    updateButtons3(btnMalediction3_10)
+                    btnMalediction3_10.isSelected = !btnMalediction3_10.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnMalediction3_10)
+
+            skillUnlock3(
+                btnMalediction3_4, btnMalediction3_8, btnMalediction3_12,
+                btnMaledictionPassive3_1, btnMaledictionPassive3_2, btnMaledictionPassive3_3,
+                btnMaledictionPassive3_4, btnMaledictionPassive3_5, btnMaledictionPassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnMalediction3_10.isSelected = !btnMalediction3_10.isSelected
+        }
+
+        btnMalediction3_11.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnMalediction3_11.isSelected) {
+                    updateButtons3(btnMalediction3_11)
+                    btnMalediction3_11.isSelected = !btnMalediction3_11.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnMalediction3_11)
+
+            skillUnlock3(
+                btnMalediction3_4, btnMalediction3_8, btnMalediction3_12,
+                btnMaledictionPassive3_1, btnMaledictionPassive3_2, btnMaledictionPassive3_3,
+                btnMaledictionPassive3_4, btnMaledictionPassive3_5, btnMaledictionPassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnMalediction3_11.isSelected = !btnMalediction3_11.isSelected
+        }
+
+        btnMalediction3_12.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnMalediction3_12.isSelected) {
+                    updateButtons3(btnMalediction3_12)
+                    btnMalediction3_12.isSelected = !btnMalediction3_12.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnMalediction3_12)
+
+            btnMalediction3_12.isSelected = !btnMalediction3_12.isSelected
+            skillUnlock3(
+                btnMalediction3_4, btnMalediction3_8, btnMalediction3_12,
+                btnMaledictionPassive3_1, btnMaledictionPassive3_2, btnMaledictionPassive3_3,
+                btnMaledictionPassive3_4, btnMaledictionPassive3_5, btnMaledictionPassive3_6,
                 skillPoints2Text, skillTree2Points
             )
         }
@@ -11695,6 +12162,236 @@ class SkillCalculator : ComponentActivity() {
             )
         }
         //endregion
+
+        //region Swiftblade3 Button Actions
+        btnSwiftblade3_1.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnSwiftblade3_1.isSelected) {
+                    updateButtons3(btnSwiftblade3_1)
+                    btnSwiftblade3_1.isSelected = !btnSwiftblade3_1.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnSwiftblade3_1)
+
+            skillUnlock3(
+                btnSwiftblade3_4, btnSwiftblade3_8, btnSwiftblade3_12,
+                btnSwiftbladePassive3_1, btnSwiftbladePassive3_2, btnSwiftbladePassive3_3,
+                btnSwiftbladePassive3_4, btnSwiftbladePassive3_5, btnSwiftbladePassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnSwiftblade3_1.isSelected = !btnSwiftblade3_1.isSelected
+        }
+
+        btnSwiftblade3_2.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnSwiftblade3_2.isSelected) {
+                    updateButtons3(btnSwiftblade3_2)
+                    btnSwiftblade3_2.isSelected = !btnSwiftblade3_2.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnSwiftblade3_2)
+
+            skillUnlock3(
+                btnSwiftblade3_4, btnSwiftblade3_8, btnSwiftblade3_12,
+                btnSwiftbladePassive3_1, btnSwiftbladePassive3_2, btnSwiftbladePassive3_3,
+                btnSwiftbladePassive3_4, btnSwiftbladePassive3_5, btnSwiftbladePassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnSwiftblade3_2.isSelected = !btnSwiftblade3_2.isSelected
+        }
+
+        btnSwiftblade3_3.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnSwiftblade3_3.isSelected) {
+                    updateButtons3(btnSwiftblade3_3)
+                    btnSwiftblade3_3.isSelected = !btnSwiftblade3_3.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnSwiftblade3_3)
+
+            skillUnlock3(
+                btnSwiftblade3_4, btnSwiftblade3_8, btnSwiftblade3_12,
+                btnSwiftbladePassive3_1, btnSwiftbladePassive3_2, btnSwiftbladePassive3_3,
+                btnSwiftbladePassive3_4, btnSwiftbladePassive3_5, btnSwiftbladePassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnSwiftblade3_3.isSelected = !btnSwiftblade3_3.isSelected
+        }
+
+        btnSwiftblade3_4.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnSwiftblade3_4.isSelected) {
+                    updateButtons3(btnSwiftblade3_4)
+                    btnSwiftblade3_4.isSelected = !btnSwiftblade3_4.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnSwiftblade3_4)
+
+            btnSwiftblade3_4.isSelected = !btnSwiftblade3_4.isSelected
+            skillUnlock3(
+                btnSwiftblade3_4, btnSwiftblade3_8, btnSwiftblade3_12,
+                btnSwiftbladePassive3_1, btnSwiftbladePassive3_2, btnSwiftbladePassive3_3,
+                btnSwiftbladePassive3_4, btnSwiftbladePassive3_5, btnSwiftbladePassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+        }
+
+        btnSwiftblade3_5.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnSwiftblade3_5.isSelected) {
+                    updateButtons3(btnSwiftblade3_5)
+                    btnSwiftblade3_5.isSelected = !btnSwiftblade3_5.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnSwiftblade3_5)
+
+            skillUnlock3(
+                btnSwiftblade3_4, btnSwiftblade3_8, btnSwiftblade3_12,
+                btnSwiftbladePassive3_1, btnSwiftbladePassive3_2, btnSwiftbladePassive3_3,
+                btnSwiftbladePassive3_4, btnSwiftbladePassive3_5, btnSwiftbladePassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnSwiftblade3_5.isSelected = !btnSwiftblade3_5.isSelected
+        }
+
+        btnSwiftblade3_6.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnSwiftblade3_6.isSelected) {
+                    updateButtons3(btnSwiftblade3_6)
+                    btnSwiftblade3_6.isSelected = !btnSwiftblade3_6.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnSwiftblade3_6)
+
+            skillUnlock3(
+                btnSwiftblade3_4, btnSwiftblade3_8, btnSwiftblade3_12,
+                btnSwiftbladePassive3_1, btnSwiftbladePassive3_2, btnSwiftbladePassive3_3,
+                btnSwiftbladePassive3_4, btnSwiftbladePassive3_5, btnSwiftbladePassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnSwiftblade3_6.isSelected = !btnSwiftblade3_6.isSelected
+        }
+
+        btnSwiftblade3_7.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnSwiftblade3_7.isSelected) {
+                    updateButtons3(btnSwiftblade3_7)
+                    btnSwiftblade3_7.isSelected = !btnSwiftblade3_7.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnSwiftblade3_7)
+
+            skillUnlock3(
+                btnSwiftblade3_4, btnSwiftblade3_8, btnSwiftblade3_12,
+                btnSwiftbladePassive3_1, btnSwiftbladePassive3_2, btnSwiftbladePassive3_3,
+                btnSwiftbladePassive3_4, btnSwiftbladePassive3_5, btnSwiftbladePassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnSwiftblade3_7.isSelected = !btnSwiftblade3_7.isSelected
+        }
+
+        btnSwiftblade3_8.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnSwiftblade3_8.isSelected) {
+                    updateButtons3(btnSwiftblade3_8)
+                    btnSwiftblade3_8.isSelected = !btnSwiftblade3_8.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnSwiftblade3_8)
+
+            btnSwiftblade3_8.isSelected = !btnSwiftblade3_8.isSelected
+            skillUnlock3(
+                btnSwiftblade3_4, btnSwiftblade3_8, btnSwiftblade3_12,
+                btnSwiftbladePassive3_1, btnSwiftbladePassive3_2, btnSwiftbladePassive3_3,
+                btnSwiftbladePassive3_4, btnSwiftbladePassive3_5, btnSwiftbladePassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+        }
+
+        btnSwiftblade3_9.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnSwiftblade3_9.isSelected) {
+                    updateButtons3(btnSwiftblade3_9)
+                    btnSwiftblade3_9.isSelected = !btnSwiftblade3_9.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnSwiftblade3_9)
+
+            skillUnlock3(
+                btnSwiftblade3_4, btnSwiftblade3_8, btnSwiftblade3_12,
+                btnSwiftbladePassive3_1, btnSwiftbladePassive3_2, btnSwiftbladePassive3_3,
+                btnSwiftbladePassive3_4, btnSwiftbladePassive3_5, btnSwiftbladePassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnSwiftblade3_9.isSelected = !btnSwiftblade3_9.isSelected
+        }
+
+        btnSwiftblade3_10.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnSwiftblade3_10.isSelected) {
+                    updateButtons3(btnSwiftblade3_10)
+                    btnSwiftblade3_10.isSelected = !btnSwiftblade3_10.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnSwiftblade3_10)
+
+            skillUnlock3(
+                btnSwiftblade3_4, btnSwiftblade3_8, btnSwiftblade3_12,
+                btnSwiftbladePassive3_1, btnSwiftbladePassive3_2, btnSwiftbladePassive3_3,
+                btnSwiftbladePassive3_4, btnSwiftbladePassive3_5, btnSwiftbladePassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnSwiftblade3_10.isSelected = !btnSwiftblade3_10.isSelected
+        }
+
+        btnSwiftblade3_11.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnSwiftblade3_11.isSelected) {
+                    updateButtons3(btnSwiftblade3_11)
+                    btnSwiftblade3_11.isSelected = !btnSwiftblade3_11.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnSwiftblade3_11)
+
+            skillUnlock3(
+                btnSwiftblade3_4, btnSwiftblade3_8, btnSwiftblade3_12,
+                btnSwiftbladePassive3_1, btnSwiftbladePassive3_2, btnSwiftbladePassive3_3,
+                btnSwiftbladePassive3_4, btnSwiftbladePassive3_5, btnSwiftbladePassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnSwiftblade3_11.isSelected = !btnSwiftblade3_11.isSelected
+        }
+
+        btnSwiftblade3_12.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnSwiftblade3_12.isSelected) {
+                    updateButtons3(btnSwiftblade3_12)
+                    btnSwiftblade3_12.isSelected = !btnSwiftblade3_12.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnSwiftblade3_12)
+
+            btnSwiftblade3_12.isSelected = !btnSwiftblade3_12.isSelected
+            skillUnlock3(
+                btnSwiftblade3_4, btnSwiftblade3_8, btnSwiftblade3_12,
+                btnSwiftbladePassive3_1, btnSwiftbladePassive3_2, btnSwiftbladePassive3_3,
+                btnSwiftbladePassive3_4, btnSwiftbladePassive3_5, btnSwiftbladePassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+        }
+        //endregion
         
 
         //region Gunslinger1 Button Actions
@@ -12156,6 +12853,236 @@ class SkillCalculator : ComponentActivity() {
             )
         }
         //endregion
+
+        //region Gunslinger3 Button Actions
+        btnGunslinger3_1.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnGunslinger3_1.isSelected) {
+                    updateButtons3(btnGunslinger3_1)
+                    btnGunslinger3_1.isSelected = !btnGunslinger3_1.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnGunslinger3_1)
+
+            skillUnlock3(
+                btnGunslinger3_4, btnGunslinger3_8, btnGunslinger3_12,
+                btnGunslingerPassive3_1, btnGunslingerPassive3_2, btnGunslingerPassive3_3,
+                btnGunslingerPassive3_4, btnGunslingerPassive3_5, btnGunslingerPassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnGunslinger3_1.isSelected = !btnGunslinger3_1.isSelected
+        }
+
+        btnGunslinger3_2.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnGunslinger3_2.isSelected) {
+                    updateButtons3(btnGunslinger3_2)
+                    btnGunslinger3_2.isSelected = !btnGunslinger3_2.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnGunslinger3_2)
+
+            skillUnlock3(
+                btnGunslinger3_4, btnGunslinger3_8, btnGunslinger3_12,
+                btnGunslingerPassive3_1, btnGunslingerPassive3_2, btnGunslingerPassive3_3,
+                btnGunslingerPassive3_4, btnGunslingerPassive3_5, btnGunslingerPassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnGunslinger3_2.isSelected = !btnGunslinger3_2.isSelected
+        }
+
+        btnGunslinger3_3.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnGunslinger3_3.isSelected) {
+                    updateButtons3(btnGunslinger3_3)
+                    btnGunslinger3_3.isSelected = !btnGunslinger3_3.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnGunslinger3_3)
+
+            skillUnlock3(
+                btnGunslinger3_4, btnGunslinger3_8, btnGunslinger3_12,
+                btnGunslingerPassive3_1, btnGunslingerPassive3_2, btnGunslingerPassive3_3,
+                btnGunslingerPassive3_4, btnGunslingerPassive3_5, btnGunslingerPassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnGunslinger3_3.isSelected = !btnGunslinger3_3.isSelected
+        }
+
+        btnGunslinger3_4.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnGunslinger3_4.isSelected) {
+                    updateButtons3(btnGunslinger3_4)
+                    btnGunslinger3_4.isSelected = !btnGunslinger3_4.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnGunslinger3_4)
+
+            btnGunslinger3_4.isSelected = !btnGunslinger3_4.isSelected
+            skillUnlock3(
+                btnGunslinger3_4, btnGunslinger3_8, btnGunslinger3_12,
+                btnGunslingerPassive3_1, btnGunslingerPassive3_2, btnGunslingerPassive3_3,
+                btnGunslingerPassive3_4, btnGunslingerPassive3_5, btnGunslingerPassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+        }
+
+        btnGunslinger3_5.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnGunslinger3_5.isSelected) {
+                    updateButtons3(btnGunslinger3_5)
+                    btnGunslinger3_5.isSelected = !btnGunslinger3_5.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnGunslinger3_5)
+
+            skillUnlock3(
+                btnGunslinger3_4, btnGunslinger3_8, btnGunslinger3_12,
+                btnGunslingerPassive3_1, btnGunslingerPassive3_2, btnGunslingerPassive3_3,
+                btnGunslingerPassive3_4, btnGunslingerPassive3_5, btnGunslingerPassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnGunslinger3_5.isSelected = !btnGunslinger3_5.isSelected
+        }
+
+        btnGunslinger3_6.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnGunslinger3_6.isSelected) {
+                    updateButtons3(btnGunslinger3_6)
+                    btnGunslinger3_6.isSelected = !btnGunslinger3_6.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnGunslinger3_6)
+
+            skillUnlock3(
+                btnGunslinger3_4, btnGunslinger3_8, btnGunslinger3_12,
+                btnGunslingerPassive3_1, btnGunslingerPassive3_2, btnGunslingerPassive3_3,
+                btnGunslingerPassive3_4, btnGunslingerPassive3_5, btnGunslingerPassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnGunslinger3_6.isSelected = !btnGunslinger3_6.isSelected
+        }
+
+        btnGunslinger3_7.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnGunslinger3_7.isSelected) {
+                    updateButtons3(btnGunslinger3_7)
+                    btnGunslinger3_7.isSelected = !btnGunslinger3_7.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnGunslinger3_7)
+
+            skillUnlock3(
+                btnGunslinger3_4, btnGunslinger3_8, btnGunslinger3_12,
+                btnGunslingerPassive3_1, btnGunslingerPassive3_2, btnGunslingerPassive3_3,
+                btnGunslingerPassive3_4, btnGunslingerPassive3_5, btnGunslingerPassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnGunslinger3_7.isSelected = !btnGunslinger3_7.isSelected
+        }
+
+        btnGunslinger3_8.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnGunslinger3_8.isSelected) {
+                    updateButtons3(btnGunslinger3_8)
+                    btnGunslinger3_8.isSelected = !btnGunslinger3_8.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnGunslinger3_8)
+
+            btnGunslinger3_8.isSelected = !btnGunslinger3_8.isSelected
+            skillUnlock3(
+                btnGunslinger3_4, btnGunslinger3_8, btnGunslinger3_12,
+                btnGunslingerPassive3_1, btnGunslingerPassive3_2, btnGunslingerPassive3_3,
+                btnGunslingerPassive3_4, btnGunslingerPassive3_5, btnGunslingerPassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+        }
+
+        btnGunslinger3_9.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnGunslinger3_9.isSelected) {
+                    updateButtons3(btnGunslinger3_9)
+                    btnGunslinger3_9.isSelected = !btnGunslinger3_9.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnGunslinger3_9)
+
+            skillUnlock3(
+                btnGunslinger3_4, btnGunslinger3_8, btnGunslinger3_12,
+                btnGunslingerPassive3_1, btnGunslingerPassive3_2, btnGunslingerPassive3_3,
+                btnGunslingerPassive3_4, btnGunslingerPassive3_5, btnGunslingerPassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnGunslinger3_9.isSelected = !btnGunslinger3_9.isSelected
+        }
+
+        btnGunslinger3_10.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnGunslinger3_10.isSelected) {
+                    updateButtons3(btnGunslinger3_10)
+                    btnGunslinger3_10.isSelected = !btnGunslinger3_10.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnGunslinger3_10)
+
+            skillUnlock3(
+                btnGunslinger3_4, btnGunslinger3_8, btnGunslinger3_12,
+                btnGunslingerPassive3_1, btnGunslingerPassive3_2, btnGunslingerPassive3_3,
+                btnGunslingerPassive3_4, btnGunslingerPassive3_5, btnGunslingerPassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnGunslinger3_10.isSelected = !btnGunslinger3_10.isSelected
+        }
+
+        btnGunslinger3_11.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnGunslinger3_11.isSelected) {
+                    updateButtons3(btnGunslinger3_11)
+                    btnGunslinger3_11.isSelected = !btnGunslinger3_11.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnGunslinger3_11)
+
+            skillUnlock3(
+                btnGunslinger3_4, btnGunslinger3_8, btnGunslinger3_12,
+                btnGunslingerPassive3_1, btnGunslingerPassive3_2, btnGunslingerPassive3_3,
+                btnGunslingerPassive3_4, btnGunslingerPassive3_5, btnGunslingerPassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnGunslinger3_11.isSelected = !btnGunslinger3_11.isSelected
+        }
+
+        btnGunslinger3_12.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnGunslinger3_12.isSelected) {
+                    updateButtons3(btnGunslinger3_12)
+                    btnGunslinger3_12.isSelected = !btnGunslinger3_12.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnGunslinger3_12)
+
+            btnGunslinger3_12.isSelected = !btnGunslinger3_12.isSelected
+            skillUnlock3(
+                btnGunslinger3_4, btnGunslinger3_8, btnGunslinger3_12,
+                btnGunslingerPassive3_1, btnGunslingerPassive3_2, btnGunslingerPassive3_3,
+                btnGunslingerPassive3_4, btnGunslingerPassive3_5, btnGunslingerPassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+        }
+        //endregion
         
 
         //region Spelldance1 Button Actions
@@ -12613,6 +13540,236 @@ class SkillCalculator : ComponentActivity() {
                 btnSpelldance2_4, btnSpelldance2_8, btnSpelldance2_12,
                 btnSpelldancePassive2_1, btnSpelldancePassive2_2, btnSpelldancePassive2_3,
                 btnSpelldancePassive2_4, btnSpelldancePassive2_5, btnSpelldancePassive2_6,
+                skillPoints2Text, skillTree2Points
+            )
+        }
+        //endregion
+
+        //region Spelldance3 Button Actions
+        btnSpelldance3_1.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnSpelldance3_1.isSelected) {
+                    updateButtons3(btnSpelldance3_1)
+                    btnSpelldance3_1.isSelected = !btnSpelldance3_1.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnSpelldance3_1)
+
+            skillUnlock3(
+                btnSpelldance3_4, btnSpelldance3_8, btnSpelldance3_12,
+                btnSpelldancePassive3_1, btnSpelldancePassive3_2, btnSpelldancePassive3_3,
+                btnSpelldancePassive3_4, btnSpelldancePassive3_5, btnSpelldancePassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnSpelldance3_1.isSelected = !btnSpelldance3_1.isSelected
+        }
+
+        btnSpelldance3_2.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnSpelldance3_2.isSelected) {
+                    updateButtons3(btnSpelldance3_2)
+                    btnSpelldance3_2.isSelected = !btnSpelldance3_2.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnSpelldance3_2)
+
+            skillUnlock3(
+                btnSpelldance3_4, btnSpelldance3_8, btnSpelldance3_12,
+                btnSpelldancePassive3_1, btnSpelldancePassive3_2, btnSpelldancePassive3_3,
+                btnSpelldancePassive3_4, btnSpelldancePassive3_5, btnSpelldancePassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnSpelldance3_2.isSelected = !btnSpelldance3_2.isSelected
+        }
+
+        btnSpelldance3_3.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnSpelldance3_3.isSelected) {
+                    updateButtons3(btnSpelldance3_3)
+                    btnSpelldance3_3.isSelected = !btnSpelldance3_3.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnSpelldance3_3)
+
+            skillUnlock3(
+                btnSpelldance3_4, btnSpelldance3_8, btnSpelldance3_12,
+                btnSpelldancePassive3_1, btnSpelldancePassive3_2, btnSpelldancePassive3_3,
+                btnSpelldancePassive3_4, btnSpelldancePassive3_5, btnSpelldancePassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnSpelldance3_3.isSelected = !btnSpelldance3_3.isSelected
+        }
+
+        btnSpelldance3_4.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnSpelldance3_4.isSelected) {
+                    updateButtons3(btnSpelldance3_4)
+                    btnSpelldance3_4.isSelected = !btnSpelldance3_4.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnSpelldance3_4)
+
+            btnSpelldance3_4.isSelected = !btnSpelldance3_4.isSelected
+            skillUnlock3(
+                btnSpelldance3_4, btnSpelldance3_8, btnSpelldance3_12,
+                btnSpelldancePassive3_1, btnSpelldancePassive3_2, btnSpelldancePassive3_3,
+                btnSpelldancePassive3_4, btnSpelldancePassive3_5, btnSpelldancePassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+        }
+
+        btnSpelldance3_5.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnSpelldance3_5.isSelected) {
+                    updateButtons3(btnSpelldance3_5)
+                    btnSpelldance3_5.isSelected = !btnSpelldance3_5.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnSpelldance3_5)
+
+            skillUnlock3(
+                btnSpelldance3_4, btnSpelldance3_8, btnSpelldance3_12,
+                btnSpelldancePassive3_1, btnSpelldancePassive3_2, btnSpelldancePassive3_3,
+                btnSpelldancePassive3_4, btnSpelldancePassive3_5, btnSpelldancePassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnSpelldance3_5.isSelected = !btnSpelldance3_5.isSelected
+        }
+
+        btnSpelldance3_6.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnSpelldance3_6.isSelected) {
+                    updateButtons3(btnSpelldance3_6)
+                    btnSpelldance3_6.isSelected = !btnSpelldance3_6.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnSpelldance3_6)
+
+            skillUnlock3(
+                btnSpelldance3_4, btnSpelldance3_8, btnSpelldance3_12,
+                btnSpelldancePassive3_1, btnSpelldancePassive3_2, btnSpelldancePassive3_3,
+                btnSpelldancePassive3_4, btnSpelldancePassive3_5, btnSpelldancePassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnSpelldance3_6.isSelected = !btnSpelldance3_6.isSelected
+        }
+
+        btnSpelldance3_7.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnSpelldance3_7.isSelected) {
+                    updateButtons3(btnSpelldance3_7)
+                    btnSpelldance3_7.isSelected = !btnSpelldance3_7.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnSpelldance3_7)
+
+            skillUnlock3(
+                btnSpelldance3_4, btnSpelldance3_8, btnSpelldance3_12,
+                btnSpelldancePassive3_1, btnSpelldancePassive3_2, btnSpelldancePassive3_3,
+                btnSpelldancePassive3_4, btnSpelldancePassive3_5, btnSpelldancePassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnSpelldance3_7.isSelected = !btnSpelldance3_7.isSelected
+        }
+
+        btnSpelldance3_8.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnSpelldance3_8.isSelected) {
+                    updateButtons3(btnSpelldance3_8)
+                    btnSpelldance3_8.isSelected = !btnSpelldance3_8.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnSpelldance3_8)
+
+            btnSpelldance3_8.isSelected = !btnSpelldance3_8.isSelected
+            skillUnlock3(
+                btnSpelldance3_4, btnSpelldance3_8, btnSpelldance3_12,
+                btnSpelldancePassive3_1, btnSpelldancePassive3_2, btnSpelldancePassive3_3,
+                btnSpelldancePassive3_4, btnSpelldancePassive3_5, btnSpelldancePassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+        }
+
+        btnSpelldance3_9.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnSpelldance3_9.isSelected) {
+                    updateButtons3(btnSpelldance3_9)
+                    btnSpelldance3_9.isSelected = !btnSpelldance3_9.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnSpelldance3_9)
+
+            skillUnlock3(
+                btnSpelldance3_4, btnSpelldance3_8, btnSpelldance3_12,
+                btnSpelldancePassive3_1, btnSpelldancePassive3_2, btnSpelldancePassive3_3,
+                btnSpelldancePassive3_4, btnSpelldancePassive3_5, btnSpelldancePassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnSpelldance3_9.isSelected = !btnSpelldance3_9.isSelected
+        }
+
+        btnSpelldance3_10.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnSpelldance3_10.isSelected) {
+                    updateButtons3(btnSpelldance3_10)
+                    btnSpelldance3_10.isSelected = !btnSpelldance3_10.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnSpelldance3_10)
+
+            skillUnlock3(
+                btnSpelldance3_4, btnSpelldance3_8, btnSpelldance3_12,
+                btnSpelldancePassive3_1, btnSpelldancePassive3_2, btnSpelldancePassive3_3,
+                btnSpelldancePassive3_4, btnSpelldancePassive3_5, btnSpelldancePassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnSpelldance3_10.isSelected = !btnSpelldance3_10.isSelected
+        }
+
+        btnSpelldance3_11.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnSpelldance3_11.isSelected) {
+                    updateButtons3(btnSpelldance3_11)
+                    btnSpelldance3_11.isSelected = !btnSpelldance3_11.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnSpelldance3_11)
+
+            skillUnlock3(
+                btnSpelldance3_4, btnSpelldance3_8, btnSpelldance3_12,
+                btnSpelldancePassive3_1, btnSpelldancePassive3_2, btnSpelldancePassive3_3,
+                btnSpelldancePassive3_4, btnSpelldancePassive3_5, btnSpelldancePassive3_6,
+                skillPoints2Text, skillTree2Points
+            )
+            btnSpelldance3_11.isSelected = !btnSpelldance3_11.isSelected
+        }
+
+        btnSpelldance3_12.setOnClickListener {
+            if (skillPoints <= 0){
+                if (btnSpelldance3_12.isSelected) {
+                    updateButtons3(btnSpelldance3_12)
+                    btnSpelldance3_12.isSelected = !btnSpelldance3_12.isSelected
+                }
+                return@setOnClickListener
+            }
+            updateButtons3(btnSpelldance3_12)
+
+            btnSpelldance3_12.isSelected = !btnSpelldance3_12.isSelected
+            skillUnlock3(
+                btnSpelldance3_4, btnSpelldance3_8, btnSpelldance3_12,
+                btnSpelldancePassive3_1, btnSpelldancePassive3_2, btnSpelldancePassive3_3,
+                btnSpelldancePassive3_4, btnSpelldancePassive3_5, btnSpelldancePassive3_6,
                 skillPoints2Text, skillTree2Points
             )
         }
