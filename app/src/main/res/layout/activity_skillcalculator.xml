@@ -2463,7 +2463,7 @@
                     />
             </LinearLayout>
 
-            <!-- Panel 2  -->
+            <!-- Panel 2 -->
             <LinearLayout
                 android:id="@+id/panel2"
                 android:layout_width="match_parent"
@@ -4925,7 +4925,7 @@
                 
             </LinearLayout>
 
-            <!-- Panel 3 (duplicate) -->
+            <!-- Panel 3 -->
             <LinearLayout
                 android:id="@+id/panel3"
                 android:layout_width="match_parent"
@@ -4933,7 +4933,6 @@
                 android:orientation="vertical"
                 android:padding="14dp"
                 android:layout_marginTop="12dp"
-                android:layout_marginBottom="10dp"
                 android:background="@android:drawable/dialog_holo_light_frame">
 
                 <TextView
@@ -4978,6 +4977,2414 @@
 
                     <Space  android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" />
                 </GridLayout>
+
+                <!-- Battlerage Text -->
+                <TextView
+                    android:id="@+id/battlerageText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Battlerage"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:paddingBottom="10sp"
+                    android:layout_gravity="center"
+                    android:visibility="gone"/>
+
+                <!-- Archery Text -->
+                <TextView
+                    android:id="@+id/archeryText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Archery"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:paddingBottom="10sp"
+                    android:layout_gravity="center"
+                    android:visibility="gone"/>
+
+                <!-- Defense Text -->
+                <TextView
+                    android:id="@+id/defenseText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Defense"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:paddingBottom="10sp"
+                    android:layout_gravity="center"
+                    android:visibility="gone"/>
+
+                <!-- Occultism Text -->
+                <TextView
+                    android:id="@+id/occultismText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Occultism"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:paddingBottom="10sp"
+                    android:layout_gravity="center"
+                    android:visibility="gone"/>
+
+                <!-- Sorcery Text -->
+                <TextView
+                    android:id="@+id/sorceryText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sorcery"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:paddingBottom="10sp"
+                    android:layout_gravity="center"
+                    android:visibility="gone"/>
+
+                <!-- Songcraft Text -->
+                <TextView
+                    android:id="@+id/songcraftText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Songcraft"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:paddingBottom="10sp"
+                    android:layout_gravity="center"
+                    android:visibility="gone"/>
+
+                <!-- Witchcraft Text -->
+                <TextView
+                    android:id="@+id/witchcraftText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Witchcraft"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:paddingBottom="10sp"
+                    android:layout_gravity="center"
+                    android:visibility="gone"/>
+
+                <!-- Auramancy Text -->
+                <TextView
+                    android:id="@+id/auramancyText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Auramancy"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:paddingBottom="10sp"
+                    android:layout_gravity="center"
+                    android:visibility="gone"/>
+
+                <!-- Shadowplay Text -->
+                <TextView
+                    android:id="@+id/shadowplayText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shadowplay"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:paddingBottom="10sp"
+                    android:layout_gravity="center"
+                    android:visibility="gone"/>
+
+                <!-- Vitalism Text -->
+                <TextView
+                    android:id="@+id/vitalismText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vitalism"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:paddingBottom="10sp"
+                    android:layout_gravity="center"
+                    android:visibility="gone"/>
+
+                <!-- Malediction Text -->
+                <TextView
+                    android:id="@+id/maledictionText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Malediction"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:paddingBottom="10sp"
+                    android:layout_gravity="center"
+                    android:visibility="gone"/>
+
+                <!-- Swiftblade Text -->
+                <TextView
+                    android:id="@+id/swiftbladeText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Swiftblade"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:paddingBottom="10sp"
+                    android:layout_gravity="center"
+                    android:visibility="gone"/>
+
+                <!-- Gunslinger Text -->
+                <TextView
+                    android:id="@+id/gunslingerText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gunslinger"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:paddingBottom="10sp"
+                    android:layout_gravity="center"
+                    android:visibility="gone"/>
+
+                <!-- Spelldance Text -->
+                <TextView
+                    android:id="@+id/spelldanceText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Spelldance"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:paddingBottom="10sp"
+                    android:layout_gravity="center"
+                    android:visibility="gone"/>
+
+                <!-- Skill Tree Points Text -->
+                <TextView
+                    android:id="@+id/skillPointsText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="x/20 Points"
+                    android:textSize="18sp"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    />
+
+                <!-- Combat Text -->
+                <TextView
+                    android:id="@+id/combatText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Combat"
+                    android:textSize="20dp"
+                    android:layout_gravity="center"
+                    android:visibility="gone"/>
+
+                <!-- BattleRage Panel 3 -->
+                <GridLayout
+                    android:id="@+id/gridBattlerage3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:useDefaultMargins="true"
+                    android:columnCount="4"
+                    android:alignmentMode="alignMargins"
+                    android:rowOrderPreserved="false"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    >
+
+                    <ImageButton
+                        android:id="@+id/btnBattlerage3_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/battlerage1"
+                        />
+                    <ImageButton
+                        android:id="@+id/btnBattlerage3_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/battlerage2"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnBattlerage3_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/battlerage3"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnBattlerage3_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/battlerage4"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnBattlerage3_5"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/battlerage5"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnBattlerage3_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/battlerage6"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnBattlerage3_7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/battlerage7"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnBattlerage3_8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/battlerage8"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnBattlerage3_9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/battlerage9"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnBattlerage3_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/battlerage10"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnBattlerage3_11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/battlerage11"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnBattlerage3_12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/battlerage12"
+                        />
+
+
+
+                </GridLayout>
+
+                <!-- Archery Panel 3 -->
+                <GridLayout
+                    android:id="@+id/gridArchery3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:useDefaultMargins="true"
+                    android:columnCount="4"
+                    android:alignmentMode="alignMargins"
+                    android:rowOrderPreserved="false"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    >
+
+                    <ImageButton
+                        android:id="@+id/btnArchery3_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/archery1"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnArchery3_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/archery2"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnArchery3_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/archery3"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnArchery3_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/archery4"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnArchery3_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/archery5"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnArchery3_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/archery6"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnArchery3_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/archery7"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnArchery3_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/archery8"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnArchery3_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/archery9"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnArchery3_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/archery10"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnArchery3_11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/archery11"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnArchery3_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/archery12"
+                        />
+
+                </GridLayout>
+
+                <!-- Defense Panel 3 -->
+                <GridLayout
+                    android:id="@+id/gridDefense3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:useDefaultMargins="true"
+                    android:columnCount="4"
+                    android:alignmentMode="alignMargins"
+                    android:rowOrderPreserved="false"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    >
+
+                    <ImageButton
+                        android:id="@+id/btnDefense3_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/defense1"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnDefense3_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/defense2"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnDefense3_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/defense3"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnDefense3_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/defense4"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnDefense3_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/defense5"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnDefense3_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/defense6"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnDefense3_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/defense7"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnDefense3_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/defense8"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnDefense3_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/defense9"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnDefense3_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/defense10"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnDefense3_11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/defense11"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnDefense3_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/defense12"
+                        />
+
+                </GridLayout>
+
+                <!-- Occultism Panel 3 -->
+                <GridLayout
+                    android:id="@+id/gridOccultism3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:useDefaultMargins="true"
+                    android:columnCount="4"
+                    android:alignmentMode="alignMargins"
+                    android:rowOrderPreserved="false"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    >
+
+                    <ImageButton
+                        android:id="@+id/btnOccultism3_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/occultism1"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnOccultism3_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/occultism2"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnOccultism3_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/occultism3"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnOccultism3_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/occultism4"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnOccultism3_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/occultism5"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnOccultism3_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/occultism6"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnOccultism3_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/occultism7"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnOccultism3_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/occultism8"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnOccultism3_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/occultism9"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnOccultism3_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/occultism10"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnOccultism3_11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/occultism11"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnOccultism3_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/occultism12"
+                        />
+
+                </GridLayout>
+
+                <!-- Sorcery Panel 3 -->
+                <GridLayout
+                    android:id="@+id/gridSorcery3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:useDefaultMargins="true"
+                    android:columnCount="4"
+                    android:alignmentMode="alignMargins"
+                    android:rowOrderPreserved="false"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    >
+
+                    <ImageButton
+                        android:id="@+id/btnSorcery3_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/sorcery1"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSorcery3_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/sorcery2"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSorcery3_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/sorcery3"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSorcery3_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/sorcery4"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSorcery3_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/sorcery5"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSorcery3_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/sorcery6"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSorcery3_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/sorcery7"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSorcery3_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/sorcery8"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSorcery3_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/sorcery9"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSorcery3_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/sorcery10"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSorcery3_11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/sorcery11"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSorcery3_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/sorcery12"
+                        />
+
+                </GridLayout>
+
+                <!-- Songcraft Panel 3 -->
+                <GridLayout
+                    android:id="@+id/gridSongcraft3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:useDefaultMargins="true"
+                    android:columnCount="4"
+                    android:alignmentMode="alignMargins"
+                    android:rowOrderPreserved="false"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    >
+
+                    <ImageButton
+                        android:id="@+id/btnSongcraft3_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/songcraft1"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSongcraft3_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/songcraft2"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSongcraft3_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/songcraft3"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSongcraft3_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/songcraft4"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSongcraft3_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/songcraft5"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSongcraft3_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/songcraft6"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSongcraft3_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/songcraft7"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSongcraft3_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/songcraft8"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSongcraft3_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/songcraft9"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSongcraft3_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/songcraft10"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSongcraft3_11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/songcraft11"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSongcraft3_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/songcraft12"
+                        />
+
+                </GridLayout>
+
+                <!-- Witchcraft Panel 3 -->
+                <GridLayout
+                    android:id="@+id/gridWitchcraft3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:useDefaultMargins="true"
+                    android:columnCount="4"
+                    android:alignmentMode="alignMargins"
+                    android:rowOrderPreserved="false"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    >
+
+                    <ImageButton
+                        android:id="@+id/btnWitchcraft3_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/witchcraft1"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnWitchcraft3_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/witchcraft2"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnWitchcraft3_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/witchcraft3"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnWitchcraft3_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/witchcraft4"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnWitchcraft3_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/witchcraft5"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnWitchcraft3_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/witchcraft6"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnWitchcraft3_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/witchcraft7"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnWitchcraft3_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/witchcraft8"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnWitchcraft3_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/witchcraft9"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnWitchcraft3_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/witchcraft10"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnWitchcraft3_11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/witchcraft11"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnWitchcraft3_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/witchcraft12"
+                        />
+
+                </GridLayout>
+
+                <!-- Auramancy Panel 3 -->
+                <GridLayout
+                    android:id="@+id/gridAuramancy3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:useDefaultMargins="true"
+                    android:columnCount="4"
+                    android:alignmentMode="alignMargins"
+                    android:rowOrderPreserved="false"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    >
+
+                    <ImageButton
+                        android:id="@+id/btnAuramancy3_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/auramancy1"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnAuramancy3_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/auramancy2"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnAuramancy3_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/auramancy3"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnAuramancy3_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/auramancy4"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnAuramancy3_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/auramancy5"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnAuramancy3_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/auramancy6"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnAuramancy3_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/auramancy7"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnAuramancy3_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/auramancy8"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnAuramancy3_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/auramancy9"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnAuramancy3_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/auramancy10"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnAuramancy3_11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/auramancy11"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnAuramancy3_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/auramancy12"
+                        />
+
+                </GridLayout>
+
+                <!-- Shadowplay Panel 3 -->
+                <GridLayout
+                    android:id="@+id/gridShadowplay3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:useDefaultMargins="true"
+                    android:columnCount="4"
+                    android:alignmentMode="alignMargins"
+                    android:rowOrderPreserved="false"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    >
+
+                    <ImageButton
+                        android:id="@+id/btnShadowplay3_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/shadowplay1"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnShadowplay3_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/shadowplay2"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnShadowplay3_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/shadowplay3"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnShadowplay3_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/shadowplay4"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnShadowplay3_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/shadowplay5"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnShadowplay3_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/shadowplay6"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnShadowplay3_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/shadowplay7"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnShadowplay3_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/shadowplay8"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnShadowplay3_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/shadowplay9"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnShadowplay3_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/shadowplay10"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnShadowplay3_11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/shadowplay11"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnShadowplay3_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/shadowplay12"
+                        />
+
+                </GridLayout>
+
+                <!-- Vitalism Panel 3 -->
+                <GridLayout
+                    android:id="@+id/gridVitalism3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:useDefaultMargins="true"
+                    android:columnCount="4"
+                    android:alignmentMode="alignMargins"
+                    android:rowOrderPreserved="false"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    >
+
+                    <ImageButton
+                        android:id="@+id/btnVitalism3_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/vitalism1"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnVitalism3_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/vitalism2"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnVitalism3_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/vitalism3"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnVitalism3_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/vitalism4"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnVitalism3_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/vitalism5"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnVitalism3_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/vitalism6"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnVitalism3_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/vitalism7"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnVitalism3_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/vitalism8"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnVitalism3_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/vitalism9"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnVitalism3_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/vitalism10"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnVitalism3_11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/vitalism11"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnVitalism3_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/vitalism12"
+                        />
+
+                </GridLayout>
+
+                <!-- Malediction Panel 3 -->
+                <GridLayout
+                    android:id="@+id/gridMalediction3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:useDefaultMargins="true"
+                    android:columnCount="4"
+                    android:alignmentMode="alignMargins"
+                    android:rowOrderPreserved="false"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    >
+
+                    <ImageButton
+                        android:id="@+id/btnMalediction3_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/malediction1"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnMalediction3_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/malediction2"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnMalediction3_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/malediction3"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnMalediction3_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/malediction4"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnMalediction3_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/malediction5"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnMalediction3_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/malediction6"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnMalediction3_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/malediction7"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnMalediction3_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/malediction8"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnMalediction3_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/malediction9"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnMalediction3_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/malediction10"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnMalediction3_11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/malediction11"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnMalediction3_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/malediction12"
+                        />
+
+                </GridLayout>
+
+                <!-- Swiftblade Panel 3 -->
+                <GridLayout
+                    android:id="@+id/gridSwiftblade3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:useDefaultMargins="true"
+                    android:columnCount="4"
+                    android:alignmentMode="alignMargins"
+                    android:rowOrderPreserved="false"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    >
+
+                    <ImageButton
+                        android:id="@+id/btnSwiftblade3_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/swiftblade1"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSwiftblade3_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/swiftblade2"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSwiftblade3_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/swiftblade3"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSwiftblade3_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/swiftblade4"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSwiftblade3_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/swiftblade5"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSwiftblade3_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/swiftblade6"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSwiftblade3_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/swiftblade7"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSwiftblade3_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/swiftblade8"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSwiftblade3_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/swiftblade9"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSwiftblade3_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/swiftblade10"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSwiftblade3_11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/swiftblade11"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSwiftblade3_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/swiftblade12"
+                        />
+
+                </GridLayout>
+
+                <!-- Gunslinger Panel 3 -->
+                <GridLayout
+                    android:id="@+id/gridGunslinger3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:useDefaultMargins="true"
+                    android:columnCount="4"
+                    android:alignmentMode="alignMargins"
+                    android:rowOrderPreserved="false"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    >
+
+                    <ImageButton
+                        android:id="@+id/btnGunslinger3_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/gunslinger1"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnGunslinger3_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/gunslinger2"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnGunslinger3_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/gunslinger3"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnGunslinger3_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/gunslinger4"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnGunslinger3_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/gunslinger5"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnGunslinger3_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/gunslinger6"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnGunslinger3_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/gunslinger7"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnGunslinger3_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/gunslinger8"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnGunslinger3_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/gunslinger9"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnGunslinger3_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/gunslinger10"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnGunslinger3_11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/gunslinger11"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnGunslinger3_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/gunslinger12"
+                        />
+
+                </GridLayout>
+
+                <!-- Spelldance Panel 3 -->
+                <GridLayout
+                    android:id="@+id/gridSpelldance3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:useDefaultMargins="true"
+                    android:columnCount="4"
+                    android:alignmentMode="alignMargins"
+                    android:rowOrderPreserved="false"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    >
+
+                    <ImageButton
+                        android:id="@+id/btnSpelldance3_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/spelldance1"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSpelldance3_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/spelldance2"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSpelldance3_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/spelldance3"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSpelldance3_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/spelldance4"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSpelldance3_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/spelldance5"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSpelldance3_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/spelldance6"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSpelldance3_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/spelldance7"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSpelldance3_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/spelldance8"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSpelldance3_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/spelldance9"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSpelldance3_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/spelldance10"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSpelldance3_11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/spelldance11"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnSpelldance3_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/spelldance12"
+                        />
+
+                </GridLayout>
+
+                <!-- Passive Section Panel 3 -->
+
+                <!-- Passive Text -->
+                <TextView
+                    android:id="@+id/passiveText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20sp"
+                    android:text="Passive"
+                    android:textSize="20sp"
+                    android:visibility="gone"
+                    android:layout_gravity="center" />
+
+                <!-- Battlerage Passives Panel 3 -->
+                <GridLayout
+                    android:id="@+id/gridBattleragePassive3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:useDefaultMargins="true"
+                    android:columnCount="4"
+                    android:alignmentMode="alignMargins"
+                    android:rowOrderPreserved="false"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    >
+
+                    <ImageButton
+                        android:id="@+id/btnBattleragePassive3_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/battleragepassive1"
+                        android:clickable="false"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnBattleragePassive3_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/battleragepassive2"
+                        android:clickable="false"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnBattleragePassive3_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/battleragepassive3"
+                        android:clickable="false"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnBattleragePassive3_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/battleragepassive4"
+                        android:clickable="false"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnBattleragePassive3_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/battleragepassive5"
+                        android:clickable="false"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnBattleragePassive3_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/battleragepassive6"
+                        android:clickable="false"
+                        />
+
+                </GridLayout>
+
+                <!-- Archery Passives Panel 3 -->
+                <GridLayout
+                    android:id="@+id/gridArcheryPassive3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:useDefaultMargins="true"
+                    android:columnCount="4"
+                    android:alignmentMode="alignMargins"
+                    android:rowOrderPreserved="false"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    >
+
+                    <ImageButton
+                        android:id="@+id/btnArcheryPassive3_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/archerypassive1"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnArcheryPassive3_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/archerypassive2"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnArcheryPassive3_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/archerypassive3"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnArcheryPassive3_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/archerypassive4"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnArcheryPassive3_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/archerypassive5"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnArcheryPassive3_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/archerypassive6"
+                        />
+
+                </GridLayout>
+
+                <!-- Defense Passives Panel 3 -->
+                <GridLayout
+                    android:id="@+id/gridDefensePassive3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:useDefaultMargins="true"
+                    android:columnCount="4"
+                    android:alignmentMode="alignMargins"
+                    android:rowOrderPreserved="false"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    >
+
+                    <ImageButton
+                        android:id="@+id/btnDefensePassive3_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/defensepassive1"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnDefensePassive3_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/defensepassive2"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnDefensePassive3_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/defensepassive3"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnDefensePassive3_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/defensepassive4"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnDefensePassive3_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/defensepassive5"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnDefensePassive3_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/defensepassive6"
+                        />
+
+                </GridLayout>
+
+                <!-- Occultism Passives Panel 3 -->
+                <GridLayout
+                    android:id="@+id/gridOccultismPassive3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:useDefaultMargins="true"
+                    android:columnCount="4"
+                    android:alignmentMode="alignMargins"
+                    android:rowOrderPreserved="false"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    >
+
+                    <ImageButton
+                        android:id="@+id/btnOccultismPassive3_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/occultismpassive1"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnOccultismPassive3_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/occultismpassive2"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnOccultismPassive3_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/occultismpassive3"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnOccultismPassive3_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/occultismpassive4"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnOccultismPassive3_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/occultismpassive5"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btnOccultismPassive3_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/occultismpassive6"
+                        />
+
+                </GridLayout>
+
+                <!-- Sorcery Passives Panel 3 -->
+                <GridLayout
+                    android:id="@+id/gridSorceryPassive3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:useDefaultMargins="true"
+                    android:columnCount="4"
+                    android:alignmentMode="alignMargins"
+                    android:rowOrderPreserved="false"
+                    android:visibility="gone"
+                    android:layout_gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/btnSorceryPassive3_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/sorcerypassive1" />
+
+                    <ImageButton
+                        android:id="@+id/btnSorceryPassive3_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/sorcerypassive2" />
+
+                    <ImageButton
+                        android:id="@+id/btnSorceryPassive3_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/sorcerypassive3" />
+
+                    <ImageButton
+                        android:id="@+id/btnSorceryPassive3_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/sorcerypassive4" />
+
+                    <ImageButton
+                        android:id="@+id/btnSorceryPassive3_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/sorcerypassive5" />
+
+                    <ImageButton
+                        android:id="@+id/btnSorceryPassive3_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/sorcerypassive6" />
+
+                </GridLayout>
+
+                <!-- Songcraft Passives Panel3  -->
+                <GridLayout
+                    android:id="@+id/gridSongcraftPassive3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:useDefaultMargins="true"
+                    android:columnCount="4"
+                    android:alignmentMode="alignMargins"
+                    android:rowOrderPreserved="false"
+                    android:visibility="gone"
+                    android:layout_gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/btnSongcraftPassive3_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/songcraftpassive1" />
+
+                    <ImageButton
+                        android:id="@+id/btnSongcraftPassive3_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/songcraftpassive2" />
+
+                    <ImageButton
+                        android:id="@+id/btnSongcraftPassive3_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/songcraftpassive3" />
+
+                    <ImageButton
+                        android:id="@+id/btnSongcraftPassive3_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/songcraftpassive4" />
+
+                    <ImageButton
+                        android:id="@+id/btnSongcraftPassive3_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/songcraftpassive5" />
+
+                    <ImageButton
+                        android:id="@+id/btnSongcraftPassive3_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/songcraftpassive6" />
+
+                </GridLayout>
+
+                <!-- Witchcraft Passives Panel 3 -->
+                <GridLayout
+                    android:id="@+id/gridWitchcraftPassive3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:useDefaultMargins="true"
+                    android:columnCount="4"
+                    android:alignmentMode="alignMargins"
+                    android:rowOrderPreserved="false"
+                    android:visibility="gone"
+                    android:layout_gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/btnWitchcraftPassive3_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/witchcraftpassive1" />
+
+                    <ImageButton
+                        android:id="@+id/btnWitchcraftPassive3_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/witchcraftpassive2" />
+
+                    <ImageButton
+                        android:id="@+id/btnWitchcraftPassive3_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/witchcraftpassive3" />
+
+                    <ImageButton
+                        android:id="@+id/btnWitchcraftPassive3_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/witchcraftpassive4" />
+
+                    <ImageButton
+                        android:id="@+id/btnWitchcraftPassive3_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/witchcraftpassive5" />
+
+                    <ImageButton
+                        android:id="@+id/btnWitchcraftPassive3_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/witchcraftpassive6" />
+
+                </GridLayout>
+
+                <!-- Auramancy Passives Panel 3 -->
+                <GridLayout
+                    android:id="@+id/gridAuramancyPassive3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:useDefaultMargins="true"
+                    android:columnCount="4"
+                    android:alignmentMode="alignMargins"
+                    android:rowOrderPreserved="false"
+                    android:visibility="gone"
+                    android:layout_gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/btnAuramancyPassive3_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/auramancypassive1" />
+
+                    <ImageButton
+                        android:id="@+id/btnAuramancyPassive3_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/auramancypassive2" />
+
+                    <ImageButton
+                        android:id="@+id/btnAuramancyPassive3_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/auramancypassive3" />
+
+                    <ImageButton
+                        android:id="@+id/btnAuramancyPassive3_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/auramancypassive4" />
+
+                    <ImageButton
+                        android:id="@+id/btnAuramancyPassive3_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/auramancypassive5" />
+
+                    <ImageButton
+                        android:id="@+id/btnAuramancyPassive3_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/auramancypassive6" />
+
+                </GridLayout>
+
+                <!-- Shadowplay Passives Panel 3 -->
+                <GridLayout
+                    android:id="@+id/gridShadowplayPassive3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:useDefaultMargins="true"
+                    android:columnCount="4"
+                    android:alignmentMode="alignMargins"
+                    android:rowOrderPreserved="false"
+                    android:visibility="gone"
+                    android:layout_gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/btnShadowplayPassive3_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/shadowplaypassive1" />
+
+                    <ImageButton
+                        android:id="@+id/btnShadowplayPassive3_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/shadowplaypassive2" />
+
+                    <ImageButton
+                        android:id="@+id/btnShadowplayPassive3_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/shadowplaypassive3" />
+
+                    <ImageButton
+                        android:id="@+id/btnShadowplayPassive3_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/shadowplaypassive4" />
+
+                    <ImageButton
+                        android:id="@+id/btnShadowplayPassive3_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/shadowplaypassive5" />
+
+                    <ImageButton
+                        android:id="@+id/btnShadowplayPassive3_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/shadowplaypassive6" />
+
+                </GridLayout>
+
+                <!-- Vitalism Passives Panel 3 -->
+                <GridLayout
+                    android:id="@+id/gridVitalismPassive3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:useDefaultMargins="true"
+                    android:columnCount="4"
+                    android:alignmentMode="alignMargins"
+                    android:rowOrderPreserved="false"
+                    android:visibility="gone"
+                    android:layout_gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/btnVitalismPassive3_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/vitalismpassive1" />
+
+                    <ImageButton
+                        android:id="@+id/btnVitalismPassive3_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/vitalismpassive2" />
+
+                    <ImageButton
+                        android:id="@+id/btnVitalismPassive3_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/vitalismpassive3" />
+
+                    <ImageButton
+                        android:id="@+id/btnVitalismPassive3_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/vitalismpassive4" />
+
+                    <ImageButton
+                        android:id="@+id/btnVitalismPassive3_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/vitalismpassive5" />
+
+                    <ImageButton
+                        android:id="@+id/btnVitalismPassive3_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/vitalismpassive6" />
+
+                </GridLayout>
+
+                <!-- Malediction Passives Panel 3 -->
+                <GridLayout
+                    android:id="@+id/gridMaledictionPassive3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:useDefaultMargins="true"
+                    android:columnCount="4"
+                    android:alignmentMode="alignMargins"
+                    android:rowOrderPreserved="false"
+                    android:visibility="gone"
+                    android:layout_gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/btnMaledictionPassive3_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/maledictionpassive1" />
+
+                    <ImageButton
+                        android:id="@+id/btnMaledictionPassive3_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/maledictionpassive2" />
+
+                    <ImageButton
+                        android:id="@+id/btnMaledictionPassive3_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/maledictionpassive3" />
+
+                    <ImageButton
+                        android:id="@+id/btnMaledictionPassive3_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/maledictionpassive4" />
+
+                    <ImageButton
+                        android:id="@+id/btnMaledictionPassive3_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/maledictionpassive5" />
+
+                    <ImageButton
+                        android:id="@+id/btnMaledictionPassive3_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/maledictionpassive6" />
+
+                </GridLayout>
+
+                <!-- Swiftblade Passives Panel 3 -->
+                <GridLayout
+                    android:id="@+id/gridSwiftbladePassive3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:useDefaultMargins="true"
+                    android:columnCount="4"
+                    android:alignmentMode="alignMargins"
+                    android:rowOrderPreserved="false"
+                    android:visibility="gone"
+                    android:layout_gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/btnSwiftbladePassive3_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/swiftbladepassive1" />
+
+                    <ImageButton
+                        android:id="@+id/btnSwiftbladePassive3_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/swiftbladepassive2" />
+
+                    <ImageButton
+                        android:id="@+id/btnSwiftbladePassive3_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/swiftbladepassive3" />
+
+                    <ImageButton
+                        android:id="@+id/btnSwiftbladePassive3_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/swiftbladepassive4" />
+
+                    <ImageButton
+                        android:id="@+id/btnSwiftbladePassive3_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/swiftbladepassive5" />
+
+                    <ImageButton
+                        android:id="@+id/btnSwiftbladePassive3_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/swiftbladepassive6" />
+
+                </GridLayout>
+
+                <!-- Gunslinger Passives Panel 3 -->
+                <GridLayout
+                    android:id="@+id/gridGunslingerPassive3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:useDefaultMargins="true"
+                    android:columnCount="4"
+                    android:alignmentMode="alignMargins"
+                    android:rowOrderPreserved="false"
+                    android:visibility="gone"
+                    android:layout_gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/btnGunslingerPassive3_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/gunslingerpassive1" />
+
+                    <ImageButton
+                        android:id="@+id/btnGunslingerPassive3_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/gunslingerpassive2" />
+
+                    <ImageButton
+                        android:id="@+id/btnGunslingerPassive3_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/gunslingerpassive3" />
+
+                    <ImageButton
+                        android:id="@+id/btnGunslingerPassive3_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/gunslingerpassive4" />
+
+                    <ImageButton
+                        android:id="@+id/btnGunslingerPassive3_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/gunslingerpassive5" />
+
+                    <ImageButton
+                        android:id="@+id/btnGunslingerPassive3_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/gunslingerpassive6" />
+
+                </GridLayout>
+
+                <!-- Spelldance Passives Panel 3 -->
+                <GridLayout
+                    android:id="@+id/gridSpelldancePassive3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:useDefaultMargins="true"
+                    android:columnCount="4"
+                    android:alignmentMode="alignMargins"
+                    android:rowOrderPreserved="false"
+                    android:visibility="gone"
+                    android:layout_gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/btnSpelldancePassive3_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/spelldancepassive1" />
+
+                    <ImageButton
+                        android:id="@+id/btnSpelldancePassive3_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/spelldancepassive2" />
+
+                    <ImageButton
+                        android:id="@+id/btnSpelldancePassive3_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/spelldancepassive3" />
+
+                    <ImageButton
+                        android:id="@+id/btnSpelldancePassive3_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/spelldancepassive4" />
+
+                    <ImageButton
+                        android:id="@+id/btnSpelldancePassive3_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/spelldancepassive5" />
+
+                    <ImageButton
+                        android:id="@+id/btnSpelldancePassive3_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/spelldancepassive6" />
+
+                </GridLayout>
+
+
+                <!-- Reset Button Panel 3 -->
+                <Button
+                    android:id="@+id/btnReset3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:text="Reset"
+                    />
+
+
             </LinearLayout>
 
         </LinearLayout>
