@@ -2835,25 +2835,48 @@ class SkillCalculator : ComponentActivity() {
             gridSpelldancePassive1.visibility = View.GONE
 
             //Enables Visibility of any invisible buttons
-            btnBattlerage1.visibility = View.VISIBLE
-            btnBattlerage2.visibility = View.VISIBLE
-            btnBattlerage3.visibility = View.VISIBLE
+            //btnBattlerage1.visibility = View.VISIBLE
 
-            btnArchery1.visibility = View.VISIBLE
-            btnArchery2.visibility = View.VISIBLE
-            btnArchery3.visibility = View.VISIBLE
+            if(gridBattlerage2.isVisible || gridBattlerage3.isVisible) {
+                btnBattlerage1.visibility = View.GONE
+            } else {
+                btnBattlerage1.visibility = View.VISIBLE
+                btnBattlerage2.visibility = View.VISIBLE
+                btnBattlerage3.visibility = View.VISIBLE
+            }
 
-            btnDefense1.visibility = View.VISIBLE
-            btnDefense2.visibility = View.VISIBLE
-            btnDefense3.visibility = View.VISIBLE
 
-            btnOccultism1.visibility = View.VISIBLE
-            btnOccultism2.visibility = View.VISIBLE
-            btnOccultism3.visibility = View.VISIBLE
+            if(gridArchery2.isVisible || gridArchery3.isVisible) {
+                btnArchery1.visibility = View.GONE
+            } else {
+                btnArchery1.visibility = View.VISIBLE
+                btnArchery2.visibility = View.VISIBLE
+                btnArchery3.visibility = View.VISIBLE
+            }
 
-            btnSorcery1.visibility = View.VISIBLE
-            btnSorcery2.visibility = View.VISIBLE
-            btnSorcery3.visibility = View.VISIBLE
+            if(gridDefense2.isVisible || gridDefense3.isVisible) {
+                btnDefense1.visibility = View.GONE
+            } else {
+                btnDefense1.visibility = View.VISIBLE
+                btnDefense2.visibility = View.VISIBLE
+                btnDefense3.visibility = View.VISIBLE
+            }
+
+            if(gridOccultism2.isVisible || gridOccultism3.isVisible) {
+                btnOccultism1.visibility = View.GONE
+            } else {
+                btnOccultism1.visibility = View.VISIBLE
+                btnOccultism2.visibility = View.VISIBLE
+                btnOccultism3.visibility = View.VISIBLE
+            }
+
+            if(gridSorcery2.isVisible || gridSorcery3.isVisible) {
+                btnSorcery1.visibility = View.GONE
+            } else {
+                btnSorcery1.visibility = View.VISIBLE
+                btnSorcery2.visibility = View.VISIBLE
+                btnSorcery3.visibility = View.VISIBLE
+            }
 
             btnSongcraft1.visibility = View.VISIBLE
             btnSongcraft2.visibility = View.VISIBLE
